@@ -1,0 +1,10 @@
+package org.netbeans.test.refactoring.safedelete;
+
+public class SelfSuffClass{
+    
+    public SelfSuffClass() {
+    
+    }
+
+    
+}

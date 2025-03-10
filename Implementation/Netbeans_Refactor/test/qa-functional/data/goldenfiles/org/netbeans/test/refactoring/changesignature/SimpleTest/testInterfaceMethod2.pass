@@ -1,0 +1,857 @@
+Change signature of method public abstract make(org.netbeans.tests.examples.packa.Bean, java.lang.String, int, boolean, java.util.Date) of class org.netbeans.tests.examples.packc.Makable
+method public make
+Arguments: 
+bean
+s
+check
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packb.BeanB that override or implement the method.
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packb.BeanC that override or implement the method.
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packb.BeanDD that override or implement the method.
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packb.BeansD that override or implement the method.
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packb.BeansD.BeanDC that override or implement the method.
+Found 10 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanB.java
+
+      Change method parameters of <b>public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, int index, boolean check, java.util.Date date)</b>
+      c.prepare().<b>make(this, "run", 10, false, new Date())</b>;
+
+File diff:
+
+-pass[68]             c.prepare().make(this, "run", 10, false, new Date());
++test[68]             c.prepare().make(this, "run", false);
+-pass[73]         public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, int index, boolean check, java.util.Date date) {
++test[73]         public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, boolean check) {
+Original file:
+-------------------------------------
+/*
+ * BeanB.java
+ *
+ * Created on May 20, 2004, 2:14 PM
+ */
+
+package org.netbeans.tests.examples.packb;
+
+import java.util.Vector;
+import org.netbeans.tests.examples.packa.Bean;
+import org.netbeans.tests.examples.packa.Testable;
+
+import org.netbeans.tests.examples.packc.Makable;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanB extends Bean implements org.netbeans.tests.examples.packc.Makable {
+    
+    int index=0;
+    
+    Vector beansa=new Vector();
+    
+    /** Creates a new instance of BeanB */
+    public BeanB() {
+        refID=473542*Makable.CODE;
+    }
+    
+    public void addBeanA(BeanA ba) {
+        beansa.add(ba);
+        ((Testable)new BeansD.BeanDA("1")).test();
+        new BeansD.BeanDA("1").test();
+        ba.protectedProperty+=5;
+    }
+    
+    public BeanA getBeanA(int indx) {
+        return (BeanA)(beansa.get(indx));
+    }
+    
+    public Bean[] getBeans() {
+        return (Bean[])(beansa.toArray(new Bean[beansa.size()]));
+    }
+    
+    /**
+     * Getter for property index.
+     * @return Value of property index.
+     */
+    public int getIndex() {
+        return index;
+    }
+    
+    /**
+     * Setter for property index.
+     * @param index New value of property index.
+     */
+    public void setIndex(int index) {
+        this.index = index;
+    }
+    
+    public Object[] finish() {
+        return new Object[CODE];
+    }
+    
+    public Makable prepare() {
+        System.out.println("do");
+        BeanC c=new BeanC();
+        c.prepare().make(this, "run", 10, false, new Date());
+        ((Bean)c).abc();
+        return this;
+    }
+    
+    public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, int index, boolean check, java.util.Date date) {
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * BeanB.java
+ *
+ * Created on May 20, 2004, 2:14 PM
+ */
+
+package org.netbeans.tests.examples.packb;
+
+import java.util.Vector;
+import org.netbeans.tests.examples.packa.Bean;
+import org.netbeans.tests.examples.packa.Testable;
+
+import org.netbeans.tests.examples.packc.Makable;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanB extends Bean implements org.netbeans.tests.examples.packc.Makable {
+    
+    int index=0;
+    
+    Vector beansa=new Vector();
+    
+    /** Creates a new instance of BeanB */
+    public BeanB() {
+        refID=473542*Makable.CODE;
+    }
+    
+    public void addBeanA(BeanA ba) {
+        beansa.add(ba);
+        ((Testable)new BeansD.BeanDA("1")).test();
+        new BeansD.BeanDA("1").test();
+        ba.protectedProperty+=5;
+    }
+    
+    public BeanA getBeanA(int indx) {
+        return (BeanA)(beansa.get(indx));
+    }
+    
+    public Bean[] getBeans() {
+        return (Bean[])(beansa.toArray(new Bean[beansa.size()]));
+    }
+    
+    /**
+     * Getter for property index.
+     * @return Value of property index.
+     */
+    public int getIndex() {
+        return index;
+    }
+    
+    /**
+     * Setter for property index.
+     * @param index New value of property index.
+     */
+    public void setIndex(int index) {
+        this.index = index;
+    }
+    
+    public Object[] finish() {
+        return new Object[CODE];
+    }
+    
+    public Makable prepare() {
+        System.out.println("do");
+        BeanC c=new BeanC();
+        c.prepare().make(this, "run", false);
+        ((Bean)c).abc();
+        return this;
+    }
+    
+    public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, boolean check) {
+    }
+    
+}
+
+org/netbeans/tests/examples/packb/BeanC.java
+
+      ((BeanB)(((BeanC)bb).getBean())).<b>make(b, ((BeanA)bb).getProtectedProperty(), refID+1, false, new Date())</b>;
+      ((org.netbeans.tests.examples.packc.Makable)bb).prepare().<b>make(this, "text", refID, false, new Date())</b>;
+      Change method parameters of <b>public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, int index, boolean check, java.util.Date date)</b>
+
+File diff:
+
+-pass[65]             ((org.netbeans.tests.examples.packc.Makable)bb).prepare().make(this, "text", refID, false, new Date());
++test[65]             ((org.netbeans.tests.examples.packc.Makable)bb).prepare().make(this, "text", false);
+-pass[66]             ((BeanB)(((BeanC)bb).getBean())).make(b, ((BeanA)bb).getProtectedProperty(), refID+1, false, new Date());
++test[66]             ((BeanB)(((BeanC)bb).getBean())).make(b, ((BeanA)bb).getProtectedProperty(), false);
+-pass[95]         public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, int index, boolean check, java.util.Date date) {
++test[95]         public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, boolean check) {
+Original file:
+-------------------------------------
+/*
+ * BeanC.java
+ *
+ * Created on May 20, 2004, 2:17 PM
+ */
+
+package org.netbeans.tests.examples.packb;
+import org.netbeans.tests.examples.packc.Makable;
+
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanC extends BeanA implements Makable {
+    
+    boolean sign=false;
+    
+    org.netbeans.tests.examples.packa.Bean b;
+    
+    /** Creates a new instance of BeanC */
+    public BeanC() {
+        super();
+        init();
+    }
+    
+    public void init() {
+        b=new BeanB() {
+            public void doit() {
+                System.out.println("done "+refID+" "+BeanC.this.protectedProperty);
+            }
+        };
+        ((BeanB)b).abc();
+    }
+    
+    public int getRefID() {
+        return refID+100;
+    }
+    /**
+     * Getter for property sign.
+     * @return Value of property sign.
+     */
+    public boolean isSign() {
+        return sign;
+    }
+    
+    public org.netbeans.tests.examples.packa.Bean getBean() {
+        System.out.println("getBean, property="+protectedProperty);
+        return b;
+    }
+    
+    public void setBean(org.netbeans.tests.examples.packa.Bean bean) {
+        b=bean;
+        protectedProperty="set";
+    }
+    /**
+     * Setter for property sign.
+     * @param sign New value of property sign.
+     */
+    public void setSign(boolean sign) {
+        this.sign = sign;
+        int d=BeanB.CODE;
+        int count=(int)((refID+5)*d+(refID*refID*1.0/Math.tan((double)refID)));
+        org.netbeans.tests.examples.packa.Bean bb=new BeanC();
+        ((org.netbeans.tests.examples.packc.Makable)bb).prepare().make(this, "text", refID, false, new Date());
+        ((BeanB)(((BeanC)bb).getBean())).make(b, ((BeanA)bb).getProtectedProperty(), refID+1, false, new Date());
+        int id=bb.getRefID();
+        BeanC[] cc=(BeanC[])(((org.netbeans.tests.examples.packc.Makable)bb).finish());
+        protectedProperty="set";
+        publicProperty="a";
+        BeansD.BeanDA da=new BeansD.BeanDA("text");
+        new BeanB().abc();
+    }
+    
+    public org.netbeans.tests.examples.packa.Testable test() {
+        return super.test();
+    }
+    
+    public java.lang.String getProtectedProperty() {
+        java.lang.String retValue;
+        
+        retValue = super.getProtectedProperty();
+        return retValue;
+    }
+    
+    public void setTestable(org.netbeans.tests.examples.packa.Testable t) {
+        org.netbeans.tests.examples.packa.Testable te=t;
+        te.test();
+    }
+
+    public java.lang.Object[] finish() {
+        return new Object[] {protectedProperty, publicProperty};
+    }
+
+    public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, int index, boolean check, java.util.Date date) {
+        protectedProperty+=s+publicProperty;
+    }
+
+    public org.netbeans.tests.examples.packc.Makable prepare() {
+        return null;
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * BeanC.java
+ *
+ * Created on May 20, 2004, 2:17 PM
+ */
+
+package org.netbeans.tests.examples.packb;
+import org.netbeans.tests.examples.packc.Makable;
+
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanC extends BeanA implements Makable {
+    
+    boolean sign=false;
+    
+    org.netbeans.tests.examples.packa.Bean b;
+    
+    /** Creates a new instance of BeanC */
+    public BeanC() {
+        super();
+        init();
+    }
+    
+    public void init() {
+        b=new BeanB() {
+            public void doit() {
+                System.out.println("done "+refID+" "+BeanC.this.protectedProperty);
+            }
+        };
+        ((BeanB)b).abc();
+    }
+    
+    public int getRefID() {
+        return refID+100;
+    }
+    /**
+     * Getter for property sign.
+     * @return Value of property sign.
+     */
+    public boolean isSign() {
+        return sign;
+    }
+    
+    public org.netbeans.tests.examples.packa.Bean getBean() {
+        System.out.println("getBean, property="+protectedProperty);
+        return b;
+    }
+    
+    public void setBean(org.netbeans.tests.examples.packa.Bean bean) {
+        b=bean;
+        protectedProperty="set";
+    }
+    /**
+     * Setter for property sign.
+     * @param sign New value of property sign.
+     */
+    public void setSign(boolean sign) {
+        this.sign = sign;
+        int d=BeanB.CODE;
+        int count=(int)((refID+5)*d+(refID*refID*1.0/Math.tan((double)refID)));
+        org.netbeans.tests.examples.packa.Bean bb=new BeanC();
+        ((org.netbeans.tests.examples.packc.Makable)bb).prepare().make(this, "text", false);
+        ((BeanB)(((BeanC)bb).getBean())).make(b, ((BeanA)bb).getProtectedProperty(), false);
+        int id=bb.getRefID();
+        BeanC[] cc=(BeanC[])(((org.netbeans.tests.examples.packc.Makable)bb).finish());
+        protectedProperty="set";
+        publicProperty="a";
+        BeansD.BeanDA da=new BeansD.BeanDA("text");
+        new BeanB().abc();
+    }
+    
+    public org.netbeans.tests.examples.packa.Testable test() {
+        return super.test();
+    }
+    
+    public java.lang.String getProtectedProperty() {
+        java.lang.String retValue;
+        
+        retValue = super.getProtectedProperty();
+        return retValue;
+    }
+    
+    public void setTestable(org.netbeans.tests.examples.packa.Testable t) {
+        org.netbeans.tests.examples.packa.Testable te=t;
+        te.test();
+    }
+
+    public java.lang.Object[] finish() {
+        return new Object[] {protectedProperty, publicProperty};
+    }
+
+    public void make(org.netbeans.tests.examples.packa.Bean bean, java.lang.String s, boolean check) {
+        protectedProperty+=s+publicProperty;
+    }
+
+    public org.netbeans.tests.examples.packc.Makable prepare() {
+        return null;
+    }
+}
+
+org/netbeans/tests/examples/packb/BeansD.java
+
+      ((Makable)new BeanDD("ttt")).<b>make(bb, "", 10, false, new Date())</b>;
+      Change method parameters of <b>public void make(Bean b, String s, int a, boolean check, java.util.Date date)</b>
+      Change method parameters of <b>public void make(Bean bean, java.lang.String s, int index, boolean check, java.util.Date date)</b>
+      Change method parameters of <b>public void make(Bean bean, java.lang.String s, int index, boolean check, java.util.Date date)</b>
+
+File diff:
+
+-pass[77]             public void make(Bean bean, java.lang.String s, int index, boolean check, java.util.Date date) {
++test[77]             public void make(Bean bean, java.lang.String s, boolean check) {
+-pass[109]            ((Makable)new BeanDD("ttt")).make(bb, "", 10, false, new Date());
++test[109]            ((Makable)new BeanDD("ttt")).make(bb, "", false);
+-pass[115]        public void make(Bean bean, java.lang.String s, int index, boolean check, java.util.Date date) {
++test[115]        public void make(Bean bean, java.lang.String s, boolean check) {
+-pass[181]        public void make(Bean b, String s, int a, boolean check, java.util.Date date) {
++test[181]        public void make(Bean b, String s, boolean check) {
+Original file:
+-------------------------------------
+/*
+ * BeansD.java
+ *
+ * Created on May 20, 2004, 2:19 PM
+ */
+
+package org.netbeans.tests.examples.packb;
+
+import org.netbeans.tests.examples.packa.Bean;
+import org.netbeans.tests.examples.packa.Testable;
+import org.netbeans.tests.examples.packc.Makable;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeansD implements org.netbeans.tests.examples.packc.Makable {
+    
+    static {
+        new BeansD(new BeanD());
+    }
+    
+    BeanA bb;
+    
+    Bean[] beans;
+    
+    /** Creates a new instance of BeansD */
+    public BeansD() {
+        bb=new BeanDA("text");
+    }
+    
+    public BeansD(BeanA bb) {
+        this.bb=bb;
+        
+    }
+    
+    public static class BeanDA extends BeanA {
+        int number=CODE;
+        
+        public BeanDA(java.lang.String text) {
+            super();
+            this.abc().abc().abc();
+            BeanA copy=new BeanA();
+            setProtectedProperty(copy.getProtectedProperty()+copy.getProtectedProperty()+copy.getProtectedProperty());
+            protectedProperty=copy.protectedProperty+copy.protectedProperty;
+            publicProperty=protectedProperty;
+        }
+        
+        /**
+         * Getter for property number.
+         * @return Value of property number.
+         */
+        public int getNumber() {
+            return number;
+        }
+        
+        /**
+         * Setter for property number.
+         * @param number New value of property number.
+         */
+        public void setNumber(int number) {
+            this.number = number*BeanB.CODE;
+            System.out.println(getProtectedProperty());
+        }
+        
+        public Bean abc() {
+            return this;
+        }
+    }
+    
+    public class BeanDC extends BeanC {
+        
+        public String getProtectedProperty() {
+            return super.getProtectedProperty()+"aaa";
+        }
+        
+        public void make(Bean bean, java.lang.String s, int index, boolean check, java.util.Date date) {
+            System.out.println("testinner "+protectedProperty+publicProperty);
+        }
+        
+        public Bean abc() {
+            System.out.println("abc");
+            protectedProperty="abc";
+            publicProperty="def";
+            return super.abc();
+        }
+    }
+    
+    protected Bean[] getBeans() {
+        return beans;
+    }
+    
+    public void setBeans(Bean[] bss) {
+        beans=bss;
+    }
+    
+    public Object[] finish() {
+        System.out.println("text "+bb.getProtectedProperty()+" "+((Bean)bb).abc());
+        
+        return null;
+    }
+    
+    public void prepare(Object[] data) {
+        ((Testable)bb).test();
+        ((BeanD)bb).getProtectedProperty();
+    }
+    
+    public org.netbeans.tests.examples.packc.Makable prepare() {
+        ((Makable)new BeanDD("ttt")).make(bb, "", 10, false, new Date());
+        System.out.println("message");
+        System.out.println();
+        return new BeanDD("ttt");
+    }
+    
+    public void make(Bean bean, java.lang.String s, int index, boolean check, java.util.Date date) {
+        System.out.println("test1");
+    }
+    
+}
+
+
+class BeanD extends BeanC {
+    
+    int counter=0;
+    
+    /**
+     * Getter for property counter.
+     * @return Value of property counter.
+     */
+    public int getCounter() {
+        return counter;
+    }
+    
+    /**
+     * Setter for property counter.
+     * @param counter New value of property counter.
+     */
+    public void setCounter(int counter) {
+        this.counter = counter;
+        String[] s=new String[] {
+            "sss",
+            protectedProperty,
+            "qqqqq",
+            publicProperty
+        };
+    }
+    
+    public java.lang.String getProtectedProperty() {
+        java.lang.String retValue;
+        System.out.println("getProtectedProperty");
+        retValue = super.getProtectedProperty();
+        return (protectedProperty+retValue).substring(1);
+    }
+    
+}
+
+class BeanDD extends BeanB {
+    long length;
+    
+    public BeanDD(String text) {
+        super();
+        Bean b=new BeanB();
+    }
+    
+    /**
+     * Getter for property length.
+     * @return Value of property length.
+     */
+    public long getLength() {
+        return length;
+    }
+    
+    /**
+     * Setter for property length.
+     * @param length New value of property length.
+     */
+    public void setLength(long length) {
+        this.length = length*Makable.CODE;
+    }
+    
+    public void make(Bean b, String s, int a, boolean check, java.util.Date date) {
+        refID=a;
+    }
+    
+    public Bean abc() {
+        return this;
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * BeansD.java
+ *
+ * Created on May 20, 2004, 2:19 PM
+ */
+
+package org.netbeans.tests.examples.packb;
+
+import org.netbeans.tests.examples.packa.Bean;
+import org.netbeans.tests.examples.packa.Testable;
+import org.netbeans.tests.examples.packc.Makable;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeansD implements org.netbeans.tests.examples.packc.Makable {
+    
+    static {
+        new BeansD(new BeanD());
+    }
+    
+    BeanA bb;
+    
+    Bean[] beans;
+    
+    /** Creates a new instance of BeansD */
+    public BeansD() {
+        bb=new BeanDA("text");
+    }
+    
+    public BeansD(BeanA bb) {
+        this.bb=bb;
+        
+    }
+    
+    public static class BeanDA extends BeanA {
+        int number=CODE;
+        
+        public BeanDA(java.lang.String text) {
+            super();
+            this.abc().abc().abc();
+            BeanA copy=new BeanA();
+            setProtectedProperty(copy.getProtectedProperty()+copy.getProtectedProperty()+copy.getProtectedProperty());
+            protectedProperty=copy.protectedProperty+copy.protectedProperty;
+            publicProperty=protectedProperty;
+        }
+        
+        /**
+         * Getter for property number.
+         * @return Value of property number.
+         */
+        public int getNumber() {
+            return number;
+        }
+        
+        /**
+         * Setter for property number.
+         * @param number New value of property number.
+         */
+        public void setNumber(int number) {
+            this.number = number*BeanB.CODE;
+            System.out.println(getProtectedProperty());
+        }
+        
+        public Bean abc() {
+            return this;
+        }
+    }
+    
+    public class BeanDC extends BeanC {
+        
+        public String getProtectedProperty() {
+            return super.getProtectedProperty()+"aaa";
+        }
+        
+        public void make(Bean bean, java.lang.String s, boolean check) {
+            System.out.println("testinner "+protectedProperty+publicProperty);
+        }
+        
+        public Bean abc() {
+            System.out.println("abc");
+            protectedProperty="abc";
+            publicProperty="def";
+            return super.abc();
+        }
+    }
+    
+    protected Bean[] getBeans() {
+        return beans;
+    }
+    
+    public void setBeans(Bean[] bss) {
+        beans=bss;
+    }
+    
+    public Object[] finish() {
+        System.out.println("text "+bb.getProtectedProperty()+" "+((Bean)bb).abc());
+        
+        return null;
+    }
+    
+    public void prepare(Object[] data) {
+        ((Testable)bb).test();
+        ((BeanD)bb).getProtectedProperty();
+    }
+    
+    public org.netbeans.tests.examples.packc.Makable prepare() {
+        ((Makable)new BeanDD("ttt")).make(bb, "", false);
+        System.out.println("message");
+        System.out.println();
+        return new BeanDD("ttt");
+    }
+    
+    public void make(Bean bean, java.lang.String s, boolean check) {
+        System.out.println("test1");
+    }
+    
+}
+
+
+class BeanD extends BeanC {
+    
+    int counter=0;
+    
+    /**
+     * Getter for property counter.
+     * @return Value of property counter.
+     */
+    public int getCounter() {
+        return counter;
+    }
+    
+    /**
+     * Setter for property counter.
+     * @param counter New value of property counter.
+     */
+    public void setCounter(int counter) {
+        this.counter = counter;
+        String[] s=new String[] {
+            "sss",
+            protectedProperty,
+            "qqqqq",
+            publicProperty
+        };
+    }
+    
+    public java.lang.String getProtectedProperty() {
+        java.lang.String retValue;
+        System.out.println("getProtectedProperty");
+        retValue = super.getProtectedProperty();
+        return (protectedProperty+retValue).substring(1);
+    }
+    
+}
+
+class BeanDD extends BeanB {
+    long length;
+    
+    public BeanDD(String text) {
+        super();
+        Bean b=new BeanB();
+    }
+    
+    /**
+     * Getter for property length.
+     * @return Value of property length.
+     */
+    public long getLength() {
+        return length;
+    }
+    
+    /**
+     * Setter for property length.
+     * @param length New value of property length.
+     */
+    public void setLength(long length) {
+        this.length = length*Makable.CODE;
+    }
+    
+    public void make(Bean b, String s, boolean check) {
+        refID=a;
+    }
+    
+    public Bean abc() {
+        return this;
+    }
+}
+
+org/netbeans/tests/examples/packc/Makable.java
+
+      Change method parameters of <b>public void make(Bean bean, String s, int index, boolean check, java.util.Date date)</b>
+
+File diff:
+
+-pass[18]         public void make(Bean bean, String s, int index, boolean check, java.util.Date date);
++test[18]         public void make(Bean bean, String s, boolean check);
+Original file:
+-------------------------------------
+/*
+ * Makable.java
+ *
+ * Created on May 21, 2004, 1:52 PM
+ */
+
+package org.netbeans.tests.examples.packc;
+import org.netbeans.tests.examples.packa.Bean;
+
+/**
+ *
+ * @author  eh103527
+ */
+public interface Makable {
+    
+    public static final int CODE=1;
+    
+    public void make(Bean bean, String s, int index, boolean check, java.util.Date date);
+    public Makable prepare();
+    public Object[] finish();
+}
+Modified file:
+-------------------------------------
+/*
+ * Makable.java
+ *
+ * Created on May 21, 2004, 1:52 PM
+ */
+
+package org.netbeans.tests.examples.packc;
+import org.netbeans.tests.examples.packa.Bean;
+
+/**
+ *
+ * @author  eh103527
+ */
+public interface Makable {
+    
+    public static final int CODE=1;
+    
+    public void make(Bean bean, String s, boolean check);
+    public Makable prepare();
+    public Object[] finish();
+}
+

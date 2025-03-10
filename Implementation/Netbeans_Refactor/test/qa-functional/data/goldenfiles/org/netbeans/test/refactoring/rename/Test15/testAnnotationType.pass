@@ -1,0 +1,663 @@
+Rename class abc.def.DAnnotType to TestAT
+Found 16 occurance(s).
+
+abc/A.java
+
+      /** <i> class is annotated by <b>DAnnotType</b></i>
+      @<b>DAnnotType</b>(id=5) public class A&lt;T&gt;
+      import <b>abc.def.DAnnotType</b>;
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+    
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+    
+    
+}
+
+abc/C.java
+
+      @<b>DAnnotType</b>(id=1, value="type") public Object methodA()
+      @<b>DAnnotType</b>(id=3) private void methodA(int i)
+      import <b>abc.def.DAnnotType</b>;
+
+File diff:
+
+-pass[9]      import abc.def.DAnnotType;
++test[9]      import abc.def.TestAT;
+-pass[35]         @DAnnotType(id=1, value="type")
++test[35]         @TestAT(id=1, value="type")
+-pass[40]         @DAnnotType(id=3)
++test[40]         @TestAT(id=3)
+Original file:
+-------------------------------------
+/*
+ * C.java
+ *
+ * Created on May 24, 2004, 1:55 PM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class C extends B implements abc.def.ghi.I {
+    
+    private int number = 0;
+    public String text = "text";
+    protected boolean test = false;
+    
+    
+    /** Creates a new instance of C */
+    public C() {
+        
+    }
+
+    public C(abc.def.ghi.I i) {
+        test = true;
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    @DAnnotType(id=1, value="type")
+    public Object methodA() {
+        return null;
+    }
+
+    @DAnnotType(id=3)
+    private void methodA(int i) {
+        
+    }
+
+    protected void methodA(int i, String text) {
+        
+    }
+
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * C.java
+ *
+ * Created on May 24, 2004, 1:55 PM
+ */
+
+package abc;
+
+import abc.def.TestAT;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class C extends B implements abc.def.ghi.I {
+    
+    private int number = 0;
+    public String text = "text";
+    protected boolean test = false;
+    
+    
+    /** Creates a new instance of C */
+    public C() {
+        
+    }
+
+    public C(abc.def.ghi.I i) {
+        test = true;
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    @TestAT(id=1, value="type")
+    public Object methodA() {
+        return null;
+    }
+
+    @TestAT(id=3)
+    private void methodA(int i) {
+        
+    }
+
+    protected void methodA(int i, String text) {
+        
+    }
+
+    
+}
+
+abc/def/D.java
+
+      @<b>DAnnotType</b>(id=1455)
+      @<b>DAnnotType</b>(id=7, value="methD", coord=En.Y) public void methodD(En e)
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.A {
+    
+    @DAnnotType(id=1455)
+    private abc.A<Integer> a;
+    En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.A a;
+        a = new abc.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.A proma) {
+        
+    }
+    
+    public void methodDI(abc.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.A {
+    
+    @DAnnotType(id=1455)
+    private abc.A<Integer> a;
+    En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.A a;
+        a = new abc.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.A proma) {
+        
+    }
+    
+    public void methodDI(abc.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+    
+}
+
+abc/def/DAnnotType.java
+
+      /** <i> This is a comment for <b>DAnnotType</b>.</i>
+      // <i> * <b>DAnnotType</b>.java</i>
+      Rename annotation type to TestAT
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * DAnnotType.java
+ *
+ * Created on January 4, 2005, 11:34 AM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * This is a comment for DAnnotType.
+ * @author eh103527
+ */
+public @interface DAnnotType {
+    int id();
+    String value() default "<empty>";
+    En coord() default En.X;
+}
+Modified file:
+-------------------------------------
+/*
+ * DAnnotType.java
+ *
+ * Created on January 4, 2005, 11:34 AM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * This is a comment for DAnnotType.
+ * @author eh103527
+ */
+public @interface DAnnotType {
+    int id();
+    String value() default "<empty>";
+    En coord() default En.X;
+}
+
+abc/def/ghi/G.java
+
+      /** <i> there is annotation <b>DAnnotType</b></i>
+      @<b>DAnnotType</b>(id=2, value="ghi") public void testA()
+      import <b>abc.def.DAnnotType</b>;
+
+File diff:
+
+-pass[11]     import abc.def.DAnnotType;
++test[11]     import abc.def.TestAT;
+-pass[41]          * there is annotation DAnnotType
++test[41]          * there is annotation TestAT
+-pass[43]         @DAnnotType(id=2, value="ghi")
++test[43]         @TestAT(id=2, value="ghi")
+Original file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.A;
+import abc.En;
+import abc.def.DAnnotType;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.A a = new abc.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.D d = new abc.def.D();
+        d.methodD(En.X);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation DAnnotType
+     */
+    @DAnnotType(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.A;
+import abc.En;
+import abc.def.TestAT;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.A a = new abc.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.D d = new abc.def.D();
+        d.methodD(En.X);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation TestAT
+     */
+    @TestAT(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+
+abc/def/ghi/H.java
+
+      @<b>DAnnotType</b>(id=5) public class H implements J
+      import <b>abc.def.DAnnotType</b>;
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * H.java
+ *
+ * Created on May 24, 2004, 1:56 PM
+ */
+
+package abc.def.ghi;
+
+import abc.En;
+import abc.def.D;
+import abc.def.DAnnotType;
+import  abc.def.ghi.jkl.J ;
+
+/**
+ *
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class H implements J {
+    
+    public static final D DATA1=new D(En.X);
+    public static final D DATA2=new D(En.Y);
+    public static final D DATA3=new D(En.Z);
+    
+    /** Creates a new instance of H */
+    public H() {
+        
+        new D().methodD(En.Y);
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    public boolean setState(String text) {
+        return true;
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * H.java
+ *
+ * Created on May 24, 2004, 1:56 PM
+ */
+
+package abc.def.ghi;
+
+import abc.En;
+import abc.def.D;
+import abc.def.DAnnotType;
+import  abc.def.ghi.jkl.J ;
+
+/**
+ *
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class H implements J {
+    
+    public static final D DATA1=new D(En.X);
+    public static final D DATA2=new D(En.Y);
+    public static final D DATA3=new D(En.Z);
+    
+    /** Creates a new instance of H */
+    public H() {
+        
+        new D().methodD(En.Y);
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    public boolean setState(String text) {
+        return true;
+    }
+    
+}
+

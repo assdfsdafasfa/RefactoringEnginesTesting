@@ -1,0 +1,200 @@
+Find usages of: org.netbeans.tests.examples.packa.Bean
+Found 35 occurance(s).
+
+org/netbeans/tests/examples/packa/Association.java
+      protected <b>Bean</b> other;
+      public Association(String name, <b>Bean</b> other)
+
+org/netbeans/tests/examples/packa/Bean.java
+      /** <i> Creates a new instance of <b>Bean</b></i>
+      // <i> * <b>Bean</b>.java</i>
+      <b>Bean</b> b=new org.netbeans.tests.examples.packb.BeanB();
+      public <b>Bean</b> abc()
+
+org/netbeans/tests/examples/packa/Property.java
+      if (<b>Bean</b>.class == value.getClass()) {
+
+org/netbeans/tests/examples/packb/BeanA.java
+      import <b>org.netbeans.tests.examples.packa.Bean</b>;
+      public class BeanA extends <b>Bean</b> implements org.netbeans.tests.examples.packa.Testable
+
+org/netbeans/tests/examples/packb/BeanB.java
+      ((<b>Bean</b>)c).abc();
+      import <b>org.netbeans.tests.examples.packa.Bean</b>;
+      public <b>Bean</b>[] getBeans()
+      public class BeanB extends <b>Bean</b> implements org.netbeans.tests.examples.packc.Makable
+      public void make(int index, java.lang.String s, <b>org.netbeans.tests.examples.packa.Bean</b> bean)
+      return (<b>Bean</b>[])(beansa.toArray(new Bean[beansa.size()]));
+      return (Bean[])(beansa.toArray(new <b>Bean</b>[beansa.size()]));
+
+org/netbeans/tests/examples/packb/BeanC.java
+      <b>org.netbeans.tests.examples.packa.Bean</b> b;
+      <b>org.netbeans.tests.examples.packa.Bean</b> bb=new BeanC();
+      public <b>org.netbeans.tests.examples.packa.Bean</b> getBean()
+      public void make(int index, java.lang.String s, <b>org.netbeans.tests.examples.packa.Bean</b> bean)
+      public void setBean(<b>org.netbeans.tests.examples.packa.Bean</b> bean)
+
+org/netbeans/tests/examples/packb/BeansD.java
+      <b>Bean</b> b=new BeanB();
+      <b>Bean</b>[] beans;
+      System.out.println("text "+bb.getProtectedProperty()+" "+((<b>Bean</b>)bb).abc());
+      import <b>org.netbeans.tests.examples.packa.Bean</b>;
+      protected <b>Bean</b>[] getBeans()
+      public <b>Bean</b> abc()
+      public <b>Bean</b> abc()
+      public <b>Bean</b> abc()
+      public void make(int a, String s, <b>Bean</b> b)
+      public void make(int index, java.lang.String s, <b>Bean</b> bean)
+      public void make(int index, java.lang.String s, <b>Bean</b> bean)
+      public void setBeans(<b>Bean</b>[] bss)
+
+org/netbeans/tests/examples/packc/Makable.java
+      import <b>org.netbeans.tests.examples.packa.Bean</b>;
+      public void make(int index, String s, <b>Bean</b> bean)
+
+
+Find usages of: org.netbeans.tests.examples.packb.BeanA
+Found 14 occurance(s).
+
+org/netbeans/tests/examples/packa/Bean.java
+      <b>BeanA</b> a=new BeansD.BeanDA("text");
+      import <b>org.netbeans.tests.examples.packb.BeanA</b>;
+
+org/netbeans/tests/examples/packb/BeanA.java
+      /** <i> Creates a new instance of <b>BeanA</b></i>
+      // <i> * <b>BeanA</b>.java</i>
+
+org/netbeans/tests/examples/packb/BeanB.java
+      public <b>BeanA</b> getBeanA(int indx)
+      public void addBeanA(<b>BeanA</b> ba)
+      return (<b>BeanA</b>)(beansa.get(indx));
+
+org/netbeans/tests/examples/packb/BeanC.java
+      ((BeanB)(((BeanC)bb).getBean())).make(refID+1, ((<b>BeanA</b>)bb).getProtectedProperty(), b);
+      public class BeanC extends <b>BeanA</b> implements Makable
+
+org/netbeans/tests/examples/packb/BeansD.java
+      <b>BeanA</b> bb;
+      <b>BeanA</b> copy=new BeanA();
+      BeanA copy=new <b>BeanA</b>();
+      public BeansD(<b>BeanA</b> bb)
+      public static class BeanDA extends <b>BeanA</b>
+
+
+Find usages of: org.netbeans.tests.examples.packb.BeanB
+Found 11 occurance(s).
+
+org/netbeans/tests/examples/packa/Bean.java
+      Bean b=new <b>org.netbeans.tests.examples.packb.BeanB</b>();
+
+org/netbeans/tests/examples/packb/BeanB.java
+      /** <i> Creates a new instance of <b>BeanB</b></i>
+      // <i> * <b>BeanB</b>.java</i>
+
+org/netbeans/tests/examples/packb/BeanC.java
+      ((<b>BeanB</b>)(((BeanC)bb).getBean())).make(refID+1, ((BeanA)bb).getProtectedProperty(), b);
+      ((<b>BeanB</b>)b).abc();
+      b=new <b>BeanB</b>() {
+      int d=<b>BeanB</b>.CODE;
+      new <b>BeanB</b>().abc();
+
+org/netbeans/tests/examples/packb/BeansD.java
+      Bean b=new <b>BeanB</b>();
+      class BeanDD extends <b>BeanB</b>
+      this.number = number*<b>BeanB</b>.CODE;
+
+
+Find usages of: org.netbeans.tests.examples.packb.BeanD
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/packb/BeansD.java
+      ((<b>BeanD</b>)bb).getProtectedProperty();
+      new BeansD(new <b>BeanD</b>());
+
+
+Find usages of: org.netbeans.tests.examples.packb.BeansD.BeanDA
+Found 8 occurance(s).
+
+org/netbeans/tests/examples/packa/Bean.java
+      BeanA a=new <b>BeansD.BeanDA</b>("text");
+      public void setA(<b>BeansD.BeanDA</b> aa)
+      setA((<b>BeansD.BeanDA</b>)a);
+
+org/netbeans/tests/examples/packb/BeanB.java
+      ((Testable)new <b>BeansD.BeanDA</b>("1")).test();
+      new <b>BeansD.BeanDA</b>("1").test();
+
+org/netbeans/tests/examples/packb/BeanC.java
+      <b>BeansD.BeanDA</b> da=new BeansD.BeanDA("text");
+      BeansD.BeanDA da=new <b>BeansD.BeanDA</b>("text");
+
+org/netbeans/tests/examples/packb/BeansD.java
+      bb=new <b>BeanDA</b>("text");
+
+
+Find usages of: java.lang.String
+Found 40 occurance(s).
+
+Main.java
+      public static void main(<b>java.lang.String</b>[] args)
+
+org/netbeans/tests/examples/Test.java
+      /** <i> Name of test - <b>String</b>.</i>
+      <b>String</b> name;
+      public Test(<b>String</b> name)
+
+org/netbeans/tests/examples/packa/Association.java
+      protected <b>String</b> name;
+      public Association(<b>String</b> name, Bean other)
+
+org/netbeans/tests/examples/packa/Property.java
+      <b>String</b> name;
+      <b>String</b> value;
+      public <b>java.lang.String</b> getName()
+      public <b>java.lang.String</b> getValue()
+      public Property(<b>String</b> name, String value)
+      public Property(String name, <b>String</b> value)
+      public void setValue(<b>java.lang.String</b> value)
+      static <b>String</b>[] types={"String","int","boolean","char","long","short","float","double"};
+
+org/netbeans/tests/examples/packb/BeanA.java
+      <b>String</b> privateProperty;
+      protected <b>String</b> protectedProperty;
+      public <b>String</b> publicProperty;
+      public <b>java.lang.String</b> getPrivateProperty()
+      public <b>java.lang.String</b> getProtectedProperty()
+      public <b>java.lang.String</b> getPublicProperty()
+      public void setPrivateProperty(<b>java.lang.String</b> privateProperty)
+      public void setProtectedProperty(<b>java.lang.String</b> protectedProperty)
+      public void setPublicProperty(<b>java.lang.String</b> publicProperty)
+
+org/netbeans/tests/examples/packb/BeanB.java
+      public void make(int index, <b>java.lang.String</b> s, org.netbeans.tests.examples.packa.Bean bean)
+
+org/netbeans/tests/examples/packb/BeanC.java
+      <b>java.lang.String</b> retValue;
+      public <b>java.lang.String</b> getProtectedProperty()
+      public void make(int index, <b>java.lang.String</b> s, org.netbeans.tests.examples.packa.Bean bean)
+
+org/netbeans/tests/examples/packb/BeansD.java
+      <b>String</b>[] s=new String[] {
+      <b>java.lang.String</b> retValue;
+      String[] s=new <b>String</b>[] {
+      public <b>String</b> getProtectedProperty()
+      public <b>java.lang.String</b> getProtectedProperty()
+      public BeanDA(<b>java.lang.String</b> text)
+      public BeanDD(<b>String</b> text)
+      public void make(int a, <b>String</b> s, Bean b)
+      public void make(int index, <b>java.lang.String</b> s, Bean bean)
+      public void make(int index, <b>java.lang.String</b> s, Bean bean)
+
+org/netbeans/tests/examples/packc/AFrame.java
+      public static void main(<b>String</b> args[])
+
+org/netbeans/tests/examples/packc/AbstractBean.java
+      protected <b>String</b> rootField;
+
+org/netbeans/tests/examples/packc/Makable.java
+      public void make(int index, <b>String</b> s, Bean bean)
+
+

@@ -1,0 +1,2 @@
+Extract super class SuperF from packageC.myAnnot
+Problem fatal: The selected type must be a class (cannot perform this operation on an interface, enum or annotation type).

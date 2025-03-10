@@ -1,0 +1,153 @@
+Rename class abc.def.ghi.H to TestClassHName
+Found 4 occurance(s).
+
+abc/def/E.java
+
+      import static <b>abc.def.ghi.H</b>.*;
+
+File diff:
+
+-pass[10]     import static abc.def.ghi.H.*;
++test[10]     import static abc.def.ghi.TestClassHName.*;
+Original file:
+-------------------------------------
+/*
+ * E.java
+ *
+ * Created on May 24, 2004, 11:47 AM
+ */
+
+package abc.def;
+
+import abc.En;
+import static abc.def.ghi.H.*;
+/**
+ *
+ * @author  mg105252
+ */
+public class E extends D {
+    
+    /** Creates a new instance of E */
+    public E() {
+        En e=DATA1.getEn();
+        D d=new D(DATA1.getEn());
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * E.java
+ *
+ * Created on May 24, 2004, 11:47 AM
+ */
+
+package abc.def;
+
+import abc.En;
+import static abc.def.ghi.TestClassHName.*;
+/**
+ *
+ * @author  mg105252
+ */
+public class E extends D {
+    
+    /** Creates a new instance of E */
+    public E() {
+        En e=DATA1.getEn();
+        D d=new D(DATA1.getEn());
+    }
+    
+}
+
+abc/def/ghi/H.java
+
+      /** <i> Creates a new instance of <b>H</b></i>
+      // <i> * <b>H</b>.java</i>
+      Rename file, class, and constructors to TestClassHName
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * H.java
+ *
+ * Created on May 24, 2004, 1:56 PM
+ */
+
+package abc.def.ghi;
+
+import abc.En;
+import abc.def.D;
+import abc.def.DAnnotType;
+import  abc.def.ghi.jkl.J ;
+
+/**
+ *
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class H implements J {
+    
+    public static final D DATA1=new D(En.X);
+    public static final D DATA2=new D(En.Y);
+    public static final D DATA3=new D(En.Z);
+    
+    /** Creates a new instance of H */
+    public H() {
+        
+        new D().methodD(En.Y);
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    public boolean setState(String text) {
+        return true;
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * H.java
+ *
+ * Created on May 24, 2004, 1:56 PM
+ */
+
+package abc.def.ghi;
+
+import abc.En;
+import abc.def.D;
+import abc.def.DAnnotType;
+import  abc.def.ghi.jkl.J ;
+
+/**
+ *
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class H implements J {
+    
+    public static final D DATA1=new D(En.X);
+    public static final D DATA2=new D(En.Y);
+    public static final D DATA3=new D(En.Z);
+    
+    /** Creates a new instance of H */
+    public H() {
+        
+        new D().methodD(En.Y);
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    public boolean setState(String text) {
+        return true;
+    }
+    
+}
+

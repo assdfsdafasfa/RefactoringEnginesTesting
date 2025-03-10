@@ -1,0 +1,17 @@
+
+package org.netbeans.test.rename;
+
+public class ThirdClass {
+    Object f;
+    
+    public void test(String[] f) {
+        int aa;
+        String bb;
+        
+        aa=0;
+        bb=null;
+        f=null;
+        this.f=null;
+    }
+    
+}

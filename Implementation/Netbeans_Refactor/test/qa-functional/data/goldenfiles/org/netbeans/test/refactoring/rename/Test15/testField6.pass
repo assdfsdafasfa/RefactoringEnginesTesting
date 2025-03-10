@@ -1,0 +1,167 @@
+Rename annotation member coord to dimension of AnnotationType abc.def.DAnnotType
+Found 2 occurance(s).
+
+abc/def/D.java
+
+      @DAnnotType(id=7, value="methD", <b>coord=En.Y</b>) public void methodD(En e)
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.A {
+    
+    @DAnnotType(id=1455)
+    private abc.A<Integer> a;
+    En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.A a;
+        a = new abc.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.A proma) {
+        
+    }
+    
+    public void methodDI(abc.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.A {
+    
+    @DAnnotType(id=1455)
+    private abc.A<Integer> a;
+    En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.A a;
+        a = new abc.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.A proma) {
+        
+    }
+    
+    public void methodDI(abc.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+    
+}
+
+abc/def/DAnnotType.java
+
+      Rename attribute to dimension
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * DAnnotType.java
+ *
+ * Created on January 4, 2005, 11:34 AM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * This is a comment for DAnnotType.
+ * @author eh103527
+ */
+public @interface DAnnotType {
+    int id();
+    String value() default "<empty>";
+    En coord() default En.X;
+}
+Modified file:
+-------------------------------------
+/*
+ * DAnnotType.java
+ *
+ * Created on January 4, 2005, 11:34 AM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * This is a comment for DAnnotType.
+ * @author eh103527
+ */
+public @interface DAnnotType {
+    int id();
+    String value() default "<empty>";
+    En coord() default En.X;
+}
+

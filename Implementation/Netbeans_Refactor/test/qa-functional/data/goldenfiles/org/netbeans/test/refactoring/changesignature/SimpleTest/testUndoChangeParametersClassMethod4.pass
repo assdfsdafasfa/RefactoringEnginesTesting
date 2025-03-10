@@ -1,0 +1,278 @@
+Change signature of method public abstract methodBean() of class org.netbeans.tests.examples.packc.AbstractBean
+method public methodBean
+Arguments: 
+java.lang.String[] names = new String[] {}
+Object[][] data = new Object[0][0]
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packa.Association that override or implement the method.
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packa.Property that override or implement the method.
+Found 3 occurance(s).
+
+org/netbeans/tests/examples/packa/Association.java
+
+      Change method parameters of <b>public void methodBean()</b>
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * Association.java
+ *
+ * Created on May 20, 2004, 1:49 PM
+ */
+
+package org.netbeans.tests.examples.packa;
+
+import java.util.Date;
+import org.netbeans.tests.examples.packc.AbstractBean;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class Association extends AbstractBean {
+    
+    protected Bean other;
+    
+    protected String name;
+    
+    /** Creates a new instance of Association */
+    public Association(String name, Bean other) {
+        this.name=name;
+        this.other=other;
+    }
+    
+    public void methodBean() {
+        rootField=name+(new Date().toString());
+        System.out.println(rootField);
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * Association.java
+ *
+ * Created on May 20, 2004, 1:49 PM
+ */
+
+package org.netbeans.tests.examples.packa;
+
+import java.util.Date;
+import org.netbeans.tests.examples.packc.AbstractBean;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class Association extends AbstractBean {
+    
+    protected Bean other;
+    
+    protected String name;
+    
+    /** Creates a new instance of Association */
+    public Association(String name, Bean other) {
+        this.name=name;
+        this.other=other;
+    }
+    
+    public void methodBean() {
+        rootField=name+(new Date().toString());
+        System.out.println(rootField);
+    }
+    
+}
+
+org/netbeans/tests/examples/packa/Property.java
+
+      Change method parameters of <b>public void methodBean()</b>
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * Property.java
+ *
+ * Created on May 20, 2004, 1:48 PM
+ */
+
+package org.netbeans.tests.examples.packa;
+
+import java.util.Date;
+import org.netbeans.tests.examples.packc.AbstractBean;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class Property extends AbstractBean {
+    
+    static String[] types={"String","int","boolean","char","long","short","float","double"};
+    
+    String name;
+    
+    String value;
+    
+    /** Creates a new instance of Property */
+    public Property(String name, String value) {
+        this.name=name;
+        this.value=value;
+    }
+    
+    /**
+     * Getter for property name.
+     * @return Value of property name.
+     */
+    public java.lang.String getName() {
+        return name;
+    }
+    
+    /**
+     * Getter for property value.
+     * @return Value of property value.
+     */
+    public java.lang.String getValue() {
+        return value;
+    }
+    
+    /**
+     * Setter for property value.
+     * @param value New value of property value.
+     */
+    public void setValue(java.lang.String value) {
+        this.value = value;
+        if (Bean.class == value.getClass()) {
+            System.out.println("good");
+        }
+    }
+    
+    public void methodBean() {
+        rootField=name+" "+value+" "+(new Date().toString());
+        System.out.println(rootField);        
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * Property.java
+ *
+ * Created on May 20, 2004, 1:48 PM
+ */
+
+package org.netbeans.tests.examples.packa;
+
+import java.util.Date;
+import org.netbeans.tests.examples.packc.AbstractBean;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class Property extends AbstractBean {
+    
+    static String[] types={"String","int","boolean","char","long","short","float","double"};
+    
+    String name;
+    
+    String value;
+    
+    /** Creates a new instance of Property */
+    public Property(String name, String value) {
+        this.name=name;
+        this.value=value;
+    }
+    
+    /**
+     * Getter for property name.
+     * @return Value of property name.
+     */
+    public java.lang.String getName() {
+        return name;
+    }
+    
+    /**
+     * Getter for property value.
+     * @return Value of property value.
+     */
+    public java.lang.String getValue() {
+        return value;
+    }
+    
+    /**
+     * Setter for property value.
+     * @param value New value of property value.
+     */
+    public void setValue(java.lang.String value) {
+        this.value = value;
+        if (Bean.class == value.getClass()) {
+            System.out.println("good");
+        }
+    }
+    
+    public void methodBean() {
+        rootField=name+" "+value+" "+(new Date().toString());
+        System.out.println(rootField);        
+    }
+    
+}
+
+org/netbeans/tests/examples/packc/AbstractBean.java
+
+      Change method parameters of <b>public abstract void methodBean()</b>
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * AbstractBean.java
+ *
+ * Created on July 20, 2004, 3:25 PM
+ */
+
+package org.netbeans.tests.examples.packc;
+
+/**
+ *
+ * @author  eh103527
+ */
+public abstract class AbstractBean {
+    
+    protected String rootField;
+    
+    /** Creates a new instance of AbstractBean */
+    public AbstractBean() {
+    }
+    
+    public abstract void methodBean();
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * AbstractBean.java
+ *
+ * Created on July 20, 2004, 3:25 PM
+ */
+
+package org.netbeans.tests.examples.packc;
+
+/**
+ *
+ * @author  eh103527
+ */
+public abstract class AbstractBean {
+    
+    protected String rootField;
+    
+    /** Creates a new instance of AbstractBean */
+    public AbstractBean() {
+    }
+    
+    public abstract void methodBean();
+    
+}
+

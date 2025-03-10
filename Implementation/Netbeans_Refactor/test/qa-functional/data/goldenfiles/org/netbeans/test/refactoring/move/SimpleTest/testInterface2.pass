@@ -1,0 +1,62 @@
+Move class org.netbeans.tests.examples.packa.Testable to org.netbeans.tests.examples.packc
+Found 10 occurance(s).
+
+BeanB.java
+
+      import <b>org.netbeans.tests.examples.packa.Testable</b>;
+
+File diff:
+
+-pass[11]     import org.netbeans.tests.examples.packa.Testable;
++test[11]     import org.netbeans.tests.examples.packc.Testable;
+
+org/netbeans/tests/examples/packa/BeanA.java
+
+      public <b>org.netbeans.tests.examples.packa.Testable</b> test()
+      public <b>org.netbeans.tests.examples.packa.Testable</b>[] usages(java.util.List list)
+      public class BeanA extends Bean implements <b>org.netbeans.tests.examples.packa.Testable</b>
+
+File diff:
+
+-pass[16]     public class BeanA extends Bean implements org.netbeans.tests.examples.packa.Testable {
++test[16]     public class BeanA extends Bean implements org.netbeans.tests.examples.packc.Testable {
+-pass[81]         public org.netbeans.tests.examples.packa.Testable test() {
++test[81]         public org.netbeans.tests.examples.packc.Testable test() {
+-pass[86]         public org.netbeans.tests.examples.packa.Testable[] usages(java.util.List list) {
++test[86]         public org.netbeans.tests.examples.packc.Testable[] usages(java.util.List list) {
+
+org/netbeans/tests/examples/packa/Testable.java
+
+      Add import org.netbeans.tests.examples.packa
+      Move source to package "org.netbeans.tests.examples.packc"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packa;
++test[7]      package org.netbeans.tests.examples.packc;
++test[9]      import org.netbeans.tests.examples.packa.*;
+
+org/netbeans/tests/examples/packb/BeanC.java
+
+      <b>org.netbeans.tests.examples.packa.Testable</b> te=t;
+      public <b>org.netbeans.tests.examples.packa.Testable</b> test()
+      public void setTestable(<b>org.netbeans.tests.examples.packa.Testable</b> t)
+
+File diff:
+
+-pass[77]         public org.netbeans.tests.examples.packa.Testable test() {
++test[77]         public org.netbeans.tests.examples.packc.Testable test() {
+-pass[88]         public void setTestable(org.netbeans.tests.examples.packa.Testable t) {
++test[88]         public void setTestable(org.netbeans.tests.examples.packc.Testable t) {
+-pass[89]             org.netbeans.tests.examples.packa.Testable te=t;
++test[89]             org.netbeans.tests.examples.packc.Testable te=t;
+
+org/netbeans/tests/examples/packc/BeansD.java
+
+      import <b>org.netbeans.tests.examples.packa.Testable</b>;
+
+File diff:
+
+-pass[13]     import org.netbeans.tests.examples.packa.Testable;
++test[13]     import org.netbeans.tests.examples.packc.Testable;
+

@@ -1,0 +1,68 @@
+Rename class Main to MainRenamed
+Found 3 occurance(s).
+
+Main.java
+
+      <b>Main</b> main=new Main();
+      Main main=new <b>Main</b>();
+      Rename file, class, and constructors to MainRenamed
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * Main.java
+ *
+ * Created on June 24, 2004, 2:05 PM
+ */
+
+/**
+ *
+ * @author  eh103527
+ */
+public class Main {
+    
+    /** Creates a new instance of Main */
+    public Main() {
+    }
+    
+    public void run() {
+        
+    }
+    
+    public static void main(java.lang.String[] args) {
+        Main main=new Main();
+        main.run();
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * Main.java
+ *
+ * Created on June 24, 2004, 2:05 PM
+ */
+
+/**
+ *
+ * @author  eh103527
+ */
+public class Main {
+    
+    /** Creates a new instance of Main */
+    public Main() {
+    }
+    
+    public void run() {
+        
+    }
+    
+    public static void main(java.lang.String[] args) {
+        Main main=new Main();
+        main.run();
+    }
+    
+}
+

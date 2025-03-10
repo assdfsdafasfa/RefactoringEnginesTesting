@@ -1,0 +1,41 @@
+Move class org.netbeans.tests.examples.packb.BeansD to org.netbeans.tests.examples.packc
+Found 6 occurance(s).
+
+BeanB.java
+
+      Add import org.netbeans.tests.examples.packc.BeansD
+
+File diff:
+
++test[12]     import org.netbeans.tests.examples.packc.BeansD;
+
+org/netbeans/tests/examples/packb/Bean.java
+
+      Add import org.netbeans.tests.examples.packc.BeansD
+
+File diff:
+
++test[13]     import org.netbeans.tests.examples.packc.BeansD;
+
+org/netbeans/tests/examples/packb/BeanC.java
+
+      Add import org.netbeans.tests.examples.packc.BeansD
+
+File diff:
+
++test[9]      import org.netbeans.tests.examples.packc.BeansD;
+
+org/netbeans/tests/examples/packb/BeansD.java
+
+      Add import org.netbeans.tests.examples.packb
+      Move source to package "org.netbeans.tests.examples.packc"
+      Remove import org.netbeans.tests.examples.packc.Makable
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packb;
++test[7]      package org.netbeans.tests.examples.packc;
++test[10]     import org.netbeans.tests.examples.packb.*;
+-pass[12]     import org.netbeans.tests.examples.packc.Makable;
++test[13]     
+

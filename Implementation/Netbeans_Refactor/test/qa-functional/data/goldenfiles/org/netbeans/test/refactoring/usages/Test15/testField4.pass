@@ -1,0 +1,34 @@
+Find usages of: id
+Found 7 occurance(s).
+
+abc/A.java
+      @DAnnotType(<b>id=5</b>) public class A&lt;T&gt;
+
+abc/C.java
+      @DAnnotType(<b>id=1</b>, value="type") public Object methodA()
+      @DAnnotType(<b>id=3</b>) private void methodA(int i)
+
+abc/def/D.java
+      @DAnnotType(<b>id=1455</b>)
+      @DAnnotType(<b>id=7</b>, value="methD", coord=En.Y) public void methodD(En e)
+
+abc/def/ghi/G.java
+      @DAnnotType(<b>id=2</b>, value="ghi") public void testA()
+
+abc/def/ghi/H.java
+      @DAnnotType(<b>id=5</b>) public class H implements J
+
+
+Find usages of: value
+Found 3 occurance(s).
+
+abc/C.java
+      @DAnnotType(id=1, <b>value="type"</b>) public Object methodA()
+
+abc/def/D.java
+      @DAnnotType(id=7, <b>value="methD"</b>, coord=En.Y) public void methodD(En e)
+
+abc/def/ghi/G.java
+      @DAnnotType(id=2, <b>value="ghi"</b>) public void testA()
+
+

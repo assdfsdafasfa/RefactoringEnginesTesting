@@ -1,0 +1,132 @@
+Encapsulate field  en of class abc.def.D
+field changed to protected, setter: public setEn(...), getter: public getEn(), use accessors if necessary
+Found 4 occurance(s).
+
+abc/def/D.java
+
+      <b>en</b>=e;
+      <b>en</b>=e;
+      Change modifier of field <b>en</b> to <b>protected</b>
+      Create method setEn
+
+File diff:
+
+-pass[19]         En en;
++test[19]         protected En en;
++test[51]     
++test[52]         public void setEn(En en) {
++test[53]             this.en = en;
++test[54]         }
+Original file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.A {
+    
+    @DAnnotType(id=1455)
+    private abc.A<Integer> a;
+    En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.A a;
+        a = new abc.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.A proma) {
+        
+    }
+    
+    public void methodDI(abc.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.A {
+    
+    @DAnnotType(id=1455)
+    private abc.A<Integer> a;
+    protected En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.A a;
+        a = new abc.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.A proma) {
+        
+    }
+    
+    public void methodDI(abc.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+
+    public void setEn(En en) {
+        this.en = en;
+    }
+    
+}
+

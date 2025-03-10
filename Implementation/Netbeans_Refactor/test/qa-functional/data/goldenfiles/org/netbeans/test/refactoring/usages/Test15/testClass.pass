@@ -1,0 +1,121 @@
+Find usages of: abc.A
+Found 22 occurance(s).
+
+abc/A.java
+      /** <i> Creates a new instance of <b>A</b></i>
+      /** <i> Creates a new instance of <b>A</b></i>
+      /** <i> Creates a new instance of <b>A</b></i>
+      // <i> * <b>A</b>.java</i>
+
+abc/B.java
+      public class B&lt;T&gt; extends <b>A&lt;T&gt;</b>
+
+abc/Main.java
+      new <b>A&lt;String&gt;</b>();
+
+abc/def/D.java
+      /** <i> class is offspring of class <b>A</b></i>
+      <b>abc.A</b> a;
+      a = new <b>abc.A</b>(1, "text");
+      private <b>abc.A&lt;Integer&gt;</b> a;
+      public class D extends <b>abc.A</b>
+      public void methodD(<b>abc.A</b> proma)
+      public void methodDI(<b>abc.A</b> proma, abc.def.ghi.I promi)
+
+abc/def/ghi/G.java
+      <b>A&lt;Long&gt;</b> al=new A();
+      <b>A&lt;String&gt;</b> as=new A();
+      <b>A&lt;Vector&gt;</b> av=new A();
+      <b>abc.A</b> a = new abc.A();
+      A&lt;Long&gt; al=new <b>A</b>();
+      A&lt;String&gt; as=new <b>A</b>();
+      A&lt;Vector&gt; av=new <b>A</b>();
+      abc.A a = new <b>abc.A</b>();
+      import <b>abc.A</b>;
+
+
+Find usages of: java.lang.String
+Found 25 occurance(s).
+
+abc/A.java
+      import static <b>java.lang.String</b>.*;
+      public <b>String</b> text = "text";
+      public A(T i, <b>String</b> text)
+      public List&lt;<b>String</b>&gt; list;
+      public void methodA(T i, <b>String</b> text)
+      public void methodA(T i, <b>String</b> text, boolean b, String ... var)
+      public void methodA(T i, String text, boolean b, <b>String</b> ... var)
+
+abc/B.java
+      list = new ArrayList&lt;<b>String</b>&gt;();
+      protected void methodA(int i, <b>String</b> text)
+      public <b>String</b> text = "text";
+
+abc/C.java
+      protected void methodA(int i, <b>String</b> text)
+      public <b>String</b> getState()
+      public <b>String</b> text = "text";
+
+abc/Main.java
+      new A&lt;<b>String</b>&gt;();
+      public <b>String</b> getState()
+      public static void main(<b>String</b>[] args)
+
+abc/def/DAnnotType.java
+      <b>String</b> value() default "&lt;empty&gt;";
+
+abc/def/ghi/G.java
+      A&lt;<b>String</b>&gt; as=new A();
+
+abc/def/ghi/H.java
+      public <b>String</b> getState()
+      public boolean setState(<b>String</b> text)
+
+abc/def/ghi/I.java
+      public <b>String</b> getState()
+      public <b>String</b> state = "idle";
+
+abc/def/ghi/jkl/J.java
+      public <b>String</b> getState()
+      public <b>String</b> state = "idle";
+      public boolean setState(<b>String</b> text)
+
+
+Find usages of: abc.def.D
+Found 15 occurance(s).
+
+abc/def/D.java
+      /** <i> Creates a new instance of <b>D</b></i>
+      // <i> * <b>D</b>.java</i>
+
+abc/def/E.java
+      <b>D</b> d=new D(DATA1.getEn());
+      D d=new <b>D</b>(DATA1.getEn());
+      public class E extends <b>D</b>
+
+abc/def/ghi/G.java
+      <b>abc.def.D</b> d = new abc.def.D();
+      abc.def.D d = new <b>abc.def.D</b>();
+
+abc/def/ghi/H.java
+      import <b>abc.def.D</b>;
+      new <b>D</b>().methodD(En.Y);
+      public static final <b>D</b> DATA1=new D(En.X);
+      public static final <b>D</b> DATA2=new D(En.Y);
+      public static final <b>D</b> DATA3=new D(En.Z);
+      public static final D DATA1=new <b>D</b>(En.X);
+      public static final D DATA2=new <b>D</b>(En.Y);
+      public static final D DATA3=new <b>D</b>(En.Z);
+
+
+Find usages of: abc.def.ghi.H
+Found 3 occurance(s).
+
+abc/def/E.java
+      import static <b>abc.def.ghi.H</b>.*;
+
+abc/def/ghi/H.java
+      /** <i> Creates a new instance of <b>H</b></i>
+      // <i> * <b>H</b>.java</i>
+
+

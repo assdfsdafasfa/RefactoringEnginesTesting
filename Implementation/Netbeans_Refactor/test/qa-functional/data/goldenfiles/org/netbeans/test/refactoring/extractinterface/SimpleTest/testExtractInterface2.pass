@@ -1,0 +1,77 @@
+Extract new interface newIfaceFromIface from packageB.InterfaceA
+package packageB;
+
+
+
+
+/**
+ *
+ * @author XXXX 
+*/public interface newIfaceFromIface {
+    void method1(int x, int y);
+
+    }
+
+Found 3 occurance(s).
+
+packageB/InterfaceA.java
+
+      Add <b>newIfaceFromIface</b> to the implements/extends clause.
+      Move method <b>method1(int, int)</b> to the new interface.
+
+File diff:
+
+-pass[17]     public interface InterfaceA {
++test[17]     public interface InterfaceA extends newIfaceFromIface {
+-pass[18]           public void method1(int x, int y);
++test[18]     
+Original file:
+-------------------------------------
+/*
+ * InterfaceA.java
+ *
+ * Created on August 10, 2005, 12:38 PM
+ *
+ * To change this template, choose Tools | Options and locate the template under
+ * the Source Creation and Management node. Right-click the template and choose
+ * Open. You can then make changes to the template in the Source Editor.
+ */
+
+package packageB;
+
+/**
+ *
+ * @author jp159440
+ */
+public interface InterfaceA {
+      public void method1(int x, int y);
+      
+      
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * InterfaceA.java
+ *
+ * Created on August 10, 2005, 12:38 PM
+ *
+ * To change this template, choose Tools | Options and locate the template under
+ * the Source Creation and Management node. Right-click the template and choose
+ * Open. You can then make changes to the template in the Source Editor.
+ */
+
+package packageB;
+
+/**
+ *
+ * @author jp159440
+ */
+public interface InterfaceA extends newIfaceFromIface {
+
+      
+      
+    
+}
+
+Create interface <b>newIfaceFromIface</b>.

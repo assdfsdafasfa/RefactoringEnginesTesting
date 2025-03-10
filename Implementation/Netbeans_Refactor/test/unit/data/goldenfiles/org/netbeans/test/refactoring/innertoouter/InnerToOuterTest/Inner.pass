@@ -1,0 +1,13 @@
+package org.netbeans.test.innertoouter;
+
+
+
+public class Inner {
+    public Inner(NewClass foo) {
+        this.foo = foo;
+    }
+
+    private final NewClass foo;
+
+    
+}

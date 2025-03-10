@@ -1,0 +1,20 @@
+Find usages of abc.A.methodA(T, java.lang.String)
+Found 4 occurance(s).
+
+abc/def/ghi/G.java
+      al.<b>methodA</b>(123l, "s2");
+      as.<b>methodA</b>("s1", "s2");
+      av.<b>methodA</b>(new Vector(), "aah");
+      av.<b>methodA</b>(v2, "bbb");
+
+
+Find usages of abc.def.D.methodD(abc.En)
+Found 2 occurance(s).
+
+abc/def/ghi/G.java
+      d.<b>methodD</b>(En.X);
+
+abc/def/ghi/H.java
+      new D().<b>methodD</b>(En.Y);
+
+

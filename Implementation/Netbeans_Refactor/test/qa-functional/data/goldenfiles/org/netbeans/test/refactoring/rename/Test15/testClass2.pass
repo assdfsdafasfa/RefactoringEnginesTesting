@@ -1,0 +1,397 @@
+Rename class abc.def.D to TestClassDName
+Found 16 occurance(s).
+
+abc/def/D.java
+
+      /** <i> Creates a new instance of <b>D</b></i>
+      // <i> * <b>D</b>.java</i>
+      Rename file, class, and constructors to TestClassDName
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.A {
+    
+    @DAnnotType(id=1455)
+    private abc.A<Integer> a;
+    En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.A a;
+        a = new abc.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.A proma) {
+        
+    }
+    
+    public void methodDI(abc.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.A {
+    
+    @DAnnotType(id=1455)
+    private abc.A<Integer> a;
+    En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.A a;
+        a = new abc.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.A proma) {
+        
+    }
+    
+    public void methodDI(abc.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+    
+}
+
+abc/def/E.java
+
+      <b>D</b> d=new D(DATA1.getEn());
+      D d=new <b>D</b>(DATA1.getEn());
+      public class E extends <b>D</b>
+
+File diff:
+
+-pass[15]     public class E extends D {
++test[15]     public class E extends TestClassDName {
+-pass[20]             D d=new D(DATA1.getEn());
++test[20]             TestClassDName d=new TestClassDName(DATA1.getEn());
+Original file:
+-------------------------------------
+/*
+ * E.java
+ *
+ * Created on May 24, 2004, 11:47 AM
+ */
+
+package abc.def;
+
+import abc.En;
+import static abc.def.ghi.H.*;
+/**
+ *
+ * @author  mg105252
+ */
+public class E extends D {
+    
+    /** Creates a new instance of E */
+    public E() {
+        En e=DATA1.getEn();
+        D d=new D(DATA1.getEn());
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * E.java
+ *
+ * Created on May 24, 2004, 11:47 AM
+ */
+
+package abc.def;
+
+import abc.En;
+import static abc.def.ghi.H.*;
+/**
+ *
+ * @author  mg105252
+ */
+public class E extends TestClassDName {
+    
+    /** Creates a new instance of E */
+    public E() {
+        En e=DATA1.getEn();
+        TestClassDName d=new TestClassDName(DATA1.getEn());
+    }
+    
+}
+
+abc/def/ghi/G.java
+
+      <b>abc.def.D</b> d = new abc.def.D();
+      abc.def.D d = new <b>abc.def.D</b>();
+
+File diff:
+
+-pass[25]             abc.def.D d = new abc.def.D();
++test[25]             abc.def.TestClassDName d = new abc.def.TestClassDName();
+Original file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.A;
+import abc.En;
+import abc.def.DAnnotType;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.A a = new abc.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.D d = new abc.def.D();
+        d.methodD(En.X);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation DAnnotType
+     */
+    @DAnnotType(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.A;
+import abc.En;
+import abc.def.DAnnotType;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.A a = new abc.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.TestClassDName d = new abc.def.TestClassDName();
+        d.methodD(En.X);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation DAnnotType
+     */
+    @DAnnotType(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+
+abc/def/ghi/H.java
+
+      import <b>abc.def.D</b>;
+      new <b>D</b>().methodD(En.Y);
+      public static final <b>D</b> DATA1=new D(En.X);
+      public static final <b>D</b> DATA2=new D(En.Y);
+      public static final <b>D</b> DATA3=new D(En.Z);
+      public static final D DATA1=new <b>D</b>(En.X);
+      public static final D DATA2=new <b>D</b>(En.Y);
+      public static final D DATA3=new <b>D</b>(En.Z);
+
+File diff:
+
+-pass[10]     import abc.def.D;
++test[10]     import abc.def.TestClassDName;
+-pass[21]         public static final D DATA1=new D(En.X);
++test[21]         public static final TestClassDName DATA1=new TestClassDName(En.X);
+-pass[22]         public static final D DATA2=new D(En.Y);
++test[22]         public static final TestClassDName DATA2=new TestClassDName(En.Y);
+-pass[23]         public static final D DATA3=new D(En.Z);
++test[23]         public static final TestClassDName DATA3=new TestClassDName(En.Z);
+-pass[28]             new D().methodD(En.Y);
++test[28]             new TestClassDName().methodD(En.Y);
+Original file:
+-------------------------------------
+/*
+ * H.java
+ *
+ * Created on May 24, 2004, 1:56 PM
+ */
+
+package abc.def.ghi;
+
+import abc.En;
+import abc.def.D;
+import abc.def.DAnnotType;
+import  abc.def.ghi.jkl.J ;
+
+/**
+ *
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class H implements J {
+    
+    public static final D DATA1=new D(En.X);
+    public static final D DATA2=new D(En.Y);
+    public static final D DATA3=new D(En.Z);
+    
+    /** Creates a new instance of H */
+    public H() {
+        
+        new D().methodD(En.Y);
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    public boolean setState(String text) {
+        return true;
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * H.java
+ *
+ * Created on May 24, 2004, 1:56 PM
+ */
+
+package abc.def.ghi;
+
+import abc.En;
+import abc.def.TestClassDName;
+import abc.def.DAnnotType;
+import  abc.def.ghi.jkl.J ;
+
+/**
+ *
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class H implements J {
+    
+    public static final TestClassDName DATA1=new TestClassDName(En.X);
+    public static final TestClassDName DATA2=new TestClassDName(En.Y);
+    public static final TestClassDName DATA3=new TestClassDName(En.Z);
+    
+    /** Creates a new instance of H */
+    public H() {
+        
+        new TestClassDName().methodD(En.Y);
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    public boolean setState(String text) {
+        return true;
+    }
+    
+}
+

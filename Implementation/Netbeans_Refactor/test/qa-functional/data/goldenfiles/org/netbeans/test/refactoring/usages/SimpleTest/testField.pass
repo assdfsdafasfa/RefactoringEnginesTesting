@@ -1,0 +1,84 @@
+Find usages of: refID
+Found 16 occurance(s).
+
+org/netbeans/tests/examples/packa/Bean.java
+      /** <i> @return <b>refID</b></i>
+      /** <i> Reference ID - <b>refID</b>.</i>
+      /** <i> Returns <b>refID</b>.</i>
+      return <b>refID</b>;
+
+org/netbeans/tests/examples/packb/BeanA.java
+      <b>refID</b>=2345;
+      return <b>refID</b>+10;
+
+org/netbeans/tests/examples/packb/BeanB.java
+      <b>refID</b>=473542*Makable.CODE;
+
+org/netbeans/tests/examples/packb/BeanC.java
+      ((BeanB)(((BeanC)bb).getBean())).make(<b>refID</b>+1, ((BeanA)bb).getProtectedProperty(), b);
+      ((org.netbeans.tests.examples.packc.Makable)bb).prepare().make(<b>refID</b>, "text", this);
+      System.out.println("done "+<b>refID</b>+" "+BeanC.this.protectedProperty);
+      int count=(int)((<b>refID</b>+5)*d+(refID*refID*1.0/Math.tan((double)refID)));
+      int count=(int)((refID+5)*d+(<b>refID</b>*refID*1.0/Math.tan((double)refID)));
+      int count=(int)((refID+5)*d+(refID*<b>refID</b>*1.0/Math.tan((double)refID)));
+      int count=(int)((refID+5)*d+(refID*refID*1.0/Math.tan((double)<b>refID</b>)));
+      return <b>refID</b>+100;
+
+org/netbeans/tests/examples/packb/BeansD.java
+      <b>refID</b>=a;
+
+
+Find usages of: protectedProperty
+Found 23 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanA.java
+      /** <i> @param <b>protectedProperty</b> New value of property protectedProperty.</i>
+      /** <i> @param protectedProperty New value of property <b>protectedProperty</b>.</i>
+      /** <i> @return Value of property <b>protectedProperty</b>.</i>
+      /** <i> Getter for property <b>protectedProperty</b>.</i>
+      /** <i> Setter for property <b>protectedProperty</b>.</i>
+      <b>this.protectedProperty</b> = protectedProperty;
+      privateProperty=publicProperty+<b>protectedProperty</b>;
+      return <b>protectedProperty</b>;
+
+org/netbeans/tests/examples/packb/BeanB.java
+      <b>ba.protectedProperty</b>+=5;
+
+org/netbeans/tests/examples/packb/BeanC.java
+      <b>protectedProperty</b>+=s+publicProperty;
+      <b>protectedProperty</b>="set";
+      <b>protectedProperty</b>="set";
+      System.out.println("done "+refID+" "+<b>BeanC.this.protectedProperty</b>);
+      System.out.println("getBean, property="+<b>protectedProperty</b>);
+      return new Object[] {<b>protectedProperty</b>, publicProperty};
+
+org/netbeans/tests/examples/packb/BeansD.java
+      <b>protectedProperty</b>,
+      <b>protectedProperty</b>="abc";
+      <b>protectedProperty</b>=copy.protectedProperty+copy.protectedProperty;
+      System.out.println("testinner "+<b>protectedProperty</b>+publicProperty);
+      protectedProperty=<b>copy.protectedProperty</b>+copy.protectedProperty;
+      protectedProperty=copy.protectedProperty+<b>copy.protectedProperty</b>;
+      publicProperty=<b>protectedProperty</b>;
+      return (<b>protectedProperty</b>+retValue).substring(1);
+
+
+Find usages of: CODE
+Found 7 occurance(s).
+
+org/netbeans/tests/examples/packa/Testable.java
+      public static final int MATCH=<b>Makable.CODE</b>;
+
+org/netbeans/tests/examples/packb/BeanB.java
+      refID=473542*<b>Makable.CODE</b>;
+      return new Object[<b>CODE</b>];
+
+org/netbeans/tests/examples/packb/BeanC.java
+      int d=<b>BeanB.CODE</b>;
+
+org/netbeans/tests/examples/packb/BeansD.java
+      int number=<b>CODE</b>;
+      this.length = length*<b>Makable.CODE</b>;
+      this.number = number*<b>BeanB.CODE</b>;
+
+

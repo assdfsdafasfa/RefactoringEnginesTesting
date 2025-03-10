@@ -1,0 +1,3 @@
+Selected element:int i;
+Safe delete from class packageD.ClassD
+Problem: References to selected elements were found. Remove all references to these elements in order to safely delete your class.

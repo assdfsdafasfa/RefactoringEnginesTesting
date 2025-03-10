@@ -1,0 +1,292 @@
+Move class org.netbeans.tests.examples.packb.BeanB to 
+Problem: Class you want to move ("BeanB") is using protected field "protectedProperty" of class "BeanA" within the same package.
+Problem: If the class is moved to the default package, classes in other packages will not be able to import the moved class.
+Found 3 occurance(s).
+
+org/netbeans/tests/examples/packa/Bean.java
+
+      Bean b=new <b>org.netbeans.tests.examples.packb.BeanB</b>();
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * Bean.java
+ *
+ * Created on May 20, 2004, 1:46 PM
+ */
+
+package org.netbeans.tests.examples.packa;
+
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import org.netbeans.tests.examples.packb.BeanA;
+import org.netbeans.tests.examples.packb.BeansD;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class Bean {
+        
+    HashMap properties;
+    HashMap associations;
+    
+    /**
+     * Reference ID - refID.
+     */
+    protected int refID=1234;
+    
+    /** Creates a new instance of Bean */
+    protected Bean() {
+        properties=new HashMap();
+        associations=new HashMap();
+    }
+   
+    public Property[] getProperties() {
+        return (Property[])(properties.keySet().toArray(new Property[properties.size()]));
+    }
+    
+    public Bean abc() {
+        BeanA a=new BeansD.BeanDA("text");
+        setA((BeansD.BeanDA)a);
+        Bean b=new org.netbeans.tests.examples.packb.BeanB();
+        return a;
+    }
+    
+    public void setA(BeansD.BeanDA aa) {
+        System.out.println("bye");
+    }
+    
+    /**
+     * Returns refID.
+     * @return refID
+     */
+    public int getRefID() {
+        return refID;
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * Bean.java
+ *
+ * Created on May 20, 2004, 1:46 PM
+ */
+
+package org.netbeans.tests.examples.packa;
+
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import org.netbeans.tests.examples.packb.BeanA;
+import org.netbeans.tests.examples.packb.BeansD;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class Bean {
+        
+    HashMap properties;
+    HashMap associations;
+    
+    /**
+     * Reference ID - refID.
+     */
+    protected int refID=1234;
+    
+    /** Creates a new instance of Bean */
+    protected Bean() {
+        properties=new HashMap();
+        associations=new HashMap();
+    }
+   
+    public Property[] getProperties() {
+        return (Property[])(properties.keySet().toArray(new Property[properties.size()]));
+    }
+    
+    public Bean abc() {
+        BeanA a=new BeansD.BeanDA("text");
+        setA((BeansD.BeanDA)a);
+        Bean b=new org.netbeans.tests.examples.packb.BeanB();
+        return a;
+    }
+    
+    public void setA(BeansD.BeanDA aa) {
+        System.out.println("bye");
+    }
+    
+    /**
+     * Returns refID.
+     * @return refID
+     */
+    public int getRefID() {
+        return refID;
+    }
+}
+
+org/netbeans/tests/examples/packb/BeanB.java
+
+      Add import org.netbeans.tests.examples.packb
+      Move source to package "&lt;default&gt;"
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * BeanB.java
+ *
+ * Created on May 20, 2004, 2:14 PM
+ */
+
+package org.netbeans.tests.examples.packb;
+
+import java.util.Vector;
+import org.netbeans.tests.examples.packa.Bean;
+import org.netbeans.tests.examples.packa.Testable;
+
+import org.netbeans.tests.examples.packc.Makable;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanB extends Bean implements org.netbeans.tests.examples.packc.Makable {
+    
+    int index=0;
+    
+    Vector beansa=new Vector();
+    
+    /** Creates a new instance of BeanB */
+    public BeanB() {
+        refID=473542*Makable.CODE;
+    }
+    
+    public void addBeanA(BeanA ba) {
+        beansa.add(ba);
+        ((Testable)new BeansD.BeanDA("1")).test();
+        new BeansD.BeanDA("1").test();
+        ba.protectedProperty+=5;
+    }
+    
+    public BeanA getBeanA(int indx) {
+        return (BeanA)(beansa.get(indx));
+    }
+    
+    public Bean[] getBeans() {
+        return (Bean[])(beansa.toArray(new Bean[beansa.size()]));
+    }
+    
+    /**
+     * Getter for property index.
+     * @return Value of property index.
+     */
+    public int getIndex() {
+        return index;
+    }
+    
+    /**
+     * Setter for property index.
+     * @param index New value of property index.
+     */
+    public void setIndex(int index) {
+        this.index = index;
+    }
+    
+    public Object[] finish() {
+        return new Object[CODE];
+    }
+    
+    public Makable prepare() {
+        System.out.println("do");
+        BeanC c=new BeanC();
+        c.prepare().make(10, "run", this);
+        ((Bean)c).abc();
+        return this;
+    }
+    
+    public void make(int index, java.lang.String s, org.netbeans.tests.examples.packa.Bean bean) {
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * BeanB.java
+ *
+ * Created on May 20, 2004, 2:14 PM
+ */
+
+package org.netbeans.tests.examples.packb;
+
+import java.util.Vector;
+import org.netbeans.tests.examples.packa.Bean;
+import org.netbeans.tests.examples.packa.Testable;
+
+import org.netbeans.tests.examples.packc.Makable;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanB extends Bean implements org.netbeans.tests.examples.packc.Makable {
+    
+    int index=0;
+    
+    Vector beansa=new Vector();
+    
+    /** Creates a new instance of BeanB */
+    public BeanB() {
+        refID=473542*Makable.CODE;
+    }
+    
+    public void addBeanA(BeanA ba) {
+        beansa.add(ba);
+        ((Testable)new BeansD.BeanDA("1")).test();
+        new BeansD.BeanDA("1").test();
+        ba.protectedProperty+=5;
+    }
+    
+    public BeanA getBeanA(int indx) {
+        return (BeanA)(beansa.get(indx));
+    }
+    
+    public Bean[] getBeans() {
+        return (Bean[])(beansa.toArray(new Bean[beansa.size()]));
+    }
+    
+    /**
+     * Getter for property index.
+     * @return Value of property index.
+     */
+    public int getIndex() {
+        return index;
+    }
+    
+    /**
+     * Setter for property index.
+     * @param index New value of property index.
+     */
+    public void setIndex(int index) {
+        this.index = index;
+    }
+    
+    public Object[] finish() {
+        return new Object[CODE];
+    }
+    
+    public Makable prepare() {
+        System.out.println("do");
+        BeanC c=new BeanC();
+        c.prepare().make(10, "run", this);
+        ((Bean)c).abc();
+        return this;
+    }
+    
+    public void make(int index, java.lang.String s, org.netbeans.tests.examples.packa.Bean bean) {
+    }
+    
+}
+

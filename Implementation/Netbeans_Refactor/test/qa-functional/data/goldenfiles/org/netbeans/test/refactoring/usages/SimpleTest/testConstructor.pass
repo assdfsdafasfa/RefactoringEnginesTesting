@@ -1,0 +1,51 @@
+Find usages of org.netbeans.tests.examples.packb.BeanA()
+Found 5 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanA.java
+      /** <i> Creates a new instance of <b>BeanA</b></i>
+      // <i> * <b>BeanA</b>.java</i>
+
+org/netbeans/tests/examples/packb/BeanC.java
+      <b>super</b>();
+
+org/netbeans/tests/examples/packb/BeansD.java
+      <b>super</b>();
+      BeanA copy=new <b>BeanA</b>();
+
+
+Find usages of org.netbeans.tests.examples.packb.BeanB()
+Found 7 occurance(s).
+
+org/netbeans/tests/examples/packa/Bean.java
+      Bean b=new <b>org.netbeans.tests.examples.packb.BeanB</b>();
+
+org/netbeans/tests/examples/packb/BeanB.java
+      /** <i> Creates a new instance of <b>BeanB</b></i>
+      // <i> * <b>BeanB</b>.java</i>
+
+org/netbeans/tests/examples/packb/BeanC.java
+      b=new <b>BeanB</b>() { public void doit() { System.out.println("done "+refID+" "+BeanC.this.protectedProperty); } };
+      new <b>BeanB</b>().abc();
+
+org/netbeans/tests/examples/packb/BeansD.java
+      <b>super</b>();
+      Bean b=new <b>BeanB</b>();
+
+
+Find usages of org.netbeans.tests.examples.packb.BeansD.BeanDA(java.lang.String)
+Found 5 occurance(s).
+
+org/netbeans/tests/examples/packa/Bean.java
+      BeanA a=new <b>BeansD.BeanDA</b>("text");
+
+org/netbeans/tests/examples/packb/BeanB.java
+      ((Testable)new <b>BeansD.BeanDA</b>("1")).test();
+      new <b>BeansD.BeanDA</b>("1").test();
+
+org/netbeans/tests/examples/packb/BeanC.java
+      BeansD.BeanDA da=new <b>BeansD.BeanDA</b>("text");
+
+org/netbeans/tests/examples/packb/BeansD.java
+      bb=new <b>BeanDA</b>("text");
+
+

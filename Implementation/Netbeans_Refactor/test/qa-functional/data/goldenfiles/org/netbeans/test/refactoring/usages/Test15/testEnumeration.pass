@@ -1,0 +1,41 @@
+Find usages of: abc.En
+Found 23 occurance(s).
+
+abc/A.java
+      /** <i> There is used enumeration <b>En</b></i>
+      <b>En</b> a = En.X;
+      En a = <b>En</b>.X;
+
+abc/En.java
+      // <i> * <b>En</b>.java</i>
+
+abc/def/D.java
+      /** <i> parameter of the method is enum <b>En</b></i>
+      <b>En</b> en;
+      @DAnnotType(id=7, value="methD", coord=<b>En</b>.Y) public void methodD(En e)
+      @DAnnotType(id=7, value="methD", coord=En.Y) public void methodD(<b>En</b> e)
+      import <b>abc.En</b>;
+      public <b>En</b> getEn()
+      public D(<b>En</b> e)
+
+abc/def/DAnnotType.java
+      <b>En</b> coord() default En.X;
+      En coord() default <b>En</b>.X;
+      import <b>abc.En</b>;
+
+abc/def/E.java
+      <b>En</b> e=DATA1.getEn();
+      import <b>abc.En</b>;
+
+abc/def/ghi/G.java
+      d.methodD(<b>En</b>.X);
+      import <b>abc.En</b>;
+
+abc/def/ghi/H.java
+      import <b>abc.En</b>;
+      new D().methodD(<b>En</b>.Y);
+      public static final D DATA1=new D(<b>En</b>.X);
+      public static final D DATA2=new D(<b>En</b>.Y);
+      public static final D DATA3=new D(<b>En</b>.Z);
+
+

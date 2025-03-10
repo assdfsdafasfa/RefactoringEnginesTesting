@@ -1,0 +1,5 @@
+Extract method from         int a = 0;
+        int b = 0;
+        in class packageA.ClassF
+name of new method sixth
+Problem fatal: List of statements contains too much return variables a b .

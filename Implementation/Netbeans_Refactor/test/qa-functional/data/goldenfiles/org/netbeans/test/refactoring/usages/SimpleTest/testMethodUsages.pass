@@ -1,0 +1,101 @@
+Find usages of org.netbeans.tests.examples.packc.Makable.make(int, java.lang.String, org.netbeans.tests.examples.packa.Bean)
+Found 4 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanB.java
+      c.prepare().<b>make</b>(10, "run", this);
+
+org/netbeans/tests/examples/packb/BeanC.java
+      ((BeanB)(((BeanC)bb).getBean())).<b>make</b>(refID+1, ((BeanA)bb).getProtectedProperty(), b);
+      ((org.netbeans.tests.examples.packc.Makable)bb).prepare().<b>make</b>(refID, "text", this);
+
+org/netbeans/tests/examples/packb/BeansD.java
+      ((Makable)new BeanDD("ttt")).<b>make</b>(10, "", bb);
+
+
+Find usages of org.netbeans.tests.examples.packa.Testable.test()
+Found 5 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanB.java
+      ((Testable)new BeansD.BeanDA("1")).<b>test</b>();
+      new BeansD.BeanDA("1").<b>test</b>();
+
+org/netbeans/tests/examples/packb/BeanC.java
+      return super.<b>test</b>();
+      te.<b>test</b>();
+
+org/netbeans/tests/examples/packb/BeansD.java
+      ((Testable)bb).<b>test</b>();
+
+
+Find usages of org.netbeans.tests.examples.packa.Bean.abc()
+Found 8 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanB.java
+      ((Bean)c).<b>abc</b>();
+
+org/netbeans/tests/examples/packb/BeanC.java
+      ((BeanB)b).<b>abc</b>();
+      new BeanB().<b>abc</b>();
+
+org/netbeans/tests/examples/packb/BeansD.java
+      System.out.println("text "+bb.getProtectedProperty()+" "+((Bean)bb).<b>abc</b>());
+      return super.<b>abc</b>();
+      this.<b>abc</b>().abc().abc();
+      this.abc().<b>abc</b>().abc();
+      this.abc().abc().<b>abc</b>();
+
+
+Find usages of org.netbeans.tests.examples.packb.BeanA.getProtectedProperty()
+Found 10 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanC.java
+      ((BeanB)(((BeanC)bb).getBean())).make(refID+1, ((BeanA)bb).<b>getProtectedProperty</b>(), b);
+      retValue = super.<b>getProtectedProperty</b>();
+
+org/netbeans/tests/examples/packb/BeansD.java
+      ((BeanD)bb).<b>getProtectedProperty</b>();
+      System.out.println("text "+bb.<b>getProtectedProperty</b>()+" "+((Bean)bb).abc());
+      System.out.println(<b>getProtectedProperty</b>());
+      retValue = super.<b>getProtectedProperty</b>();
+      return super.<b>getProtectedProperty</b>()+"aaa";
+      setProtectedProperty(copy.<b>getProtectedProperty</b>()+copy.getProtectedProperty()+copy.getProtectedProperty());
+      setProtectedProperty(copy.getProtectedProperty()+copy.<b>getProtectedProperty</b>()+copy.getProtectedProperty());
+      setProtectedProperty(copy.getProtectedProperty()+copy.getProtectedProperty()+copy.<b>getProtectedProperty</b>());
+
+
+Find usages of java.io.PrintStream.println(java.lang.String)
+Found 16 occurance(s).
+
+org/netbeans/tests/examples/Test.java
+      System.out.<b>println</b>("runTest "+name);
+
+org/netbeans/tests/examples/packa/Association.java
+      System.out.<b>println</b>(rootField);
+
+org/netbeans/tests/examples/packa/Bean.java
+      System.out.<b>println</b>("bye");
+
+org/netbeans/tests/examples/packa/Property.java
+      System.out.<b>println</b>("good");
+      System.out.<b>println</b>(rootField);
+
+org/netbeans/tests/examples/packb/BeanA.java
+      System.out.<b>println</b>("Construct");
+
+org/netbeans/tests/examples/packb/BeanB.java
+      System.out.<b>println</b>("do");
+
+org/netbeans/tests/examples/packb/BeanC.java
+      System.out.<b>println</b>("done "+refID+" "+BeanC.this.protectedProperty);
+      System.out.<b>println</b>("getBean, property="+protectedProperty);
+
+org/netbeans/tests/examples/packb/BeansD.java
+      System.out.<b>println</b>("abc");
+      System.out.<b>println</b>("getProtectedProperty");
+      System.out.<b>println</b>("message");
+      System.out.<b>println</b>("test1");
+      System.out.<b>println</b>("testinner "+protectedProperty+publicProperty);
+      System.out.<b>println</b>("text "+bb.getProtectedProperty()+" "+((Bean)bb).abc());
+      System.out.<b>println</b>(getProtectedProperty());
+
+

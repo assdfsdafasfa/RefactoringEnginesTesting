@@ -1,0 +1,101 @@
+/*
+ * The contents of this file are subject to the terms of the Common Development
+ * and Distribution License (the License). You may not use this file except in
+ * compliance with the License.
+ *
+ * You can obtain a copy of the License at http://www.netbeans.org/cddl.html
+ * or http://www.netbeans.org/cddl.txt.
+ *
+ * When distributing Covered Code, include this CDDL Header Notice in each file
+ * and include the License file at http://www.netbeans.org/cddl.txt.
+ * If applicable, add the following below the CDDL Header, with the fields
+ * enclosed by brackets [] replaced by your own identifying information:
+ * "Portions Copyrighted [year] [name of copyright owner]"
+ *
+ * The Original Software is NetBeans. The Initial Developer of the Original
+ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
+ * Microsystems, Inc. All Rights Reserved.
+ */
+
+package org.netbeans.test.encapsulate;
+
+/**
+ *
+ * @author  Tomas Hurka
+ */
+public class DimEncapsulate {
+    private float b[];
+    private int[] a;
+    private double[] c[];
+    private short[] d;
+    private short[] e[];
+
+    public DimEncapsulate() {
+    }
+
+    class GGG {
+
+    }
+
+    void ff() {
+        float f;
+        getB()[0]=1;
+        f=getB()[0];
+    }
+
+    void dd() {
+        getA()[0]=0;
+    }
+
+    void ggg() {
+        getC()[0][0]=0;
+    }
+
+    void ddd() {
+        getD()[0]=0;
+    }
+
+    void eeee() {
+        getE()[0][0]=0;
+    }
+
+    public float[] getB() {
+        return b;
+    }
+
+    public void setB(float[] b) {
+        this.b = b;
+    }
+
+    public int[] getA() {
+        return a;
+    }
+
+    public void setA(int[] a) {
+        this.a = a;
+    }
+
+    public double[][] getC() {
+        return c;
+    }
+
+    public void setC(double[][] c) {
+        this.c = c;
+    }
+
+    public short[] getD() {
+        return d;
+    }
+
+    public void setD(short[] d) {
+        this.d = d;
+    }
+
+    public short[][] getE() {
+        return e;
+    }
+
+    public void setE(short[][] e) {
+        this.e = e;
+    }
+}

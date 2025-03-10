@@ -1,0 +1,9 @@
+Extract method from 
+    public void noReturn() {
+       //0
+        int a = 0;
+        int b = 0;
+        //1
+        S in class packageA.ClassE
+name of new method fifth
+Problem fatal: Invalid selection.

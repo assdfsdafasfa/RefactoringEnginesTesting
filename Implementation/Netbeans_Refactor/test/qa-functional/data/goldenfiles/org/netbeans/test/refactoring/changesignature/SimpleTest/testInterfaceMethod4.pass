@@ -1,0 +1,7 @@
+Change signature of method public abstract prepare() of class org.netbeans.tests.examples.packc.Makable
+method protected prepare
+Arguments: 
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packb.BeanB that override or implement the method.
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packb.BeanC that override or implement the method.
+Problem: There are methods in subclasses or implementors of org.netbeans.tests.examples.packb.BeansD that override or implement the method.
+Problem fatal: Cannot change modifiers of method in interface.

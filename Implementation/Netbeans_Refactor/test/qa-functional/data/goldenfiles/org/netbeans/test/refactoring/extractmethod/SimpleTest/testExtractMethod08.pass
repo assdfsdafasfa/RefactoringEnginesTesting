@@ -1,0 +1,4 @@
+Extract method from         if(a==0) c = 0;
+        in class packageA.ClassH
+name of new method existing
+Problem fatal: Cannot rename. Method existing with the same signature already exists in class packageA.ClassH.

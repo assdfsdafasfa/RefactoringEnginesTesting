@@ -1,0 +1,3 @@
+Selected element:public int field1;
+Safe delete from class packageD.ClassB
+Problem: References to selected elements were found. Remove all references to these elements in order to safely delete your class.

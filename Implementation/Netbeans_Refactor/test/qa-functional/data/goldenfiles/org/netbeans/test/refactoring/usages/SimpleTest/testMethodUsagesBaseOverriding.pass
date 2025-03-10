@@ -1,0 +1,53 @@
+Find usages of org.netbeans.tests.examples.packb.BeanB.make(int, java.lang.String, org.netbeans.tests.examples.packa.Bean)
+Found 5 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanB.java
+      public void <b>make</b>(int index, java.lang.String s, org.netbeans.tests.examples.packa.Bean bean)
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public void <b>make</b>(int index, java.lang.String s, org.netbeans.tests.examples.packa.Bean bean)
+
+org/netbeans/tests/examples/packb/BeansD.java
+      public void <b>make</b>(int a, String s, Bean b)
+      public void <b>make</b>(int index, java.lang.String s, Bean bean)
+      public void <b>make</b>(int index, java.lang.String s, Bean bean)
+
+
+Find usages of org.netbeans.tests.examples.packb.BeanA.test()
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanA.java
+      public org.netbeans.tests.examples.packa.Testable <b>test</b>()
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public org.netbeans.tests.examples.packa.Testable <b>test</b>()
+
+
+Find usages of org.netbeans.tests.examples.packb.BeanA.getRefID()
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanA.java
+      public int <b>getRefID</b>()
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public int <b>getRefID</b>()
+
+
+Find usages of org.netbeans.tests.examples.packb.BeanD.getProtectedProperty()
+Found 3 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public java.lang.String <b>getProtectedProperty</b>()
+
+org/netbeans/tests/examples/packb/BeansD.java
+      public String <b>getProtectedProperty</b>()
+      public java.lang.String <b>getProtectedProperty</b>()
+
+
+Find usages of org.netbeans.tests.examples.packc.BPanel.actionPerformed(java.awt.event.ActionEvent)
+Found 1 occurance(s).
+
+org/netbeans/tests/examples/packc/BPanel.java
+      jButton1.getActionListeners()[0].<b>actionPerformed</b>(e);
+
+

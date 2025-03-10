@@ -1,0 +1,7 @@
+Extract method from             if( a%3 != 0) {
+                s = s+"--, ";
+                continue;
+            }           
+            in class packageA.ClassG
+name of new method seventh
+Problem fatal: List of statemenst contains break, continue or return which is not last statement.

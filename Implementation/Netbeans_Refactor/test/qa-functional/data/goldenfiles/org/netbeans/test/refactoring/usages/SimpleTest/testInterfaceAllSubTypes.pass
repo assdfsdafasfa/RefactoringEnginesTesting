@@ -1,0 +1,41 @@
+Find usages of: org.netbeans.tests.examples.packc.Makable
+Found 6 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanB.java
+      public class BeanB extends Bean implements org.netbeans.tests.examples.packc.Makable
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public class BeanC extends BeanA implements Makable
+
+org/netbeans/tests/examples/packb/BeansD.java
+      class BeanD extends BeanC
+      class BeanDD extends BeanB
+      public class BeanDC extends BeanC
+      public class BeansD implements org.netbeans.tests.examples.packc.Makable
+
+
+Find usages of: org.netbeans.tests.examples.packa.Testable
+Found 5 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanA.java
+      public class BeanA extends Bean implements org.netbeans.tests.examples.packa.Testable
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public class BeanC extends BeanA implements Makable
+
+org/netbeans/tests/examples/packb/BeansD.java
+      class BeanD extends BeanC
+      public class BeanDC extends BeanC
+      public static class BeanDA extends BeanA
+
+
+Find usages of: javax.accessibility.Accessible
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/packc/AFrame.java
+      public class AFrame extends javax.swing.JFrame
+
+org/netbeans/tests/examples/packc/BPanel.java
+      public class BPanel extends javax.swing.JPanel implements ActionListener
+
+

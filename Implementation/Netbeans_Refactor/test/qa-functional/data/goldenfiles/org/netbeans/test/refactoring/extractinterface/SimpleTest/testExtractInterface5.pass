@@ -1,0 +1,90 @@
+Extract new interface newIfaceImplementingIface from packageB.ClassC
+package packageB;
+
+
+
+
+/**
+ *
+ * @author XXXX 
+*/public interface newIfaceImplementingIface extends Runnable {
+    void run();
+
+    }
+
+Found 4 occurance(s).
+
+packageB/ClassC.java
+
+      Add <b>newIfaceImplementingIface</b> to the implements/extends clause.
+      Create declaration of method <b>run()</b> in the new interface.
+      Move <b>Runnable</b> to the extends clause of the new interface.
+
+File diff:
+
+-pass[17]     public class ClassC implements Runnable{
++test[17]     public class ClassC implements newIfaceImplementingIface{
+Original file:
+-------------------------------------
+/*
+ * ClassC.java
+ *
+ * Created on August 10, 2005, 1:18 PM
+ *
+ * To change this template, choose Tools | Options and locate the template under
+ * the Source Creation and Management node. Right-click the template and choose
+ * Open. You can then make changes to the template in the Source Editor.
+ */
+
+package packageB;
+
+/**
+ *
+ * @author jp159440
+ */
+public class ClassC implements Runnable{
+    
+    /** Creates a new instance of ClassC */
+    public ClassC() {
+    }
+                
+    public void method1() {
+    }
+        
+    public void run() {
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * ClassC.java
+ *
+ * Created on August 10, 2005, 1:18 PM
+ *
+ * To change this template, choose Tools | Options and locate the template under
+ * the Source Creation and Management node. Right-click the template and choose
+ * Open. You can then make changes to the template in the Source Editor.
+ */
+
+package packageB;
+
+/**
+ *
+ * @author jp159440
+ */
+public class ClassC implements newIfaceImplementingIface{
+    
+    /** Creates a new instance of ClassC */
+    public ClassC() {
+    }
+                
+    public void method1() {
+    }
+        
+    public void run() {
+    }
+    
+}
+
+Create interface <b>newIfaceImplementingIface</b>.

@@ -1,0 +1,196 @@
+Encapsulate field  data of class abc.A
+field changed to private, setter: public setData(...), getter: public getData(), use accessors if necessary
+Found 6 occurance(s).
+
+abc/A.java
+
+      <b>data</b>.add(i);
+      <b>data</b>=new ArrayList();
+      Change modifier of field <b>data</b> to <b>private</b>
+      Create method getData
+      Create method setData
+      for (T t : <b>data</b>) {
+
+File diff:
+
+-pass[26]         ArrayList<T> data;
++test[26]         private ArrayList<T> data;
++test[77]     
++test[78]         public ArrayList<T> getData() {
++test[79]             return data;
++test[80]         }
++test[81]     
++test[82]         public void setData(ArrayList<T> data) {
++test[83]             this.data = data;
++test[84]         }
+Original file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+    
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    private ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+
+    public ArrayList<T> getData() {
+        return data;
+    }
+
+    public void setData(ArrayList<T> data) {
+        this.data = data;
+    }
+    
+    
+}
+

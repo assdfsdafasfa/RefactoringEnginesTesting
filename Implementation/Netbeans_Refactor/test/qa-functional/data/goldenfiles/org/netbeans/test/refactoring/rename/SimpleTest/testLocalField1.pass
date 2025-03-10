@@ -1,0 +1,266 @@
+Rename method's count(double[], double[]) parameter v1 to vector1 of class org.netbeans.tests.examples.packc.BeanE
+Found 9 occurance(s).
+
+org/netbeans/tests/examples/packc/BeanE.java
+
+      <b>v1</b>[i]=v1[i]/len1;
+      Rename parameter to vector1
+      for (int i=0;i &lt; <b>v1</b>.length;i++) {
+      for (int i=0;i &lt; <b>v1</b>.length;i++) {
+      if (<b>v1</b>.length != v2.length) {
+      len1+=<b>v1</b>[i]*v1[i];
+      len1+=v1[i]*<b>v1</b>[i];
+      pow+=<b>v1</b>[i]*v2[i];
+      v1[i]=<b>v1</b>[i]/len1;
+
+File diff:
+
+-pass[29]         public double count(double[] v1, double[] v2) {
++test[29]         public double count(double[] vector1, double[] v2) {
+-pass[30]             if (v1.length != v2.length) {
++test[30]             if (vector1.length != v2.length) {
+-pass[37]             for (int i=0;i < v1.length;i++) {
++test[37]             for (int i=0;i < vector1.length;i++) {
+-pass[38]                 len1+=v1[i]*v1[i];
++test[38]                 len1+=vector1[i]*vector1[i];
+-pass[40]                 pow+=v1[i]*v2[i];
++test[40]                 pow+=vector1[i]*v2[i];
+-pass[42]             for (int i=0;i < v1.length;i++) {
++test[42]             for (int i=0;i < vector1.length;i++) {
+-pass[43]                 v1[i]=v1[i]/len1;
++test[43]                 vector1[i]=vector1[i]/len1;
+Original file:
+-------------------------------------
+/*
+ * BeanE.java
+ *
+ * Created on July 23, 2004, 2:22 PM
+ */
+
+package org.netbeans.tests.examples.packc;
+
+import org.netbeans.tests.examples.Test;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanE {
+    
+    /** Creates a new instance of BeanE */
+    public BeanE() {
+        
+    }
+    
+    public void run() {
+        Test t1=new Test("1");
+        t1.runTest();
+        Test.makeTest();
+        t1.test1();
+    }
+    
+    public double count(double[] v1, double[] v2) {
+        if (v1.length != v2.length) {
+            throw new IllegalArgumentException();
+        }
+        double len1, len2, pow;
+        len1=0.0;
+        len2=0.0;
+        pow=0.0;
+        for (int i=0;i < v1.length;i++) {
+            len1+=v1[i]*v1[i];
+            len2+=v2[i]*v2[i];
+            pow+=v1[i]*v2[i];
+        }
+        for (int i=0;i < v1.length;i++) {
+            v1[i]=v1[i]/len1;
+            v2[i]=v2[i]/len2;
+        }
+        len1=Math.sqrt(len1);
+        len2=Math.sqrt(len2);
+        return pow/(len1*len2);
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * BeanE.java
+ *
+ * Created on July 23, 2004, 2:22 PM
+ */
+
+package org.netbeans.tests.examples.packc;
+
+import org.netbeans.tests.examples.Test;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanE {
+    
+    /** Creates a new instance of BeanE */
+    public BeanE() {
+        
+    }
+    
+    public void run() {
+        Test t1=new Test("1");
+        t1.runTest();
+        Test.makeTest();
+        t1.test1();
+    }
+    
+    public double count(double[] vector1, double[] v2) {
+        if (vector1.length != v2.length) {
+            throw new IllegalArgumentException();
+        }
+        double len1, len2, pow;
+        len1=0.0;
+        len2=0.0;
+        pow=0.0;
+        for (int i=0;i < vector1.length;i++) {
+            len1+=vector1[i]*vector1[i];
+            len2+=v2[i]*v2[i];
+            pow+=vector1[i]*v2[i];
+        }
+        for (int i=0;i < vector1.length;i++) {
+            vector1[i]=vector1[i]/len1;
+            v2[i]=v2[i]/len2;
+        }
+        len1=Math.sqrt(len1);
+        len2=Math.sqrt(len2);
+        return pow/(len1*len2);
+    }
+}
+
+Rename method's count(double[], double[]) parameter v2 to vector2 of class org.netbeans.tests.examples.packc.BeanE
+Found 7 occurance(s).
+
+org/netbeans/tests/examples/packc/BeanE.java
+
+      <b>v2</b>[i]=v2[i]/len2;
+      Rename parameter to vector2
+      if (vector1.length != <b>v2</b>.length) {
+      len2+=<b>v2</b>[i]*v2[i];
+      len2+=v2[i]*<b>v2</b>[i];
+      pow+=vector1[i]*<b>v2</b>[i];
+      v2[i]=<b>v2</b>[i]/len2;
+
+File diff:
+
+-pass[29]         public double count(double[] vector1, double[] v2) {
++test[29]         public double count(double[] vector1, double[] vector2) {
+-pass[30]             if (vector1.length != v2.length) {
++test[30]             if (vector1.length != vector2.length) {
+-pass[39]                 len2+=v2[i]*v2[i];
++test[39]                 len2+=vector2[i]*vector2[i];
+-pass[40]                 pow+=vector1[i]*v2[i];
++test[40]                 pow+=vector1[i]*vector2[i];
+-pass[44]                 v2[i]=v2[i]/len2;
++test[44]                 vector2[i]=vector2[i]/len2;
+Original file:
+-------------------------------------
+/*
+ * BeanE.java
+ *
+ * Created on July 23, 2004, 2:22 PM
+ */
+
+package org.netbeans.tests.examples.packc;
+
+import org.netbeans.tests.examples.Test;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanE {
+    
+    /** Creates a new instance of BeanE */
+    public BeanE() {
+        
+    }
+    
+    public void run() {
+        Test t1=new Test("1");
+        t1.runTest();
+        Test.makeTest();
+        t1.test1();
+    }
+    
+    public double count(double[] vector1, double[] v2) {
+        if (vector1.length != v2.length) {
+            throw new IllegalArgumentException();
+        }
+        double len1, len2, pow;
+        len1=0.0;
+        len2=0.0;
+        pow=0.0;
+        for (int i=0;i < vector1.length;i++) {
+            len1+=vector1[i]*vector1[i];
+            len2+=v2[i]*v2[i];
+            pow+=vector1[i]*v2[i];
+        }
+        for (int i=0;i < vector1.length;i++) {
+            vector1[i]=vector1[i]/len1;
+            v2[i]=v2[i]/len2;
+        }
+        len1=Math.sqrt(len1);
+        len2=Math.sqrt(len2);
+        return pow/(len1*len2);
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * BeanE.java
+ *
+ * Created on July 23, 2004, 2:22 PM
+ */
+
+package org.netbeans.tests.examples.packc;
+
+import org.netbeans.tests.examples.Test;
+
+/**
+ *
+ * @author  eh103527
+ */
+public class BeanE {
+    
+    /** Creates a new instance of BeanE */
+    public BeanE() {
+        
+    }
+    
+    public void run() {
+        Test t1=new Test("1");
+        t1.runTest();
+        Test.makeTest();
+        t1.test1();
+    }
+    
+    public double count(double[] vector1, double[] vector2) {
+        if (vector1.length != vector2.length) {
+            throw new IllegalArgumentException();
+        }
+        double len1, len2, pow;
+        len1=0.0;
+        len2=0.0;
+        pow=0.0;
+        for (int i=0;i < vector1.length;i++) {
+            len1+=vector1[i]*vector1[i];
+            len2+=vector2[i]*vector2[i];
+            pow+=vector1[i]*vector2[i];
+        }
+        for (int i=0;i < vector1.length;i++) {
+            vector1[i]=vector1[i]/len1;
+            vector2[i]=vector2[i]/len2;
+        }
+        len1=Math.sqrt(len1);
+        len2=Math.sqrt(len2);
+        return pow/(len1*len2);
+    }
+}
+

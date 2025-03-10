@@ -1,0 +1,8 @@
+Find usages of: DATA1
+Found 2 occurance(s).
+
+abc/def/E.java
+      D d=new D(<b>DATA1</b>.getEn());
+      En e=<b>DATA1</b>.getEn();
+
+

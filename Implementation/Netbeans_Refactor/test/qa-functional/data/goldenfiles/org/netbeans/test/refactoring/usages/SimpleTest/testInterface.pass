@@ -1,0 +1,59 @@
+Find usages of: org.netbeans.tests.examples.packc.Makable
+Found 18 occurance(s).
+
+org/netbeans/tests/examples/packa/Testable.java
+      import <b>org.netbeans.tests.examples.packc.Makable</b>;
+      public static final int MATCH=<b>Makable</b>.CODE;
+
+org/netbeans/tests/examples/packb/BeanB.java
+      import <b>org.netbeans.tests.examples.packc.Makable</b>;
+      public <b>Makable</b> prepare()
+      public class BeanB extends Bean implements <b>org.netbeans.tests.examples.packc.Makable</b>
+      refID=473542*<b>Makable</b>.CODE;
+
+org/netbeans/tests/examples/packb/BeanC.java
+      ((<b>org.netbeans.tests.examples.packc.Makable</b>)bb).prepare().make(refID, "text", this);
+      BeanC[] cc=(BeanC[])(((<b>org.netbeans.tests.examples.packc.Makable</b>)bb).finish());
+      import <b>org.netbeans.tests.examples.packc.Makable</b>;
+      public <b>org.netbeans.tests.examples.packc.Makable</b> prepare()
+      public class BeanC extends BeanA implements <b>Makable</b>
+
+org/netbeans/tests/examples/packb/BeansD.java
+      ((<b>Makable</b>)new BeanDD("ttt")).make(10, "", bb);
+      import <b>org.netbeans.tests.examples.packc.Makable</b>;
+      public <b>org.netbeans.tests.examples.packc.Makable</b> prepare()
+      public class BeansD implements <b>org.netbeans.tests.examples.packc.Makable</b>
+      this.length = length*<b>Makable</b>.CODE;
+
+org/netbeans/tests/examples/packc/Makable.java
+      // <i> * <b>Makable</b>.java</i>
+      public <b>Makable</b> prepare()
+
+
+Find usages of: org.netbeans.tests.examples.packa.Testable
+Found 13 occurance(s).
+
+org/netbeans/tests/examples/packa/Testable.java
+      // <i> * <b>Testable</b>.java</i>
+      public <b>Testable</b> test()
+      public <b>Testable</b>[] usages(java.util.List list)
+
+org/netbeans/tests/examples/packb/BeanA.java
+      public <b>org.netbeans.tests.examples.packa.Testable</b> test()
+      public <b>org.netbeans.tests.examples.packa.Testable</b>[] usages(java.util.List list)
+      public class BeanA extends Bean implements <b>org.netbeans.tests.examples.packa.Testable</b>
+
+org/netbeans/tests/examples/packb/BeanB.java
+      ((<b>Testable</b>)new BeansD.BeanDA("1")).test();
+      import <b>org.netbeans.tests.examples.packa.Testable</b>;
+
+org/netbeans/tests/examples/packb/BeanC.java
+      <b>org.netbeans.tests.examples.packa.Testable</b> te=t;
+      public <b>org.netbeans.tests.examples.packa.Testable</b> test()
+      public void setTestable(<b>org.netbeans.tests.examples.packa.Testable</b> t)
+
+org/netbeans/tests/examples/packb/BeansD.java
+      ((<b>Testable</b>)bb).test();
+      import <b>org.netbeans.tests.examples.packa.Testable</b>;
+
+

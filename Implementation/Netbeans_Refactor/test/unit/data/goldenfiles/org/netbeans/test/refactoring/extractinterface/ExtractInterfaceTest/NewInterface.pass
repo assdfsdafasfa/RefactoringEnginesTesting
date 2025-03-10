@@ -1,0 +1,9 @@
+
+
+package org.netbeans.test.extractinterface;
+
+
+public interface NewInterface {
+    void beep();
+    
+}

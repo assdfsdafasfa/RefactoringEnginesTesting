@@ -1,0 +1,54 @@
+Rename package org.netbeans.tests.examples.packb to org.netbeans.tests.examples.packa
+Found 7 occurance(s).
+
+org/netbeans/tests/examples/packarenamed/Bean.java
+
+      Bean b=new <b>org.netbeans.tests.examples.packb.BeanB</b>();
+      import <b>org.netbeans.tests.examples.packb.BeanA</b>;
+      import <b>org.netbeans.tests.examples.packb.BeansD</b>;
+
+File diff:
+
+-pass[11]     import org.netbeans.tests.examples.packb.BeanA;
++test[11]     import org.netbeans.tests.examples.packa.BeanA;
+-pass[12]     import org.netbeans.tests.examples.packb.BeansD;
++test[12]     import org.netbeans.tests.examples.packa.BeansD;
+-pass[41]             Bean b=new org.netbeans.tests.examples.packb.BeanB();
++test[41]             Bean b=new org.netbeans.tests.examples.packa.BeanB();
+
+org/netbeans/tests/examples/packb/BeanA.java
+
+      Move source to package "org.netbeans.tests.examples.packa"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packb;
++test[7]      package org.netbeans.tests.examples.packa;
+
+org/netbeans/tests/examples/packb/BeanB.java
+
+      Move source to package "org.netbeans.tests.examples.packa"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packb;
++test[7]      package org.netbeans.tests.examples.packa;
+
+org/netbeans/tests/examples/packb/BeanC.java
+
+      Move source to package "org.netbeans.tests.examples.packa"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packb;
++test[7]      package org.netbeans.tests.examples.packa;
+
+org/netbeans/tests/examples/packb/BeansD.java
+
+      Move source to package "org.netbeans.tests.examples.packa"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packb;
++test[7]      package org.netbeans.tests.examples.packa;
+

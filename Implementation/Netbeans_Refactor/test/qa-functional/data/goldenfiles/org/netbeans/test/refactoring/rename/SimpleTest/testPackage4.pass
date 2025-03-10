@@ -1,0 +1,120 @@
+Rename package org.netbeans.tests.examples.packc to com.netbeans.tests.examples.packc
+Found 17 occurance(s).
+
+org/netbeans/tests/examples/packa/BeanB.java
+
+      import <b>org.netbeans.tests.examples.packc.Makable</b>;
+      public class BeanB extends Bean implements <b>org.netbeans.tests.examples.packc.Makable</b>
+
+File diff:
+
+-pass[13]     import org.netbeans.tests.examples.packc.Makable;
++test[13]     import com.netbeans.tests.examples.packc.Makable;
+-pass[19]     public class BeanB extends Bean implements org.netbeans.tests.examples.packc.Makable {
++test[19]     public class BeanB extends Bean implements com.netbeans.tests.examples.packc.Makable {
+
+org/netbeans/tests/examples/packa/BeanC.java
+
+      ((<b>org.netbeans.tests.examples.packc.Makable</b>)bb).prepare().make(refID, "text", this);
+      BeanC[] cc=(BeanC[])(((<b>org.netbeans.tests.examples.packc.Makable</b>)bb).finish());
+      import <b>org.netbeans.tests.examples.packc.Makable</b>;
+      public <b>org.netbeans.tests.examples.packc.Makable</b> prepare()
+
+File diff:
+
+-pass[8]      import org.netbeans.tests.examples.packc.Makable;
++test[8]      import com.netbeans.tests.examples.packc.Makable;
+-pass[65]             ((org.netbeans.tests.examples.packc.Makable)bb).prepare().make(refID, "text", this);
++test[65]             ((com.netbeans.tests.examples.packc.Makable)bb).prepare().make(refID, "text", this);
+-pass[68]             BeanC[] cc=(BeanC[])(((org.netbeans.tests.examples.packc.Makable)bb).finish());
++test[68]             BeanC[] cc=(BeanC[])(((com.netbeans.tests.examples.packc.Makable)bb).finish());
+-pass[99]         public org.netbeans.tests.examples.packc.Makable prepare() {
++test[99]         public com.netbeans.tests.examples.packc.Makable prepare() {
+
+org/netbeans/tests/examples/packa/BeansD.java
+
+      import <b>org.netbeans.tests.examples.packc.Makable</b>;
+      public <b>org.netbeans.tests.examples.packc.Makable</b> prepare()
+      public class BeansD implements <b>org.netbeans.tests.examples.packc.Makable</b>
+
+File diff:
+
+-pass[11]     import org.netbeans.tests.examples.packc.Makable;
++test[11]     import com.netbeans.tests.examples.packc.Makable;
+-pass[17]     public class BeansD implements org.netbeans.tests.examples.packc.Makable {
++test[17]     public class BeansD implements com.netbeans.tests.examples.packc.Makable {
+-pass[108]        public org.netbeans.tests.examples.packc.Makable prepare() {
++test[108]        public com.netbeans.tests.examples.packc.Makable prepare() {
+
+org/netbeans/tests/examples/packarenamed/Association.java
+
+      import <b>org.netbeans.tests.examples.packc.AbstractBean</b>;
+
+File diff:
+
+-pass[10]     import org.netbeans.tests.examples.packc.AbstractBean;
++test[10]     import com.netbeans.tests.examples.packc.AbstractBean;
+
+org/netbeans/tests/examples/packarenamed/Property.java
+
+      import <b>org.netbeans.tests.examples.packc.AbstractBean</b>;
+
+File diff:
+
+-pass[10]     import org.netbeans.tests.examples.packc.AbstractBean;
++test[10]     import com.netbeans.tests.examples.packc.AbstractBean;
+
+org/netbeans/tests/examples/packarenamed/Testable.java
+
+      import <b>org.netbeans.tests.examples.packc.Makable</b>;
+
+File diff:
+
+-pass[9]      import org.netbeans.tests.examples.packc.Makable;
++test[9]      import com.netbeans.tests.examples.packc.Makable;
+
+org/netbeans/tests/examples/packc/AFrame.java
+
+      Move source to package "com.netbeans.tests.examples.packc"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packc;
++test[7]      package com.netbeans.tests.examples.packc;
+
+org/netbeans/tests/examples/packc/AbstractBean.java
+
+      Move source to package "com.netbeans.tests.examples.packc"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packc;
++test[7]      package com.netbeans.tests.examples.packc;
+
+org/netbeans/tests/examples/packc/BPanel.java
+
+      Move source to package "com.netbeans.tests.examples.packc"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packc;
++test[7]      package com.netbeans.tests.examples.packc;
+
+org/netbeans/tests/examples/packc/BeanE.java
+
+      Move source to package "com.netbeans.tests.examples.packc"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packc;
++test[7]      package com.netbeans.tests.examples.packc;
+
+org/netbeans/tests/examples/packc/Makable.java
+
+      Move source to package "com.netbeans.tests.examples.packc"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packc;
++test[7]      package com.netbeans.tests.examples.packc;
+

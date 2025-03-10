@@ -1,0 +1,26 @@
+Change signature of method public setSign(boolean) of class org.netbeans.tests.examples.packb.BeanC
+method public setSign
+Arguments: 
+int sign = 0
+sign
+Problem fatal: Duplicate parameter name (sign).
+Change signature of method public test1() of class org.netbeans.tests.examples.Test
+method public test1
+Arguments: 
+java.beans.PropertyChangeListener a = null
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/Test.java
+
+      Change method parameters of <b>public void test1()</b>
+
+File diff:
+
+
+org/netbeans/tests/examples/packc/BeanE.java
+
+      t1.<b>test1()</b>;
+
+File diff:
+
+

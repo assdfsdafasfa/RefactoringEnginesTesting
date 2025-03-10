@@ -1,0 +1,2 @@
+Extract super class Inter from packageC.ClassB
+Problem fatal: Cannot rename. Class Inter already exists in folder packageC.

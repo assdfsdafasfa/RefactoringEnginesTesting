@@ -1,0 +1,56 @@
+Selected element:package packageD;
+
+/**
+ *
+ * @author jp159440
+ */
+public class ClassG {
+    private ClassG instance = null;
+    
+    public ClassG getDefault() {
+        if(instance==null) {
+            instance = new ClassG();
+        }
+        return instance;
+    }
+    
+}
+
+Safe delete from class packageD.ClassG
+Found 1 occurance(s).
+
+packageD/ClassG.java
+
+      Delete <b>ClassG.java</b>
+Original file:
+-------------------------------------
+/*
+ * ClassG.java
+ *
+ * Created on May 18, 2006, 3:26 PM
+ *
+ * To change this template, choose Tools | Template Manager
+ * and open the template in the editor.
+ */
+
+package packageD;
+
+/**
+ *
+ * @author jp159440
+ */
+public class ClassG {
+    private ClassG instance = null;
+    
+    public ClassG getDefault() {
+        if(instance==null) {
+            instance = new ClassG();
+        }
+        return instance;
+    }
+    
+}
+Modified file:
+-------------------------------------
+File was deleted
+

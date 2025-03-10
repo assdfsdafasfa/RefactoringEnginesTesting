@@ -1,0 +1,3 @@
+Selected element:import tempPack.ImportedClass;
+Safe delete from class packageD.ClassB
+Problem fatal: Safe Delete can be invoked only on a Method, Field or Class

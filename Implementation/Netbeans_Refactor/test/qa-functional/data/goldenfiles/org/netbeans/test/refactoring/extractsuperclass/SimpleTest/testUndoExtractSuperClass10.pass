@@ -1,0 +1,132 @@
+Extract super class SuperI from packageC.ClassI
+package packageC;
+
+
+
+
+/**
+ *
+ * @author XXXX 
+*/public class SuperI extends SuperClass {
+    
+    /** Creates a new instance of SuperI */
+    public SuperI() {
+    }
+    
+    public int field1;
+    }
+
+Found 4 occurance(s).
+
+packageC/ClassI.java
+
+      Move <b>field1</b> to the new super class.
+      Set <b>SuperI</b> to the extend clause.
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * ClassA.java
+ *
+ * Created on August 22, 2005, 8:38 AM
+ *
+ * To change this template, choose Tools | Options and locate the template under
+ * the Source Creation and Management node. Right-click the template and choose
+ * Open. You can then make changes to the template in the Source Editor.
+ */
+
+package packageC;
+
+/**
+ *
+ * @author jp159440
+ */
+public class ClassI extends SuperClass implements Inter {
+    
+    public int field1;
+    private int field2;
+    protected int field3;
+    /** Creates a new instance of ClassA */
+    public ClassI() {
+    }
+    
+    public void method1() {
+        
+    }
+    
+    private void method2() {
+        
+    }
+    
+    protected void method3() {
+        
+    }
+    
+    public class Inner1 {
+
+    }
+
+    private class Inner2 {
+
+    }
+    protected class Inner3 {
+        
+    }
+}
+
+Modified file:
+-------------------------------------
+/*
+ * ClassA.java
+ *
+ * Created on August 22, 2005, 8:38 AM
+ *
+ * To change this template, choose Tools | Options and locate the template under
+ * the Source Creation and Management node. Right-click the template and choose
+ * Open. You can then make changes to the template in the Source Editor.
+ */
+
+package packageC;
+
+/**
+ *
+ * @author jp159440
+ */
+public class ClassI extends SuperClass implements Inter {
+    
+    public int field1;
+    private int field2;
+    protected int field3;
+    /** Creates a new instance of ClassA */
+    public ClassI() {
+    }
+    
+    public void method1() {
+        
+    }
+    
+    private void method2() {
+        
+    }
+    
+    protected void method3() {
+        
+    }
+    
+    public class Inner1 {
+
+    }
+
+    private class Inner2 {
+
+    }
+    protected class Inner3 {
+        
+    }
+}
+
+
+Create class <b>SuperI</b>.
+Set <b>packageC.SuperClass</b> to the extend clause.

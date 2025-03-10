@@ -1,0 +1,617 @@
+Move class abc.A to abc.def
+Found 14 occurance(s).
+
+abc/A.java
+
+      Add import abc
+      Move source to package "abc.def"
+      Remove import abc.def.DAnnotType
+
+File diff:
+
+-pass[7]      package abc;
++test[7]      package abc.def;
+-pass[9]      import abc.def.DAnnotType;
++test[9]      import abc.*;
+Original file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+    
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc.def;
+
+import abc.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+    
+    
+}
+
+abc/B.java
+
+      Add import abc.def.A
+
+File diff:
+
++test[9]      import abc.def.A;
+Original file:
+-------------------------------------
+/*
+ * B.java
+ *
+ * Created on May 24, 2004, 1:55 PM
+ */
+
+package abc;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class B<T> extends A<T> {
+    
+    private int number = 0;
+    public String text = "text";
+    protected boolean test = false;
+    
+    
+    /** Creates a new instance of B */
+    public B() {
+        list = new ArrayList<String>();
+    }
+
+    public T methodA() {
+        return null;
+    }
+
+    private void methodA(int i) {        
+        number = i;
+        
+    }
+
+    protected void methodA(int i, String text) {
+        methodA(null,"hello", true);
+    }
+
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * B.java
+ *
+ * Created on May 24, 2004, 1:55 PM
+ */
+
+package abc;
+
+import abc.def.A;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class B<T> extends A<T> {
+    
+    private int number = 0;
+    public String text = "text";
+    protected boolean test = false;
+    
+    
+    /** Creates a new instance of B */
+    public B() {
+        list = new ArrayList<String>();
+    }
+
+    public T methodA() {
+        return null;
+    }
+
+    private void methodA(int i) {        
+        number = i;
+        
+    }
+
+    protected void methodA(int i, String text) {
+        methodA(null,"hello", true);
+    }
+
+    
+}
+
+abc/Main.java
+
+      Add import abc.def.A
+
+File diff:
+
++test[9]      import abc.def.A;
+Original file:
+-------------------------------------
+/*
+ * Main.java
+ *
+ * Created on May 20, 2004, 4:28 PM
+ */
+
+package abc;
+
+import abc.def.F;
+
+
+
+/**
+ *
+ * @author  mg105252
+ */
+public class Main {
+    
+    private C c;
+    
+    
+    /** Creates a new instance of Main */
+    public Main() {
+        new A<String>();
+        c = new C(new abc.def.ghi.I () {
+            public String getState() {
+                return "idle";
+            };     
+        });
+
+        F f = new F();       
+        F.PublicInnerClass pic = f.new PublicInnerClass();
+        F.PublicStaticInnerClass psic = new F.PublicStaticInnerClass();
+    }
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic herAe
+        new Main();
+    }    
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * Main.java
+ *
+ * Created on May 20, 2004, 4:28 PM
+ */
+
+package abc;
+
+import abc.def.A;
+import abc.def.F;
+
+
+
+/**
+ *
+ * @author  mg105252
+ */
+public class Main {
+    
+    private C c;
+    
+    
+    /** Creates a new instance of Main */
+    public Main() {
+        new A<String>();
+        c = new C(new abc.def.ghi.I () {
+            public String getState() {
+                return "idle";
+            };     
+        });
+
+        F f = new F();       
+        F.PublicInnerClass pic = f.new PublicInnerClass();
+        F.PublicStaticInnerClass psic = new F.PublicStaticInnerClass();
+    }
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic herAe
+        new Main();
+    }    
+    
+}
+
+abc/def/D.java
+
+      <b>abc.A</b> a;
+      a = new <b>abc.A</b>(1, "text");
+      private <b>abc.A&lt;Integer&gt;</b> a;
+      public class D extends <b>abc.A</b>
+      public void methodD(<b>abc.A</b> proma)
+      public void methodDI(<b>abc.A</b> proma, abc.def.ghi.I promi)
+
+File diff:
+
+-pass[15]     public class D extends abc.A {
++test[15]     public class D extends abc.def.A {
+-pass[18]         private abc.A<Integer> a;
++test[18]         private abc.def.A<Integer> a;
+-pass[23]             abc.A a;
++test[23]             abc.def.A a;
+-pass[24]             a = new abc.A(1, "text");
++test[24]             a = new abc.def.A(1, "text");
+-pass[40]         public void methodD(abc.A proma) {
++test[40]         public void methodD(abc.def.A proma) {
+-pass[44]         public void methodDI(abc.A proma, abc.def.ghi.I promi) {
++test[44]         public void methodDI(abc.def.A proma, abc.def.ghi.I promi) {
+Original file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.A {
+    
+    @DAnnotType(id=1455)
+    private abc.A<Integer> a;
+    En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.A a;
+        a = new abc.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.A proma) {
+        
+    }
+    
+    public void methodDI(abc.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * D.java
+ *
+ * Created on May 21, 2004, 5:34 PM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * class is offspring of class A
+ * @author  mg105252
+ */
+public class D extends abc.def.A {
+    
+    @DAnnotType(id=1455)
+    private abc.def.A<Integer> a;
+    En en;
+    
+    /** Creates a new instance of D */
+    public D() {
+        abc.def.A a;
+        a = new abc.def.A(1, "text");
+        a.text = "Hello";
+        a.methodA(2,"ciao", false);
+    }
+    
+    public D(En e) {
+        en=e;
+    }
+    /**
+     * parameter of the method is enum En
+     */
+    @DAnnotType(id=7, value="methD", coord=En.Y)
+    public void methodD(En e) {
+        en=e;
+    }
+    
+    public void methodD(abc.def.A proma) {
+        
+    }
+    
+    public void methodDI(abc.def.A proma, abc.def.ghi.I promi) {
+        
+    }
+    
+    public En getEn() {
+        return en;
+    }
+    
+}
+
+abc/def/ghi/G.java
+
+      <b>abc.A</b> a = new abc.A();
+      abc.A a = new <b>abc.A</b>();
+      import <b>abc.A</b>;
+
+File diff:
+
+-pass[9]      import abc.A;
++test[9]      import abc.def.A;
+-pass[22]             abc.A a = new abc.A();
++test[22]             abc.def.A a = new abc.def.A();
+Original file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.A;
+import abc.En;
+import abc.def.DAnnotType;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.A a = new abc.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.D d = new abc.def.D();
+        d.methodD(En.X);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation DAnnotType
+     */
+    @DAnnotType(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.def.A;
+import abc.En;
+import abc.def.DAnnotType;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.def.A a = new abc.def.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.D d = new abc.def.D();
+        d.methodD(En.X);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation DAnnotType
+     */
+    @DAnnotType(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+

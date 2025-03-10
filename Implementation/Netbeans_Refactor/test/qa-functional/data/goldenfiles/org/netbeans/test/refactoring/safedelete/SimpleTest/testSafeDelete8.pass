@@ -1,0 +1,5 @@
+Selected element:public static class Inner {
+        
+    }
+Safe delete from class packageD.ClassB
+Problem: References to selected elements were found. Remove all references to these elements in order to safely delete your class.

@@ -1,0 +1,72 @@
+same argument's name
+Change signature of method public setSign(boolean) of class org.netbeans.tests.examples.packb.BeanC
+method public setSign
+Arguments: 
+int sign = 0
+sign
+Problem fatal: Duplicate parameter name (sign).
+wrong argument's name - just exists in the method
+Change signature of method public test1() of class org.netbeans.tests.examples.Test
+method public test1
+Arguments: 
+java.beans.PropertyChangeListener a = null
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/Test.java
+
+      Change method parameters of <b>public void test1()</b>
+
+File diff:
+
+-pass[48]         public void test1() {
++test[48]         public void test1(java.beans.PropertyChangeListener a) {
+
+org/netbeans/tests/examples/packc/BeanE.java
+
+      t1.<b>test1()</b>;
+
+File diff:
+
+-pass[26]             t1.test1();
++test[26]             t1.test1(null);
+
+guarded method
+Change signature of method private buttonActionPerformed(java.awt.event.ActionEvent) of class org.netbeans.tests.examples.packc.AFrame
+method protected buttonActionPerformed
+Arguments: 
+evt
+int action = 0
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/packc/AFrame.java
+
+      <b>buttonActionPerformed(evt)</b>; [ error: code is in guarded block ]
+      Change method parameters of <b>private void buttonActionPerformed(java.awt.event.ActionEvent evt)</b> [ error: code is in guarded block ]
+
+File diff:
+
+
+bad accessor - method is called as public from another package
+Change signature of method public runTest() of class org.netbeans.tests.examples.Test
+method private runTest
+Arguments: 
+Problem: You changed the access modifier to private. Method will not be accessible for some of references. The sources will not compile after refactoring!
+Found 3 occurance(s).
+
+org/netbeans/tests/examples/Test.java
+
+      Change method parameters of <b>public void runTest()</b>
+      t.<b>runTest()</b>;
+
+File diff:
+
+-pass[27]         public void runTest() {
++test[27]         private void runTest() {
+
+org/netbeans/tests/examples/packc/BeanE.java
+
+      t1.<b>runTest()</b>;
+
+File diff:
+
+

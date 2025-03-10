@@ -1,0 +1,124 @@
+Rename package org.netbeans.tests.examples.packa to org.netbeans.tests.examples.packarenamed
+Found 23 occurance(s).
+
+org/netbeans/tests/examples/packa/Association.java
+
+      Move source to package "org.netbeans.tests.examples.packarenamed"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packa;
++test[7]      package org.netbeans.tests.examples.packarenamed;
+
+org/netbeans/tests/examples/packa/Bean.java
+
+      Move source to package "org.netbeans.tests.examples.packarenamed"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packa;
++test[7]      package org.netbeans.tests.examples.packarenamed;
+
+org/netbeans/tests/examples/packa/Property.java
+
+      Move source to package "org.netbeans.tests.examples.packarenamed"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packa;
++test[7]      package org.netbeans.tests.examples.packarenamed;
+
+org/netbeans/tests/examples/packa/Testable.java
+
+      Move source to package "org.netbeans.tests.examples.packarenamed"
+
+File diff:
+
+-pass[7]      package org.netbeans.tests.examples.packa;
++test[7]      package org.netbeans.tests.examples.packarenamed;
+
+org/netbeans/tests/examples/packb/BeanA.java
+
+      import <b>org.netbeans.tests.examples.packa.Bean</b>;
+      public <b>org.netbeans.tests.examples.packa.Testable</b> test()
+      public <b>org.netbeans.tests.examples.packa.Testable</b>[] usages(java.util.List list)
+      public class BeanA extends Bean implements <b>org.netbeans.tests.examples.packa.Testable</b>
+
+File diff:
+
+-pass[9]      import org.netbeans.tests.examples.packa.Bean;
++test[9]      import org.netbeans.tests.examples.packarenamed.Bean;
+-pass[15]     public class BeanA extends Bean implements org.netbeans.tests.examples.packa.Testable {
++test[15]     public class BeanA extends Bean implements org.netbeans.tests.examples.packarenamed.Testable {
+-pass[80]         public org.netbeans.tests.examples.packa.Testable test() {
++test[80]         public org.netbeans.tests.examples.packarenamed.Testable test() {
+-pass[85]         public org.netbeans.tests.examples.packa.Testable[] usages(java.util.List list) {
++test[85]         public org.netbeans.tests.examples.packarenamed.Testable[] usages(java.util.List list) {
+
+org/netbeans/tests/examples/packb/BeanB.java
+
+      import <b>org.netbeans.tests.examples.packa.Bean</b>;
+      import <b>org.netbeans.tests.examples.packa.Testable</b>;
+      public void make(int index, java.lang.String s, <b>org.netbeans.tests.examples.packa.Bean</b> bean)
+
+File diff:
+
+-pass[10]     import org.netbeans.tests.examples.packa.Bean;
++test[10]     import org.netbeans.tests.examples.packarenamed.Bean;
+-pass[11]     import org.netbeans.tests.examples.packa.Testable;
++test[11]     import org.netbeans.tests.examples.packarenamed.Testable;
+-pass[73]         public void make(int index, java.lang.String s, org.netbeans.tests.examples.packa.Bean bean) {
++test[73]         public void make(int index, java.lang.String s, org.netbeans.tests.examples.packarenamed.Bean bean) {
+
+org/netbeans/tests/examples/packb/BeanC.java
+
+      <b>org.netbeans.tests.examples.packa.Bean</b> b;
+      <b>org.netbeans.tests.examples.packa.Bean</b> bb=new BeanC();
+      <b>org.netbeans.tests.examples.packa.Testable</b> te=t;
+      public <b>org.netbeans.tests.examples.packa.Bean</b> getBean()
+      public <b>org.netbeans.tests.examples.packa.Testable</b> test()
+      public void make(int index, java.lang.String s, <b>org.netbeans.tests.examples.packa.Bean</b> bean)
+      public void setBean(<b>org.netbeans.tests.examples.packa.Bean</b> bean)
+      public void setTestable(<b>org.netbeans.tests.examples.packa.Testable</b> t)
+
+File diff:
+
+-pass[19]         org.netbeans.tests.examples.packa.Bean b;
++test[19]         org.netbeans.tests.examples.packarenamed.Bean b;
+-pass[47]         public org.netbeans.tests.examples.packa.Bean getBean() {
++test[47]         public org.netbeans.tests.examples.packarenamed.Bean getBean() {
+-pass[52]         public void setBean(org.netbeans.tests.examples.packa.Bean bean) {
++test[52]         public void setBean(org.netbeans.tests.examples.packarenamed.Bean bean) {
+-pass[64]             org.netbeans.tests.examples.packa.Bean bb=new BeanC();
++test[64]             org.netbeans.tests.examples.packarenamed.Bean bb=new BeanC();
+-pass[75]         public org.netbeans.tests.examples.packa.Testable test() {
++test[75]         public org.netbeans.tests.examples.packarenamed.Testable test() {
+-pass[86]         public void setTestable(org.netbeans.tests.examples.packa.Testable t) {
++test[86]         public void setTestable(org.netbeans.tests.examples.packarenamed.Testable t) {
+-pass[87]             org.netbeans.tests.examples.packa.Testable te=t;
++test[87]             org.netbeans.tests.examples.packarenamed.Testable te=t;
+-pass[95]         public void make(int index, java.lang.String s, org.netbeans.tests.examples.packa.Bean bean) {
++test[95]         public void make(int index, java.lang.String s, org.netbeans.tests.examples.packarenamed.Bean bean) {
+
+org/netbeans/tests/examples/packb/BeansD.java
+
+      import <b>org.netbeans.tests.examples.packa.Bean</b>;
+      import <b>org.netbeans.tests.examples.packa.Testable</b>;
+
+File diff:
+
+-pass[9]      import org.netbeans.tests.examples.packa.Bean;
++test[9]      import org.netbeans.tests.examples.packarenamed.Bean;
+-pass[10]     import org.netbeans.tests.examples.packa.Testable;
++test[10]     import org.netbeans.tests.examples.packarenamed.Testable;
+
+org/netbeans/tests/examples/packc/Makable.java
+
+      import <b>org.netbeans.tests.examples.packa.Bean</b>;
+
+File diff:
+
+-pass[8]      import org.netbeans.tests.examples.packa.Bean;
++test[8]      import org.netbeans.tests.examples.packarenamed.Bean;
+
+Move "properties.properties" to package "org.netbeans.tests.examples.packarenamed"

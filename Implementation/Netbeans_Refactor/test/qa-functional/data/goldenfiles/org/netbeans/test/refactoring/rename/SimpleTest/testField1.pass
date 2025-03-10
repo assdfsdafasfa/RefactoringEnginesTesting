@@ -1,0 +1,2 @@
+Rename field refID to 22222 of class org.netbeans.tests.examples.packa.Bean
+Problem fatal: "22222" is not a valid Java identifier.

@@ -1,0 +1,462 @@
+Rename field X to XX of class abc.En
+Found 5 occurance(s).
+
+abc/A.java
+
+      En a = <b>En.X</b>;
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+    
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+    
+    
+}
+
+abc/En.java
+
+      Rename field to XX
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * En.java
+ *
+ * Created on June 22, 2004, 8:22 AM
+ */
+
+package abc;
+
+/**
+ *
+ * @author Jan Lahoda
+ */
+public enum En {
+    
+    X, Y, Z;
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * En.java
+ *
+ * Created on June 22, 2004, 8:22 AM
+ */
+
+package abc;
+
+/**
+ *
+ * @author Jan Lahoda
+ */
+public enum En {
+    
+    X, Y, Z;
+    
+}
+
+abc/def/DAnnotType.java
+
+      En coord() default <b>En.X</b>;
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * DAnnotType.java
+ *
+ * Created on January 4, 2005, 11:34 AM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * This is a comment for DAnnotType.
+ * @author eh103527
+ */
+public @interface DAnnotType {
+    int id();
+    String value() default "<empty>";
+    En coord() default En.X;
+}
+Modified file:
+-------------------------------------
+/*
+ * DAnnotType.java
+ *
+ * Created on January 4, 2005, 11:34 AM
+ */
+
+package abc.def;
+
+import abc.En;
+
+/**
+ * This is a comment for DAnnotType.
+ * @author eh103527
+ */
+public @interface DAnnotType {
+    int id();
+    String value() default "<empty>";
+    En coord() default En.X;
+}
+
+abc/def/ghi/G.java
+
+      d.methodD(<b>En.X</b>);
+
+File diff:
+
+-pass[26]             d.methodD(En.X);
++test[26]             d.methodD(En.XX);
+Original file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.A;
+import abc.En;
+import abc.def.DAnnotType;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.A a = new abc.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.D d = new abc.def.D();
+        d.methodD(En.X);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation DAnnotType
+     */
+    @DAnnotType(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.A;
+import abc.En;
+import abc.def.DAnnotType;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.A a = new abc.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.D d = new abc.def.D();
+        d.methodD(En.XX);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation DAnnotType
+     */
+    @DAnnotType(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+
+abc/def/ghi/H.java
+
+      public static final D DATA1=new D(<b>En.X</b>);
+
+File diff:
+
+Original file:
+-------------------------------------
+/*
+ * H.java
+ *
+ * Created on May 24, 2004, 1:56 PM
+ */
+
+package abc.def.ghi;
+
+import abc.En;
+import abc.def.D;
+import abc.def.DAnnotType;
+import  abc.def.ghi.jkl.J ;
+
+/**
+ *
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class H implements J {
+    
+    public static final D DATA1=new D(En.X);
+    public static final D DATA2=new D(En.Y);
+    public static final D DATA3=new D(En.Z);
+    
+    /** Creates a new instance of H */
+    public H() {
+        
+        new D().methodD(En.Y);
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    public boolean setState(String text) {
+        return true;
+    }
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * H.java
+ *
+ * Created on May 24, 2004, 1:56 PM
+ */
+
+package abc.def.ghi;
+
+import abc.En;
+import abc.def.D;
+import abc.def.DAnnotType;
+import  abc.def.ghi.jkl.J ;
+
+/**
+ *
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class H implements J {
+    
+    public static final D DATA1=new D(En.X);
+    public static final D DATA2=new D(En.Y);
+    public static final D DATA3=new D(En.Z);
+    
+    /** Creates a new instance of H */
+    public H() {
+        
+        new D().methodD(En.Y);
+    }
+
+    public String getState() {
+        return "idle";
+    }
+
+    public boolean setState(String text) {
+        return true;
+    }
+    
+}
+

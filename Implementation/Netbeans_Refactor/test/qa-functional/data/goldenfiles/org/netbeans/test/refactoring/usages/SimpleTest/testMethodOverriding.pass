@@ -1,0 +1,56 @@
+Find usages of org.netbeans.tests.examples.packc.Makable.make(int, java.lang.String, org.netbeans.tests.examples.packa.Bean)
+Found 5 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanB.java
+      public void <b>make</b>(int index, java.lang.String s, org.netbeans.tests.examples.packa.Bean bean)
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public void <b>make</b>(int index, java.lang.String s, org.netbeans.tests.examples.packa.Bean bean)
+
+org/netbeans/tests/examples/packb/BeansD.java
+      public void <b>make</b>(int a, String s, Bean b)
+      public void <b>make</b>(int index, java.lang.String s, Bean bean)
+      public void <b>make</b>(int index, java.lang.String s, Bean bean)
+
+
+Find usages of org.netbeans.tests.examples.packa.Testable.test()
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanA.java
+      public org.netbeans.tests.examples.packa.Testable <b>test</b>()
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public org.netbeans.tests.examples.packa.Testable <b>test</b>()
+
+
+Find usages of org.netbeans.tests.examples.packa.Bean.abc()
+Found 3 occurance(s).
+
+org/netbeans/tests/examples/packb/BeansD.java
+      public Bean <b>abc</b>()
+      public Bean <b>abc</b>()
+      public Bean <b>abc</b>()
+
+
+Find usages of org.netbeans.tests.examples.packb.BeanA.getProtectedProperty()
+Found 3 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public java.lang.String <b>getProtectedProperty</b>()
+
+org/netbeans/tests/examples/packb/BeansD.java
+      public String <b>getProtectedProperty</b>()
+      public java.lang.String <b>getProtectedProperty</b>()
+
+
+Find usages of java.awt.event.ActionListener.actionPerformed(java.awt.event.ActionEvent)
+Found 3 occurance(s).
+
+org/netbeans/tests/examples/packc/AFrame.java
+      public void <b>actionPerformed</b>(java.awt.event.ActionEvent evt) [ error: code is in guarded block ]
+
+org/netbeans/tests/examples/packc/BPanel.java
+      public void <b>actionPerformed</b>(java.awt.event.ActionEvent e)
+      public void <b>actionPerformed</b>(java.awt.event.ActionEvent evt) [ error: code is in guarded block ]
+
+

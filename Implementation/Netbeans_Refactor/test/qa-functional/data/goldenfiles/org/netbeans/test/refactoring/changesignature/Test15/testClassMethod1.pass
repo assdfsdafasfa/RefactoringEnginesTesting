@@ -1,0 +1,295 @@
+Change signature of method public methodA(T, java.lang.String) of class abc.A
+method public methodA
+Arguments: 
+i
+java.lang.String abc = ""
+text
+Found 5 occurance(s).
+
+abc/A.java
+
+      Change method parameters of <b>public void methodA(T i, String text)</b>
+
+File diff:
+
+-pass[65]         public void methodA(T i, String text) {
++test[65]         public void methodA(T i, java.lang.String abc, String text) {
+Original file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+    
+    
+}
+Modified file:
+-------------------------------------
+/*
+ * A.java
+ *
+ * Created on May 24, 2004, 9:36 AM
+ */
+
+package abc;
+
+import abc.def.DAnnotType;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import static java.lang.String.*;
+/**
+ * class is annotated by DAnnotType
+ * @author  mg105252
+ */
+@DAnnotType(id=5)
+public class A<T> {
+    
+    private T number;
+    public String text = "text";
+    protected boolean test = false;
+    
+    public List<String> list;
+    ArrayList<T> data;
+    
+    /** Creates a new instance of A */
+    public A() {
+        data=new ArrayList();
+        methodA(number, text, false);
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i) {
+        
+    }
+    
+    /** Creates a new instance of A */
+    public A(T i, String text) {
+        
+    }
+    
+    public T methodA() {
+        return null;
+    }
+    
+    /**
+     * There is used enumeration En
+     */
+    private void methodA(T i) {
+        list.get(0);
+        
+        En a = En.X;
+        
+        System.err.println("a=" + a);
+        for (T t : data) {
+            if (t == i) {
+                return;
+            }
+        }
+        data.add(i);
+    }
+    
+    public void methodA(T i, java.lang.String abc, String text) {
+        methodA(i);
+        methodA(i, text, true, "test1", "test2", "test3", "test4");
+        methodA(i, text, true, "test1");
+        methodA(i, text, true);
+        list.add(text);
+        Collections.sort(list, CASE_INSENSITIVE_ORDER);
+    }
+    
+    public void methodA(T i, String text, boolean b, String ... var) {
+        methodA(i);
+    }
+    
+    
+}
+
+abc/def/ghi/G.java
+
+      al.<b>methodA(123l, "s2")</b>;
+      as.<b>methodA("s1", "s2")</b>;
+      av.<b>methodA(new Vector(), "aah")</b>;
+      av.<b>methodA(v2, "bbb")</b>;
+
+File diff:
+
+-pass[28]             av.methodA(new Vector(), "aah");
++test[28]             av.methodA(new Vector(), "", "aah");
+-pass[30]             av.methodA(v2, "bbb");
++test[30]             av.methodA(v2, "", "bbb");
+-pass[32]             as.methodA("s1", "s2");
++test[32]             as.methodA("s1", "", "s2");
+-pass[34]             al.methodA(123l, "s2");
++test[34]             al.methodA(123l, "", "s2");
+Original file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.A;
+import abc.En;
+import abc.def.DAnnotType;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.A a = new abc.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.D d = new abc.def.D();
+        d.methodD(En.X);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation DAnnotType
+     */
+    @DAnnotType(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+Modified file:
+-------------------------------------
+/*
+ * G.java
+ *
+ * Created on May 24, 2004, 1:43 PM
+ */
+
+package abc.def.ghi;
+
+import abc.A;
+import abc.En;
+import abc.def.DAnnotType;
+import java.util.Vector;
+
+/**
+ *
+ * @author  mg105252
+ */
+public class G {
+    
+    /** Creates a new instance of G */
+    public G() {
+        abc.A a = new abc.A();
+        a.methodA(3, "hi", true);
+        
+        abc.def.D d = new abc.def.D();
+        d.methodD(En.X);
+        A<Vector> av=new A();
+        av.methodA(new Vector(), "", "aah");
+        Vector v2=new Vector();
+        av.methodA(v2, "", "bbb");
+        A<String> as=new A();
+        as.methodA("s1", "", "s2");
+        A<Long> al=new A();
+        al.methodA(123l, "", "s2");
+        
+    }
+
+    public int age = 13;
+    
+    /**
+     * there is annotation DAnnotType
+     */
+    @DAnnotType(id=2, value="ghi")
+    public void testA() {
+        
+    }
+}
+

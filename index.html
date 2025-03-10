@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格示例</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Java Refactoring Engines Testing</h1>
+    <table id="tab" border="1" cellpadding="5">
+        <p style="font-family: Arial, sans-serif; font-size: 22px;"> We anonymously submitted the discovered errors to IDEs. The following list of bugs is provided for reviewers to check.
+            <br>It's worth noting that when we submitted bugs to the NetBeans bug repository, the maintainers told us, "These errors are a major issue.
+            However, if you're not going to submit a pull request to fix them, please stop submitting. Listing problems is not helpful."
+            Therefore, in our paper, we did not count the bug submissions and confirmations for NetBeans. All the confirmed bugs were from Eclipse and IntelliJ IDEA.
+            In the subsequent work, we will submit bugs and corresponding pull requests to fix them to NetBeans to resolve these issues.
+        </p>
+        <tr><th rowspan="2"></th> <th rowspan="2">Refactoring Types</th> <th colspan="2"><a href="http://www.eclipse.org/jdt/">Eclipse</a> 4.33.0</th> <th colspan="2"><a href="http://netbeans.org/">NetBeans</a> 25<br/></th> <th colspan="2"><a href="http://www.jetbrains.com/idea/">IntelliJ</a> 2024.2.4<br/></th></tr>
+<tr> <th>bug id</th> <th>bug status</th> <th>bug id</th> <th>bug status</th><th>bug id</th> <th>bug status</th></tr>
+        <tr><td align="right">1.</td> <td>MoveField</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1746">1746</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td><td align="center">-</td><td align="center">-</td></tr>
+        <tr><td align="right">2.</td> <td>MoveField</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1745">1745</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td> <td align="center">-</td><td align="center">-</td></tr>
+        <tr><td align="right">3.</td> <td>MoveField</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1744">1744</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td> <td align="center">-</td><td align="center">-</td></tr>
+<tr><td align="right">4.</td> <td>PullDownField</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1738">1738</a></td> <td align="center">no-assigned</td> <td align="center"><a href="https://github.com/apache/netbeans/issues/8301">8301</td><td align="center">no-assigned</td> <td align="center">-</td><td align="center">-</td></tr>
+<tr><td align="right">5.</td> <td>MoveClass</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1737">1737</a></td> <td align="center">confirmed</td> <td align="center">-</td><td align="center">Yes</td> <td align="center">-</td><td align="center">-</td></tr>
+<tr><td align="right">6.</td> <td>MoveClass</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1743">1743</a></td> <td align="center">no-assigned</td><td align="center">-</td> <td align="center">Yes</td><td align="center">-</td> <td align="center">-</td></tr>
+        <tr><td align="right">7.</td> <td>MoveMethod</td> <td align="center">-</td> <td align="center">-</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361683/Move-method-refactoring-causes-syntax-error">361683</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">8.</td> <td>MoveMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1865">1865</a></td> <td align="center">fixed</td> <td align="center"><a href="https://github.com/apache/netbeans/issues/8300">8300</td><td align="center">no-assigned</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361686/Move-method-refactoring-causes-the-method-call-relationship-to-change">361686</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">9.</td> <td>MoveMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1866">1866</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361687/Move-method-refactoring-causes-compilation-errors-in-static-methods">361687</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">10.</td> <td>MoveMethod</td> <td align="center">-</td> <td align="center">-</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361688/Move-method-refactoring-Access-errors-occur-when-the-move-method-refactoring-is-moved-to-the-interface">361688</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">11.</td> <td>MoveMethod</td> <td align="center">-</td> <td align="center">-</td> <td align="center">-</td>-<td align="center">-</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361689/Move-method-refactoring-The-super-keyword-causes-a-syntax-error">361689</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">12.</td> <td>ExtractMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1757">1757</a><td align="center">fixed</td> <td align="center"><a href="https://github.com/apache/netbeans/issues/8305">8305</td><td align="center">no-assigned</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361729/Extract-method-refactoring-causes-the-call-relationship-to-change">361729</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">13.</td> <td>ExtractMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1758">1758</a></td> <td align="center">fixed</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361730/Extract-method-refactoring-Internal-class-method-call-changes">361730</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">14.</td> <td>InlineMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1748">1748</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361732/Inline-method-refactoring-causes-method-calls-to-change">361732</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">15.</td> <td>RenameField</td> <td align="center">-</td> <td align="center">-</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361733/Rename-field-refactoring-The-behavior-of-the-assignment-statement-changes">361733</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">16.</td> <td>PullDownMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1755">1755</a></td> <td align="center">not-supported</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361735/Pull-down-refactoring-Code-behavior-errors-due-to-reflection">361735</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">17.</td> <td>PullDownMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1756">1756</a></td> <td align="center">confirmed</td> <td align="center"><a href="https://github.com/apache/netbeans/issues/8306">8306</td><td align="center">no-assigned</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361736/Pull-down-refactoringchanges-the-method-call-relationship.">361736</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">18.</td> <td>ChangeMethodSignature</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1749">1749</a></td> <td align="center">not-supported</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361738/Change-Method-Signature-refactoringReflection-causes-code-behavior-changes">361738</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">19.</td> <td>ChangeMethodSignature</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1750">1750</a></td> <td align="center">fixed</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361739/Change-Method-Signature-refactoring-causing-the-method-call-change">361739</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">20.</td> <td>ChangeMethodSignature</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1751">1751</a></td> <td align="center">fixed</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361740/Change-Method-Signature-refactoring-Causes-method-recursion">361740</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">21.</td> <td>ChangeMethodSignature</td> <td align="center">-</td> <td align="center">-</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361741/Change-method-signature-refactoring-causes-static-method-compilation-error">361741</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">22.</td> <td>PullUpMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1871">1871</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361742/Pull-up-method-refactoring-Code-behavior-changes-due-to-reflection">361742</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">23.</td> <td>PullUpMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1870">1870</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361743/Pull-up-method-refactoring-The-method-call-relationship-has-changed">361743</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">24.</td> <td>PullUpMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1869">1869</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361746/Pull-up-method-refactoring-Behavior-changes-in-inheritance-relationships">361746</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">25.</td> <td>PullUpMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1868">1868</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361747/pull-up-method-refactoring-code-compilation-errors">361747</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">26.</td> <td>PullUpMethod</td> <td align="center"><a href="https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1867">1867</a></td> <td align="center">no-assigned</td> <td align="center">-</td><td align="center">Yes</td><td align="center"><a href="https://youtrack.jetbrains.com/issue/IDEA-361748/pull-up-method-refactoring-causes-compilation-error-for-calling-methods">361748</a></td> <td align="center">confirmed</td></tr>
+        <tr><td align="right">27.</td> <td>InlineField</td> <td align="center">-</td> <td align="center">-</td><td align="center">-</td> <td align="center">Yes</td><td align="center">-</td> <td align="center">-</td></tr>
+        <tr><td align="right">28.</td> <td>InlineField</td> <td align="center">-</td> <td align="center">-</td> <td align="center">-</td><td align="center">Yes</td><td align="center">-</td> <td align="center">-</td></tr>
+    </table>
+</body>
+</html>

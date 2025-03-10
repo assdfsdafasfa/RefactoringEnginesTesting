@@ -1,0 +1,2 @@
+Extract new interface wrong.name from packageB.ClassC
+Problem fatal: "wrong.name" is not a valid Java identifier.

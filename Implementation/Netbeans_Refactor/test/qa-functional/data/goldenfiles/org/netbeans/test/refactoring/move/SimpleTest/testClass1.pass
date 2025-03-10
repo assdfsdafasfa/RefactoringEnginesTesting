@@ -1,0 +1,2 @@
+Move class org.netbeans.tests.examples.packa.Bean to org.netbeans.tests.examples.packa
+Problem fatal: Cannot move class(es) into the same package.

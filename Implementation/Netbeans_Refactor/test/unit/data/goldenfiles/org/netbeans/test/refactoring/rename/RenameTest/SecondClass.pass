@@ -1,0 +1,43 @@
+/*
+ * SecondClass.java
+ *
+ * Created on 18 January 2004, 21:42
+ */
+
+package org.netbeans.test.rename;
+
+import java.util.List;
+import java.util.Iterator;
+import org.netbeans.test.rename.RenamedClass;
+import java.util.Collections;
+
+/**
+ *
+ * @author  Dan
+ */
+public class SecondClass {
+    
+    /** Creates a new instance of SecondClass */
+    public SecondClass() {
+    }
+    
+    public void runMe() {
+        RenamedClass inst = new RenamedClass();
+        inst.go();
+        if (RenamedClass.MAX % 2 == RenamedClass.MAX % 3) {
+            System.out.println(inst.renamedMethod('q', inst.renamedMethod('d', 3)));
+        } else {
+            System.out.println(inst.renamedMethod('f', 7));
+        }
+        inst.main(null);
+    }
+    
+    public static class InnerClass extends RenamedClass {
+        
+        public InnerClass() {
+            super(2, "");
+        }
+        
+    }
+    
+}

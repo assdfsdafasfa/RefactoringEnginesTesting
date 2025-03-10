@@ -1,0 +1,4 @@
+You are an expert in software testing and refactoring. Please generate test cases for the program of the refactoring engine. These test cases should make the output results of the program different before and after refactoring. If you can generate them, output the test cases; otherwise, answer "no". The following is the information provided for refactoring:
+1. The program before refactoring;
+2. The program after refactoring;
+3. The refactoring scheme

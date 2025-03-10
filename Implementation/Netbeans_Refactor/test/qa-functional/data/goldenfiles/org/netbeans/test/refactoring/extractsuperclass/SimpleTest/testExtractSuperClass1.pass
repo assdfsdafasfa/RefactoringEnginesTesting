@@ -1,0 +1,137 @@
+Extract super class SuperA from packageC.ClassA
+package packageC;
+
+
+
+
+/**
+ *
+ * @author XXXX 
+*/public class SuperA extends SuperClass implements Inter {
+    
+    /** Creates a new instance of SuperA */
+    public SuperA() {
+    }
+    
+    public int field1;
+    
+    public void method1() {
+        
+    }
+    }
+
+Found 6 occurance(s).
+
+packageC/ClassA.java
+
+      Move <b>Inter</b> to the new super class.
+      Move <b>field1</b> to the new super class.
+      Move <b>method1()</b> to the new super class.
+      Set <b>SuperA</b> to the extend clause.
+
+File diff:
+
+-pass[17]     public class ClassA extends SuperClass implements Inter {
++test[17]     public class ClassA extends SuperA {
+-pass[19]         public int field1;
+-pass[26]         public void method1() {
+-pass[27]             
+Original file:
+-------------------------------------
+/*
+ * ClassA.java
+ *
+ * Created on August 22, 2005, 8:38 AM
+ *
+ * To change this template, choose Tools | Options and locate the template under
+ * the Source Creation and Management node. Right-click the template and choose
+ * Open. You can then make changes to the template in the Source Editor.
+ */
+
+package packageC;
+
+/**
+ *
+ * @author jp159440
+ */
+public class ClassA extends SuperClass implements Inter {
+    
+    public int field1;
+    private int field2;
+    protected int field3;
+    /** Creates a new instance of ClassA */
+    public ClassA() {
+    }
+    
+    public void method1() {
+        
+    }
+    
+    private void method2() {
+        
+    }
+    
+    protected void method3() {
+        
+    }
+    
+    public class Inner1 {
+
+    }
+
+    private class Inner2 {
+
+    }
+    protected class Inner3 {
+        
+    }
+}
+
+Modified file:
+-------------------------------------
+/*
+ * ClassA.java
+ *
+ * Created on August 22, 2005, 8:38 AM
+ *
+ * To change this template, choose Tools | Options and locate the template under
+ * the Source Creation and Management node. Right-click the template and choose
+ * Open. You can then make changes to the template in the Source Editor.
+ */
+
+package packageC;
+
+/**
+ *
+ * @author jp159440
+ */
+public class ClassA extends SuperA {
+    private int field2;
+    protected int field3;
+    /** Creates a new instance of ClassA */
+    public ClassA() {
+    }
+    
+    private void method2() {
+        
+    }
+    
+    protected void method3() {
+        
+    }
+    
+    public class Inner1 {
+
+    }
+
+    private class Inner2 {
+
+    }
+    protected class Inner3 {
+        
+    }
+}
+
+
+Create class <b>SuperA</b>.
+Set <b>packageC.SuperClass</b> to the extend clause.

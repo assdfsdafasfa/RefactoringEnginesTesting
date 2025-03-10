@@ -1,0 +1,42 @@
+Find usages of: org.netbeans.tests.examples.packa.Bean
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanA.java
+      public class BeanA extends Bean implements org.netbeans.tests.examples.packa.Testable
+
+org/netbeans/tests/examples/packb/BeanB.java
+      public class BeanB extends Bean implements org.netbeans.tests.examples.packc.Makable
+
+
+Find usages of: org.netbeans.tests.examples.packb.BeanA
+Found 2 occurance(s).
+
+org/netbeans/tests/examples/packb/BeanC.java
+      public class BeanC extends BeanA implements Makable
+
+org/netbeans/tests/examples/packb/BeansD.java
+      public static class BeanDA extends BeanA
+
+
+Find usages of: org.netbeans.tests.examples.packb.BeanB
+Found 1 occurance(s).
+
+org/netbeans/tests/examples/packb/BeansD.java
+      class BeanDD extends BeanB
+
+
+Find usages of: org.netbeans.tests.examples.packb.BeanD
+Found 0 occurance(s).
+
+
+Find usages of: org.netbeans.tests.examples.packb.BeansD.BeanDA
+Found 0 occurance(s).
+
+
+Find usages of: javax.swing.JFrame
+Found 1 occurance(s).
+
+org/netbeans/tests/examples/packc/AFrame.java
+      public class AFrame extends javax.swing.JFrame
+
+

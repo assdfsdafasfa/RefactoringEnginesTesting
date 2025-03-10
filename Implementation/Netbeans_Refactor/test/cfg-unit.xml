@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mconfig PUBLIC "-//NetBeans//DTD XTest cfg 1.0//EN" "http://www.netbeans.org/dtds/xtest-cfg-1_0.dtd">
+<!--
+The contents of this file are subject to the terms of the Common Development
+and Distribution License (the License). You may not use this file except in
+compliance with the License.
+
+You can obtain a copy of the License at http://www.netbeans.org/cddl.html
+or http://www.netbeans.org/cddl.txt.
+
+When distributing Covered Code, include this CDDL Header Notice in each file
+and include the License file at http://www.netbeans.org/cddl.txt.
+If applicable, add the following below the CDDL Header, with the fields
+enclosed by brackets [] replaced by your own identifying information:
+"Portions Copyrighted [year] [name of copyright owner]"
+
+The Original Software is NetBeans. The Initial Developer of the Original
+Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
+Microsystems, Inc. All Rights Reserved.
+-->
+<mconfig name="Configuration of refactoring unit tests">
+
+    <testbag testattribs="full, stable" executor="ide" name="Refactoring unit tests">
+        <testset dir="unit/src">
+            <patternset>
+                <include name="org/netbeans/test/refactoring/encapsulate/EncapsulateTest.class"/>
+                <include name="org/netbeans/test/refactoring/encapsulate/DimEncapsulateTest.class"/>
+                <include name="org/netbeans/test/refactoring/extractmethod/ExtractMethod1Test.class"/>
+                <include name="org/netbeans/test/refactoring/signature/Signature1Test.class"/>
+                <include name="org/netbeans/test/refactoring/signature/Signature2Test.class"/>
+                <include name="org/netbeans/test/refactoring/rename/RenamePackageTest.class"/>
+                <include name="org/netbeans/test/refactoring/rename/RenameTest.class"/>
+                <include name="org/netbeans/test/refactoring/rename/RenameTypeParameterTest.class"/>
+                <include name="org/netbeans/test/refactoring/rename/RenameAnnAttributeTest.class"/>
+                <include name="org/netbeans/test/refactoring/rename/RenameVariableTest.class"/>
+                <include name="org/netbeans/test/refactoring/undomanager/UndoRenamePackageTest.class"/>
+                <include name="org/netbeans/test/refactoring/undomanager/UndoMoveClassTest.class"/>
+                <include name="org/netbeans/test/refactoring/moveclass/MoveClassTest.class"/>
+                <include name="org/netbeans/test/refactoring/safedelete/SafeDeleteRefactoringTest.class"/>
+                <include name="org/netbeans/test/refactoring/safedelete/SafeDeleteFieldTest.class"/>
+                <include name="org/netbeans/test/refactoring/pullup/PullUpRefactoringTest.class"/>
+                <include name="org/netbeans/test/refactoring/usesupertype/UseSuperTypeTest.class"/>
+                <include name="org/netbeans/test/refactoring/pushdown/*Test.class"/>
+                <include name="org/netbeans/test/refactoring/innertoouter/*Test.class"/>
+                <include name="org/netbeans/test/refactoring/anonymoustoinner/*Test.class"/>
+                <include name="org/netbeans/test/refactoring/extractsuperclass/*Test.class"/>
+                <include name="org/netbeans/test/refactoring/extractinterface/*Test.class"/>
+                <include name="org/netbeans/test/refactoring/api/ui/*Test.class"/>
+            </patternset>
+        </testset>
+    </testbag>
+ 
+    <!-- ide executor - use this one if you plan to run your tests inside IDE (internally).
+                        Similarly as with code executor, you can create your own to 
+                        prepare some neccessary stuff before running tests. -->
+    <executor name="ide" antfile="build-unit.xml" target="runidetest"/>
+    
+
+    <compiler name="unit-compiler" antfile="build-unit.xml" target="default-compiler" default="true"/>
+</mconfig>
+

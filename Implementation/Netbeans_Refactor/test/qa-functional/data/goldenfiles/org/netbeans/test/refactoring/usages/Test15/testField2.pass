@@ -1,0 +1,16 @@
+Find usages of: X
+Found 4 occurance(s).
+
+abc/A.java
+      En a = <b>En.X</b>;
+
+abc/def/DAnnotType.java
+      En coord() default <b>En.X</b>;
+
+abc/def/ghi/G.java
+      d.methodD(<b>En.X</b>);
+
+abc/def/ghi/H.java
+      public static final D DATA1=new D(<b>En.X</b>);
+
+

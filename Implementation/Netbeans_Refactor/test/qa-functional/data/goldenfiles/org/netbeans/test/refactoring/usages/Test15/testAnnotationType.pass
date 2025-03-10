@@ -1,0 +1,31 @@
+Find usages of: abc.def.DAnnotType
+Found 15 occurance(s).
+
+abc/A.java
+      /** <i> class is annotated by <b>DAnnotType</b></i>
+      @<b>DAnnotType</b>(id=5) public class A&lt;T&gt;
+      import <b>abc.def.DAnnotType</b>;
+
+abc/C.java
+      @<b>DAnnotType</b>(id=1, value="type") public Object methodA()
+      @<b>DAnnotType</b>(id=3) private void methodA(int i)
+      import <b>abc.def.DAnnotType</b>;
+
+abc/def/D.java
+      @<b>DAnnotType</b>(id=1455)
+      @<b>DAnnotType</b>(id=7, value="methD", coord=En.Y) public void methodD(En e)
+
+abc/def/DAnnotType.java
+      /** <i> This is a comment for <b>DAnnotType</b>.</i>
+      // <i> * <b>DAnnotType</b>.java</i>
+
+abc/def/ghi/G.java
+      /** <i> there is annotation <b>DAnnotType</b></i>
+      @<b>DAnnotType</b>(id=2, value="ghi") public void testA()
+      import <b>abc.def.DAnnotType</b>;
+
+abc/def/ghi/H.java
+      @<b>DAnnotType</b>(id=5) public class H implements J
+      import <b>abc.def.DAnnotType</b>;
+
+

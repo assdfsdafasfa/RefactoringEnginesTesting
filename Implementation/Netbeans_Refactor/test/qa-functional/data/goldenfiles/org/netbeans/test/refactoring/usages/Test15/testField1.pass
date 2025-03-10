@@ -1,0 +1,12 @@
+Find usages of: list
+Found 4 occurance(s).
+
+abc/A.java
+      <b>list</b>.add(text);
+      <b>list</b>.get(0);
+      Collections.sort(<b>list</b>, CASE_INSENSITIVE_ORDER);
+
+abc/B.java
+      <b>list</b> = new ArrayList&lt;String&gt;();
+
+

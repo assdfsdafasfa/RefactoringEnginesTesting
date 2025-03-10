@@ -1,0 +1,100 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.example.AutoRefactor</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>AutoRefactor</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="123456@yourcompany.com" url="https://www.yourcompany.com">123456</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>111111111111111111111111111111111111111111111111111111111111111111</description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.ExtractVariableAction" id="$ExtractVariable" text="Extract Variables">
+        <add-to-group group-id="FileMenu" anchor="first"/>
+    </action>
+    </actions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.RenameFieldAction" id="$RenameField" text="Rename Field">
+            <add-to-group group-id="FileMenu" anchor="last"/>
+        </action>
+    </actions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.RenameMethodAction" id="$RenameMethod" text="Rename Method">
+            <add-to-group group-id="FileMenu" anchor="last"/>
+        </action>
+    </actions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.RenameLocalVariableAction" id="$RenameVariable" text="Rename Variable">
+            <add-to-group group-id="FileMenu" anchor="last"/>
+        </action>
+    </actions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.RenameParameterAction" id="$RenameParameter" text="Rename Parameter">
+            <add-to-group group-id="FileMenu" anchor="last"/>
+        </action>
+    </actions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.RenameTypeAction" id="$RenameType" text="Rename Type">
+            <add-to-group group-id="FileMenu" anchor="last"/>
+        </action>
+    </actions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.RenameTypeAction" id="$RenameType" text="Rename Type">
+            <add-to-group group-id="FileMenu" anchor="last"/>
+        </action>
+    </actions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.InlineMethodAction" id="$inlineMethod" text="inline Method">
+            <add-to-group group-id="FileMenu" anchor="first"/>
+        </action>
+    </actions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.MoveMethodAction" id="$MoveMethod" text="Move Method">
+            <add-to-group group-id="FileMenu" anchor="first"/>
+        </action>
+    </actions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="Action.ExtractMethodAction" id="$ExtractMethod" text="Extract Method">
+            <add-to-group group-id="FileMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>

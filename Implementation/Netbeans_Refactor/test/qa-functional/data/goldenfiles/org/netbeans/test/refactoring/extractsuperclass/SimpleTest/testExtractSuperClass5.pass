@@ -1,0 +1,2 @@
+Extract super class SuperE from packageC.myEnum
+Problem fatal: The selected type must be a class (cannot perform this operation on an interface, enum or annotation type).

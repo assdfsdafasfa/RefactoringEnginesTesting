@@ -1,0 +1,16 @@
+
+
+package org.netbeans.test.extractsuperclass;
+
+
+public class NewClass {
+    
+    /** Creates a new instance of NewClass */
+    public NewClass() {
+    }
+
+    
+    public void beep() {
+    }
+    
+}

@@ -1,0 +1,19 @@
+Find usages of: abc.A
+Found 5 occurance(s).
+
+abc/B.java
+      public class B&lt;T&gt; extends A&lt;T&gt;
+
+abc/C.java
+      public class C extends B implements abc.def.ghi.I
+
+abc/def/D.java
+      public class D extends abc.A
+
+abc/def/E.java
+      public class E extends D
+
+abc/def/F.java
+      public class F extends E
+
+

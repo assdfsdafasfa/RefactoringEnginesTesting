@@ -1,0 +1,2 @@
+Rename package org.netbeans.tests.examples.packb to org.netbeans.tests.examples.packb
+Problem fatal: Cannot move class(es) into the same package.
