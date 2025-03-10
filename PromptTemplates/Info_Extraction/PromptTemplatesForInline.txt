@@ -1,0 +1,60 @@
+You are an expert in software testing and refactoring. I’ll provide you with a historical bug report of refactoring engines. Please
+extract the following information from the report based on the given extraction example:
+1. The program to be refactored;
+2. The refactoring scheme
+3. Bug symptoms;
+The given extraction example: 
+Bug report:[
+Inlining one of the foo(...) methods of the first compilation unit below should
+refuse to work because the calls to foo(...) are ambiguous. Potential loss of work.
+
+public class A {
+
+	protected void foo(String s) {
+		System.out.println("A.foo()");
+	}
+
+	protected void foo(Integer i) {
+		System.out.println("A.foo()");
+	}
+}
+public class B1 extends A {
+
+	public void bar1() {
+		foo(null);
+	}
+}
+public class B2 extends A {
+
+	public void bar2() {
+		foo(null);
+	}
+}
+]
+1. The program to be refactored： [
+public class A {
+	protected void foo(String s) {
+		System.out.println("A.foo()");
+	}
+	protected void foo(Integer i) {
+		System.out.println("A.foo()");
+	}
+}
+public class B1 extends A {
+	public void bar1() {
+		foo(null);
+	}
+}
+public class B2 extends A {
+	public void bar2() {
+		foo(null);
+	}
+}
+}]
+2. The refactoring scheme
+[{
+Type：Inline method;
+Ojb: protected void foo(Integer i) 
+EnclosingEntity: A
+}]
+3. Bug symptoms: name shadowing

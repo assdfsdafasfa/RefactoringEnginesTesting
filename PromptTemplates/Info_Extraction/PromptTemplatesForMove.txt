@@ -1,0 +1,34 @@
+You are an expert in software testing and refactoring. I’ll provide you with a historical bug report of refactoring engines. Please
+extract the following information from the report based on the given extraction example:
+1. The program to be refactored;
+2. The refactoring scheme
+3. Bug symptoms;
+The given extraction example: 
+Bug report:[
+1. Create the following classes:
+public class O {
+	private S _s;
+	public void m(){}
+}
+public class S {
+	public void m(){}
+}
+2.Now use the move refactoring to move method O.m to S.
+3.The refactoring performs and produces the compile error without indicating an error status: Duplicate method m() in type S S.java
+]
+1. The program to be refactored： [
+public class O {
+	private S _s;
+	public void m(){}
+}
+public class S {
+	public void m(){}
+}]
+2. The refactoring scheme
+[{
+Type：move method
+  Obj：void m()
+  Source：O
+ Target：S
+}]
+3. Bug symptoms: naming conflict

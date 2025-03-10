@@ -1,0 +1,28 @@
+You are an expert in software testing and refactoring. I’ll provide you with a historical bug report of refactoring engines. Please
+extract the following information from the report based on the given extraction example:
+1. The program to be refactored;
+2. The refactoring scheme
+3. Bug symptoms;
+The given extraction example: 
+Bug report:[
+public class T11337_1 {
+void f(byte bytes) {
+/∗ [ ∗/ System.out. println (bytes) ; /∗ ] ∗/
+ }
+ }
+]
+1. The program to be refactored： [
+public class T11337_1 {
+void f(byte bytes) {
+/∗ [ ∗/ System.out. println (bytes) ; /∗ ] ∗/
+ }
+ }
+}]
+2. The refactoring scheme
+[{
+Type：Extract method;
+Ojb:  System.out. println (bytes) ;
+EnclosingEntity: T11337_1;
+Newname: f
+}]
+3. Bug symptoms: naming conflict

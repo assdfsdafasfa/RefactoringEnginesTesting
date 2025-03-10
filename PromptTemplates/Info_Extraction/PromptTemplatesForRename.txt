@@ -1,0 +1,60 @@
+You are an expert in software testing and refactoring. I’ll provide you with a historical bug report of refactoring engines. Please
+extract the following information from the report based on the given extraction example:
+1. The program to be refactored;
+2. The refactoring scheme
+3. Bug symptoms;
+The given extraction example: 
+Bug report:[
+Source example:
+
+class RenameTest {
+    static void foo1(Number n) {
+        System.out.println("1");
+    }
+    static void foo2(Long i) {
+        System.out.println("2");
+    }
+    public static void main(String[] args) {
+        long n = 0;
+        foo1(n);// look here
+    }
+}
+Try to rename method "foo1" to "foo2" via Shift+F6.
+After renaming:
+class RenameTest {
+    static void foo2(Number n) {
+        System.out.println("1");
+    }
+    static void foo2(Long i) {
+        System.out.println("2");
+    }
+    public static void main(String[] args) {
+        long n = 0;
+        RenameTest.foo2(n);// look here
+    }
+}
+Thus, after renaming, method foo2(Long) was linked silently without the "Problems Dialog".
+]
+1. The program to be refactored： [
+class RenameTest {
+    static void foo2(Number n) {
+        System.out.println("1");
+    }
+    static void foo2(Long i) {
+        System.out.println("2");
+    }
+    public static void main(String[] args) {
+        long n = 0;
+        RenameTest.foo2(n);// look here
+    }
+}
+}]
+2. The refactoring scheme
+[{
+Type：Rename method;
+Ojb: static void foo2 (long i)
+newObj: static void foo1 (long i)
+EnclosingEntity: RenameTest
+Newname: foo1
+}]
+3. Bug symptoms: name shadowing
