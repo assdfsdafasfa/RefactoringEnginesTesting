@@ -23,4 +23,4 @@ Download the implementation at: git clone git@github.com:assdfsdafasfa/Refactori
 
 2. Open dataset [Dataset](https://github.com/assdfsdafasfa/RefactoringEnginesTesting/tree/main/Dataset)).
 
-3. Migration Prompt template [Migration](https://github.com/assdfsdafasfa/RefactoringEnginesTesting/tree/main/PromptTemplates)).
+3. Migration Prompt template [Migration](https://github.com/assdfsdafasfa/RefactoringEnginesTesting/tree/main/Dataset/Tem)).
