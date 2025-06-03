@@ -1,0 +1,8 @@
+public static void changeColorAndMakeStringOfOldColors(List<Shape> shapes, Color newColor, StringBuilder stringBuilder) {
+    shapes.forEach(shape -> applyChangeAndAppend(shape, newColor, stringBuilder));
+}
+
+private static void applyChangeAndAppend(Shape shape, Color newColor, StringBuilder stringBuilder) {
+    stringBuilder.append(shape);
+    shape.setColor(newColor);
+}

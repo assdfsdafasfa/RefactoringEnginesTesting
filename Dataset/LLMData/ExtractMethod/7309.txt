@@ -1,0 +1,24 @@
+class OriginalClass {
+    TargetClass c;
+
+    interface InnerInterface {
+        void innerMethod();
+    }
+
+    private void extractedLogic() {
+        // Some logic here
+    }
+
+    public void myMethod() {
+        InnerInterface inner = new InnerInterface() {
+            @Override
+            public void innerMethod() {
+                extractedLogic();
+            }
+        };
+        inner.innerMethod();
+    }
+}
+
+class TargetClass {
+}

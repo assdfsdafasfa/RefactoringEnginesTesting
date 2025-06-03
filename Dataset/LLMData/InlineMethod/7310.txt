@@ -1,0 +1,16 @@
+class OriginalClass {
+    TargetClass c;
+
+    protected class ProtectedInnerClass {
+        // Removed innerMethod; logic inlined
+    }
+
+    public void myMethod() {
+        ProtectedInnerClass inner = new ProtectedInnerClass();
+        // Inlined logic here directly
+        // Some logic here
+    }
+}
+
+class TargetClass {
+}

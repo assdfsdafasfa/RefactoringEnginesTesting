@@ -1,0 +1,15 @@
+class SourceClass {
+    private int value;
+    TargetClass c;
+    public void setValue(int value) {
+        this.value = value;
+    }
+    // inlined dependentMethod's body directly where it's called
+}
+
+class TargetClass {
+    public void callDependentMethod() {
+        SourceClass source = new SourceClass();
+        System.out.println("Dependent method: " + source.value);
+    }
+}

@@ -1,0 +1,20 @@
+import java.io.File;
+
+public class MyFile extends File {
+    private String l;
+
+    public MyFile(String parent, String child) {
+        super(parent, normalizeChild(child));
+        l = normalizeChild(child);
+    }
+
+    // Renamed method from Bar to Baz
+    private static String Baz(String input) {
+        return input.toLowerCase();
+    }
+
+    // Use renamed method Baz for normalization
+    private static String normalizeChild(String child) {
+        return Baz(child);
+    }
+}

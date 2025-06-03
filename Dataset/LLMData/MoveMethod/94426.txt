@@ -1,0 +1,11 @@
+public class SubDeprecation  {
+    void m() {
+        B.foo();
+    }
+}
+
+class B {
+    public static void foo() {
+        System.out.println("foo");
+    }
+}

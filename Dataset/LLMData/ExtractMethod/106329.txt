@@ -1,0 +1,15 @@
+package org.example;
+import java.util.HashMap;
+class Collector<E> {
+    public static <T> void countItem(HashMap<T, Integer> frequencies, T item) {
+        System.out.println("");
+        Integer frequency = frequencies.get(item);
+        if (frequency == null)
+            frequency = 1;
+        else
+            frequency++;
+        frequencies.put(item, frequency);
+    }
+}
+public class Stats<T> extends Collector<T> {
+}

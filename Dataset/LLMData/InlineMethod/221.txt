@@ -1,0 +1,20 @@
+public interface Nameable {
+    @NotNull String getName();
+}
+
+public record User(String name) implements Nameable {
+
+    // Inline method 'getFirstName()' inside getName()
+    @Override
+    public @NotNull String getName() {
+        return getFirstName();
+    }
+
+    private @NotNull String getFirstName() {
+        return name;
+    }
+}
+
+public interface Nameable {
+    @NotNull String getFirstName();
+}

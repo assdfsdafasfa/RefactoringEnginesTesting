@@ -1,0 +1,4 @@
+@Override
+protected void paintChildren(Graphics g) {
+   int a = myComp.getHeight();
+}

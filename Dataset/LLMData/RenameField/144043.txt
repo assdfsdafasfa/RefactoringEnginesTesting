@@ -1,0 +1,17 @@
+package a;
+public abstract class A {
+    public abstract void tempName();
+}
+
+package b;
+public class B extends A {
+  @Override
+  public void m() {}
+
+  void n() {
+    new A() {
+        @Override
+        public void tempName() {}
+    };
+  }
+}

@@ -1,0 +1,5 @@
+class Source {
+    static int getInt() { return parseInt(""); }
+    public static void tempName() {}
+}
+class Target {}

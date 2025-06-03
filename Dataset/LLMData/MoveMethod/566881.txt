@@ -1,0 +1,14 @@
+class X {
+    private void foo(Object o) {
+        if (o instanceof X x) {
+            System.out.println(x.toString());
+            x.fooHelper(null);  // moved extracted method out
+        }
+    }
+
+    // Extracted method moved outside of foo
+    private void fooHelper(Object obj) {
+        // original foo(null) call functionality here
+        foo(obj);
+    }
+}

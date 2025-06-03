@@ -1,0 +1,18 @@
+class RenameTest {
+	void foo1(Number n) {
+		System.out.println("1");
+	}
+
+	public void main(String[] args) {
+		long n = 0;
+		foo1(n);
+	}
+}
+
+class RefactorHelper {
+	RenameTest rename;
+
+	void foo1(Long n) {
+		System.out.println("2");
+	}
+}

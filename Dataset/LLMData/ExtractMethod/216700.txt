@@ -1,0 +1,14 @@
+class A {
+    static int getRecursive() {
+        return extractedRecursive();
+    }
+
+    static int extractedRecursive() {
+        return extractedRecursive();
+    }
+}
+class B {
+    static int getRecursive() {
+        return A.getRecursive();
+    }
+}

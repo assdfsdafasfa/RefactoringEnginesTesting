@@ -1,0 +1,8 @@
+interface Bar<T> { }
+
+interface Base<T> { }
+
+class Foo<T,U> implements Base<U> {
+    private int renamedField;
+    void foo(Bar<U> bar) { }
+}

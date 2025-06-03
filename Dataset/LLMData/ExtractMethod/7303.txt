@@ -1,0 +1,11 @@
+interface I {
+    // Original method kept for backward compatibility or reference
+    String m() throws Exception;
+}
+
+class Mover {
+    // Moved and renamed method from interface I
+    String hashCode(I i) throws Exception {
+        return i.m();
+    }
+}

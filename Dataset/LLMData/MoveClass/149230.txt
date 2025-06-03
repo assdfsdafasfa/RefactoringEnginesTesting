@@ -1,0 +1,8 @@
+class MyAction {
+    <T extends Action> void m() {
+    }
+}
+
+import java.io.Serializable;
+class Action implements Serializable {
+}

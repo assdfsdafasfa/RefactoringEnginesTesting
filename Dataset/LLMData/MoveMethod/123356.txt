@@ -1,0 +1,12 @@
+public class Bug {
+    static String[] field;
+    public static void main(String[] args) {
+        BugHelper.add((field = args).length, field.hashCode());
+    }
+}
+
+class BugHelper {
+    static int add(int x, int y) {
+        return y + x;
+    }
+}

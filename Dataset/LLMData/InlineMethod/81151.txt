@@ -1,0 +1,8 @@
+class A {
+}
+
+class C extends A{
+    void foo(List<String>... args) {
+        // Inline extracted behavior here if possible
+    }
+}

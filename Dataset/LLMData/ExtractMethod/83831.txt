@@ -1,0 +1,18 @@
+class RenameTest {
+    static void foo2(Long i) {
+        System.out.println("2");
+    }
+
+    static void foo1(Number n) {
+        extractedFoo1(n);
+    }
+
+    private static void extractedFoo1(Number n) {
+        System.out.println("1");
+    }
+
+    public static void main(String[] args) {
+        long n = 0;
+        foo1(n); // still calls foo1, which delegates to extractedFoo1
+    }
+}

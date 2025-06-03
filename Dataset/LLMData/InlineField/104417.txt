@@ -1,0 +1,17 @@
+public class Bean {
+    private boolean isVisible;
+
+    public Bean(boolean visible) {
+        isVisible = visible;
+    }
+
+    // Inline getter method for 'isEnabled', inlining the field access directly
+    public boolean isEnabled() {
+        return isVisible;  // inlined field access instead of separate method
+    }
+
+    // Inline setter method for 'isEnabled'
+    public void setEnabled(boolean enabled) {
+        isVisible = enabled;  // inlined field assignment
+    }
+}

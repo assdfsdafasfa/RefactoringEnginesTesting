@@ -1,0 +1,5 @@
+class Bug {
+    {
+        String key = System.getenv().entrySet().iterator().next().getKey(); // extracted variable
+    }
+}

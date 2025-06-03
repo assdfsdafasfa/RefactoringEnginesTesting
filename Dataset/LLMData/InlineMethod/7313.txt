@@ -1,0 +1,10 @@
+class SourceClass {
+    TargetClass target;
+    // inlined methodToMove logic (hypothetical usage example shown below)
+    public void someCaller(TargetClass target) {
+        this.target = target; // inlined directly
+    }
+}
+
+enum TargetClass {
+}

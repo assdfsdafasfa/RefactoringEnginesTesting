@@ -1,0 +1,17 @@
+public class A extends JComponent {
+
+  private void f() {
+    applyRedBackground();
+  }
+
+  private void applyRedBackground() {
+    Color c = Color.RED;
+    setBackground(c);
+  }
+
+  private class B extends JComponent {
+    void g() {
+      applyRedBackgroundB();
+    }
+
+    private void app

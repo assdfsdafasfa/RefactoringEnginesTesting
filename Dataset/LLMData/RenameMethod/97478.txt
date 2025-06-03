@@ -1,0 +1,5 @@
+public class A {
+    private <T> int getSize(List<T> list) {
+        return list.size();
+    }
+}

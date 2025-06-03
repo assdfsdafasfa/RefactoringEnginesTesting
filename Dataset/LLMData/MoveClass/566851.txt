@@ -1,0 +1,8 @@
+record R() { // original definition
+	private void foo(Object o) {
+		if (o instanceof R) {
+			System.out.println("hello");
+		}
+	}
+}
+class Bar {} // extracted class

@@ -1,0 +1,28 @@
+@FunctionalInterface
+public interface I1 {
+	int foo(int a);
+}
+
+interface I2 {
+	I1 i1 = (a) -> calculate(a);
+
+	static int calculate(int a) {
+		int b = 10;
+		return a + b;
+	}
+}
+
+interface I3 {
+	default int foo() {
+		return retrieveA();
+	}
+
+	static int bar() {
+		return retrieveA();
+	}
+
+	static int retrieveA() {
+		int a = 10;
+		return a;
+	}
+}

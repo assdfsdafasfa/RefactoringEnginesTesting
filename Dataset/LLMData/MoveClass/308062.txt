@@ -1,0 +1,12 @@
+public class ConstantsHolder {
+    public static final int VALUE = 1;
+}
+
+public class OtherClass {
+}
+
+public class YetAnotherClass {
+    public static void main(String[] args) {
+        System.out.println(ConstantsHolder.VALUE);
+    }
+}

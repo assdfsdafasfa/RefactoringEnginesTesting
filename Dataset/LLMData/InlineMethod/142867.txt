@@ -1,0 +1,19 @@
+class SubSon {
+    public void doMyOwn() {}
+    
+    // inline method 't()'
+    public void t() {
+        doMyOwn();
+    }
+}
+
+class GrandSon extends SubSon {
+    @Override
+    public void doMyOwn() {
+        super.doMyOwn();
+    }
+    
+    public void f() {
+        t();  // usage replaced with inlined 't()'
+    }
+}

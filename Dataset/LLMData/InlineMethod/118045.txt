@@ -1,0 +1,6 @@
+public interface IFoo {
+}
+
+public class Foo implements IFoo {
+    // method test() inlined here if called elsewhere
+}

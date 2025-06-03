@@ -1,0 +1,33 @@
+// Original class after move refactoring - field is moved to a new helper class
+public class Bean {
+    private FieldHolder fieldHolder;
+
+    public Bean(boolean visible) {
+        this.fieldHolder = new FieldHolder(visible);
+    }
+
+    public boolean isEnabled() {
+        return fieldHolder.isEnabled();
+    }
+
+    public void setEnabled(boolean enabled) {
+        fieldHolder.setEnabled(enabled);
+    }
+}
+
+// New class where the field is moved, renamed from isVisible to isEnabled
+class FieldHolder {
+    private boolean isEnabled;
+
+    public FieldHolder(boolean enabled) {
+        this.isEnabled = enabled;
+    }
+
+    public boolean isEnabled() {
+        return isEnabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.isEnabled = enabled;
+    }
+}

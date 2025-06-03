@@ -1,0 +1,9 @@
+public class Class1 {
+    public final static String RENAMED_INITIALIZED_LATER;
+
+    static {
+        RENAMED_INITIALIZED_LATER = "value";
+    }
+}
+public class Class2 {
+}

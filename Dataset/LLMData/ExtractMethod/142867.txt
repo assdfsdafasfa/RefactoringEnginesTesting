@@ -1,0 +1,16 @@
+class SubSon {
+    // Original method remains as is
+    public void doMyOwn() {}
+}
+
+class GrandSon extends SubSon {
+    // Extracted new method 't()' that calls the original 'doMyOwn()'
+    public void t() {
+        doMyOwn();
+    }
+
+    @Override
+    public void doMyOwn() {
+        super.doMyOwn();
+    }
+}

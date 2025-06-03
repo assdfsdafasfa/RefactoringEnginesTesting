@@ -1,0 +1,13 @@
+public class MethodExtraction {
+    public final String internalValue;
+    MethodExtraction() {
+        this.internalValue = "This is my internal value";
+    }
+    void aMethod() {
+        String exclaim = createExclaim();
+        System.out.println(exclaim);
+    }
+    private String createExclaim() {
+        return this.internalValue + "!";
+    }
+}

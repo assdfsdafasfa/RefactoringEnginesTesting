@@ -1,0 +1,10 @@
+public boolean isConsideredFinal(int cl) {
+    return Helper.haveSeenAllExpectedAtCl(cl, countExpectedDirectlyAtCl());
+}
+
+class Helper {
+    public static boolean haveSeenAllExpectedAtCl(int cl, int countExpectedDirectlyAtCl) {
+        return cl == cl()
+            && countSeenDirectlyAtCl() == countExpectedDirectlyAtCl;
+    }
+}

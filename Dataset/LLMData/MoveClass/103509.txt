@@ -1,0 +1,19 @@
+public class Test {
+    MyEnum value = EnumHolder.MyEnum.B.getValue();
+}
+
+class EnumHolder {
+    public enum MyEnum {
+        A(0), B(0), C(0); // duplicates removed to avoid compile error
+
+        private int value1;
+
+        public int getValue() {
+            return value1;
+        }
+
+        MyEnum(int value) {
+            value1 = value;
+        }
+    }
+}

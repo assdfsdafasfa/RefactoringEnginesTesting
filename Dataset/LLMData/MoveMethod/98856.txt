@@ -1,0 +1,20 @@
+public class Bug {
+    
+    class Inner {
+        String field;
+    }
+    Inner inner;
+    String string;
+    
+    static void foo() {
+        Bug b = new Bug();
+        BHandler.bar(b);
+    }
+}
+
+class BHandler {
+    static void bar(Bug b) {
+        b.inner.field = "Eclipse";
+        b.string = "Eclipse";
+    }
+}

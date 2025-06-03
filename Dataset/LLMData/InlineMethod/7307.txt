@@ -1,0 +1,15 @@
+public class OriginalClass {
+    public int m() {
+        return 1;
+    }
+
+    public class C extends OriginalClass {
+        public int m(B b) {
+            // Inlined logic from super.m()
+            return 1;
+        }
+    }
+}
+
+class B {
+}

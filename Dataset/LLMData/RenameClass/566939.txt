@@ -1,0 +1,6 @@
+@SuppressWarnings("preview")
+record RenamedR(int i) {
+}
+
+public class X {
+}

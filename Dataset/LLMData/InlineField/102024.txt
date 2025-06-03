@@ -1,0 +1,1 @@
+static DomMapperCss CSS = ((DomBundle) GWT.create(DomBundle.class)).style();

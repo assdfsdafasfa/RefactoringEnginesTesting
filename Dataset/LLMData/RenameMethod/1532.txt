@@ -1,0 +1,11 @@
+public class A {
+    public interface Bar<T> { }
+
+    public interface Base<T> {
+        void tempFoo(Bar<T> bar); // renamed method signature added to interface
+    }
+
+    public class Foo<T, U> implements Base<U> {
+        public void tempFoo(Bar<U> bar) { } // renamed from foo to tempFoo
+    }
+}

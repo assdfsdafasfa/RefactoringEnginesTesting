@@ -1,0 +1,24 @@
+void f(int p) {
+    new Ad() {
+        void f() {
+            int u = AdHelper.fred(this);
+        }
+    };
+}
+
+class AdHelper {
+    static int fred(Ad ad) {
+        return ad.superHashCode();
+    }
+}
+
+// Note: Since calling super.hashCode() outside the class is impossible,
+// you may need to add a method in Ad to expose it:
+class Ad {
+    int fred() {
+        return super.hashCode();
+    }
+    int superHashCode() {
+        return super.hashCode();
+    }
+}

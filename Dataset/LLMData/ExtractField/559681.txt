@@ -1,0 +1,24 @@
+public record Circle(long radius) implements Shape {
+    /**
+     * create unit radius circle
+     */
+    public Circle {
+        this.radius = radius;
+    }
+    public void Circle2(long radius) {
+    }
+
+    // Extracted method that uses renamed field 'i'
+    private long i() {
+        return radius();  // originally 'radius', logically renamed to 'i'
+    }
+
+    @Override
+    public long area() {
+        // use extracted method i() instead of radius()
+        return ((22 * i() * i()) / 7);
+    }
+}
+
+interface Shape {
+}

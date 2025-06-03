@@ -1,0 +1,11 @@
+String foo(String... strings){
+    String suffix = "foo";
+    printStrings(strings, suffix);
+    return suffix;
+}
+
+private void printStrings(String[] strings, String suffix) {
+    for (String string : strings) {
+        System.out.println(string + suffix);
+    }
+}

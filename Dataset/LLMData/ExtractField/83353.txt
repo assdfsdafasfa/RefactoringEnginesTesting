@@ -1,0 +1,15 @@
+public class Class1 {
+    static {
+        FieldHolder.initialize();
+    }
+
+    public static class FieldHolder {
+        public final static String INITIALIZED_LATER = "value";
+
+        public static void initialize() {
+            // Trigger class loading
+        }
+    }
+}
+public class Class2 {
+}

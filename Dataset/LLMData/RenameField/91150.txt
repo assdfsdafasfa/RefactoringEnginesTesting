@@ -1,0 +1,6 @@
+class Test {
+    Runnable runnable = () -> {};
+    void foo() {
+        runnable.run();
+    }
+}

@@ -1,0 +1,18 @@
+public class Person extends MetaPerson { 
+    public Person(String name) {
+        super(name);
+    }
+}
+public class Roster {
+    public static void main(String[] args) {
+        final MetaPerson p = new MetaPerson(""); //inline MetaPerson
+    }
+}
+class MetaPersonHelper {
+    public static MetaPerson[] emptyArray() {
+        return new MetaPerson[0];
+    }
+}
+class MetaPerson {
+    public MetaPerson(String name) { }
+}

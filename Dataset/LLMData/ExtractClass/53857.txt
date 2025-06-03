@@ -1,0 +1,18 @@
+public class Bug {
+    void test() {
+        new Object() {
+            public void yes() {
+                System.out.println("hello world");
+            }
+        };
+        System.out.println("hello world");
+
+        Object o = createObject();  // renamed variable 'o' receives extracted method result
+    }
+
+    private Object createObject() {
+        Object object = null;  // original variable in extracted method
+        // additional initialization can be added here
+        return object;
+    }
+}

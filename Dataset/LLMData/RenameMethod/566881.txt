@@ -1,0 +1,8 @@
+class NewName {
+    private void foo(Object o) {
+        if (o instanceof NewName x) { // renamed class from X to NewName
+            System.out.println(x.toString());
+            x.foo(null);
+        }
+    }
+}

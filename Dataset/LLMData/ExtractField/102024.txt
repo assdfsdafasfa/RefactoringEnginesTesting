@@ -1,0 +1,5 @@
+private static class BundleHolder {
+    static final DomBundle BUNDLE = GWT.create(DomBundle.class);
+}
+
+static DomMapperCss CSS = BundleHolder.BUNDLE.style();

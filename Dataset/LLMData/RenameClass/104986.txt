@@ -1,0 +1,10 @@
+package a;
+class UpperRenamed {
+  class Inner {
+  }
+  Inner i;
+}
+package b;
+
+class Target {
+}

@@ -1,0 +1,17 @@
+// Original class, now without the field 'name'
+class OriginalClass {
+    // Moved getter and setter no longer here
+}
+
+// New class holding the moved field and its accessors
+class NameHolder {
+    private int name;
+
+    public int getName() {
+        return name;
+    }
+
+    public void setName(int name) {
+        this.name = name;
+    }
+}

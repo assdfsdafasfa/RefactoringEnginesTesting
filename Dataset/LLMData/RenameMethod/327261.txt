@@ -1,0 +1,6 @@
+void beforeRenamed() {
+}
+
+void after() {
+    beforeRenamed();
+}

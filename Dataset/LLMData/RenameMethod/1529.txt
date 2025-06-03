@@ -1,0 +1,11 @@
+public class A {
+    void bar() {}
+}
+public class B extends A {
+    void foo() {
+        super.bar();
+    }
+    static void err(B b) {
+        b.foo(); // still calls foo()
+    }
+}

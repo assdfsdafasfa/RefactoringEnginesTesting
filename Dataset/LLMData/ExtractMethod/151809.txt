@@ -1,0 +1,9 @@
+public interface IPlanet {}
+
+public class SimplePlanet implements IPlanet {
+    double mass;
+
+    private double mass(System.out.println("");) {
+        return mass;
+    }
+}

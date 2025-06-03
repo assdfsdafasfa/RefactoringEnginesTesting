@@ -1,0 +1,19 @@
+public class Demo {
+
+    static class MyChild {
+        private final String value;
+
+        MyChild(String value) {
+            this.value = value;
+        }
+    }
+
+    public static void main(String[] args) {
+        String value = "something";
+        final MyChild p;
+        if (true)
+            p = new MyChild(value);
+        else
+            p = new MyChild("value");
+    }
+}

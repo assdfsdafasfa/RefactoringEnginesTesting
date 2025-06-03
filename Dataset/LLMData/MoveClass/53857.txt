@@ -1,0 +1,19 @@
+public class Bug {
+    void test() {
+        new Object() {
+            public void yes() {
+                System.out.println("hello world");
+            }
+        };
+        System.out.println("hello world");
+
+        Object o = createObject();  // use renamed variable 'o'
+    }
+
+    // Moved object creation and assignment into this method
+    private Object createObject() {
+        Object object = null;  // original variable remains here
+        // possibly some initialization here
+        return object;
+    }
+}

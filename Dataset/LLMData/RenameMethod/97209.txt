@@ -1,0 +1,12 @@
+package com.example;
+
+public class SuperType<ELEM extends Number> {
+    void add(ELEM e) {
+    }
+    public void tempName(ELEM e) {
+    }
+
+    ELEM get() {
+        return null;
+    }
+}

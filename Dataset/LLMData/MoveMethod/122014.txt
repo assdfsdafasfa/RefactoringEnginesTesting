@@ -1,0 +1,19 @@
+public class A extends JComponent {
+
+  private void f() {
+    UIHelper.applyRedBackground(this);
+  }
+
+  private class B extends JComponent {
+    void g() {
+      UIHelper.applyRedBackground(this);
+    }
+  }
+}
+
+class UIHelper {
+  public static void applyRedBackground(JComponent component) {
+    Color c = Color.RED;
+    component.setBackground(c);
+  }
+}

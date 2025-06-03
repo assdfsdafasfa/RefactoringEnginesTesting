@@ -1,0 +1,2 @@
+private static DomBundle RENAMED_BUNDLE = GWT.create(DomBundle.class);  
+static DomMapperCss CSS = RENAMED_BUNDLE.style();

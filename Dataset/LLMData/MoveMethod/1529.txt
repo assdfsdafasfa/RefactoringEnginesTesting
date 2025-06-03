@@ -1,0 +1,8 @@
+public class A {
+    void bar() {}
+}
+public class B extends A {
+    static void err(B b) {
+        b.bar(); // inline foo() replaced by direct call to bar()
+    }
+}

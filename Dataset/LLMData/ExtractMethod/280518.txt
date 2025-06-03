@@ -1,0 +1,18 @@
+public class MethodTest {
+	
+	public void methodOne() {
+		System.err.println("one");
+	}
+	
+	public void methodTwo() {
+		System.err.println("two");
+	}
+	
+	public void methodThree() {
+		printThree(); // extracted from methodThree()
+	}
+	
+	private void printThree() {
+		System.err.println("three");
+	}
+}

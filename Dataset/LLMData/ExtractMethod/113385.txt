@@ -1,0 +1,13 @@
+public class PullUpLosesAnnotation {
+    // extracted behavior with added content
+    public void foo() {
+        System.out.println("");
+    }
+}
+
+class SubclassA extends PullUpLosesAnnotation {
+    @Deprecated
+    public void foo() {
+        super.foo();
+    }
+}

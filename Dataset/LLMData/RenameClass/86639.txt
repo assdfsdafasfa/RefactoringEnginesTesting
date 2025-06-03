@@ -1,0 +1,5 @@
+public interface IterableWrapperRenamed<T> extends Iterable<T> {
+}
+
+public interface SomethingIterable<T> extends IterableWrapperRenamed<T> {
+}

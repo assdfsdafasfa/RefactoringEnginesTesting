@@ -1,0 +1,25 @@
+public class OriginalClass {
+    public static boolean compare(final MultiAlignment first, final MultiAlignment second) {
+        assert first.m_totalCost == second.m_totalCost;
+        final Set<InDelSequence> unchecked = new HashSet<>(second);
+        outer: for (final InDelSequence f : first) {
+            if (!NewClass.isMatch(f, unchecked)) {
+                assert false : "No match for " + f + " in " + second;
+            }
+        }
+        return true;
+    }
+}
+
+class NewClass {
+    public static boolean isMatch(final InDelSequence f, final Set<InDelSequence> unchecked) {
+        for (final Iterator<InDelSequence> iterator = unchecked.iterator(); iterator.hasNext();) {
+            final InDelSequence s = iterator.next();
+            if (f.equals(s)) {
+                iterator.remove();
+                return true;
+            }
+        }
+        return false;
+    }
+}

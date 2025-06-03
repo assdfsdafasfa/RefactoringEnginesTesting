@@ -1,0 +1,11 @@
+class Source {
+  void usage() {
+    Target.foo(1);
+    foo(System.out.println(""), "one");
+  }
+  private static void foo(String x){}
+  private static void foo(Object unused, String x){}
+}
+class Target {
+  public static void foo(int x){}
+}

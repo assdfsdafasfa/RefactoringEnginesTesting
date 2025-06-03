@@ -1,0 +1,20 @@
+public class A {
+    protected final int a = 1;
+
+    // Extracted method to get the renamed field value
+    protected int getB() {
+        return a;  // originally 'a', exposed as 'b' through this method
+    }
+}
+
+public class B {
+    void main() {
+        final int b = 2;
+        new A() {
+            void m() {
+                // Using extracted method instead of direct field access
+                System.out.println(b);
+            }
+        };
+    }
+}

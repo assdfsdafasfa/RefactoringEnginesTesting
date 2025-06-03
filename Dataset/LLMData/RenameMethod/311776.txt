@@ -1,0 +1,7 @@
+class Foo {
+  public static void foo() {}  
+  public static void tempName() {}
+  void m() {
+    class FooExt extends Foo { }
+  }
+}

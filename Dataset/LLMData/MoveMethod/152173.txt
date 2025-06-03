@@ -1,0 +1,16 @@
+public class A {
+   void bar() {}
+}
+public class B extends A {
+    void foo() {
+        BUtil.bar(this);
+    }
+    static void err(B b) {
+        b.foo(); //inline call to foo()
+    }
+}
+class BUtil {
+    public static void bar(B b) {
+        b.superBar();
+    }
+}

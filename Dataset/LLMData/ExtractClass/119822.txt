@@ -1,0 +1,18 @@
+public class Bug {
+  void test() {
+    // Extracted method returning new F instance (formerly Foo)
+    F getF() {
+      return new F();
+    }
+
+    // Usage in test()
+    F f = getF();
+  }
+
+  // Extracted class from Foo, renamed to F
+  public class F {
+    F getFoo() {
+      return null;
+    }
+  }
+}

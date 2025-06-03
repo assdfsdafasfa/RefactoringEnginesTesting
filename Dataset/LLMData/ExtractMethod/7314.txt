@@ -1,0 +1,19 @@
+class SourceClass {
+    private TargetClass target;
+    public SourceClass(TargetClass target) {
+        this.target = target;
+    }
+
+    public void moveMethod(TargetClass parameter) {
+        callTargetMethod();
+    }
+
+    private void callTargetMethod() {
+        ((TargetClass) target.abstractField).methodWithSameName();
+    }
+}
+
+interface TargetClass {
+    Object abstractField = null;
+    void methodWithSameName();
+}

@@ -1,0 +1,16 @@
+package com.mycompany.mavenproject1;
+
+public class Bar {
+   
+}
+package com.mycompany.mavenproject1;
+
+import java.util.List;
+
+public class Foo {
+
+    public List<String> renamedMethod() {
+        return null;
+    }
+   
+}

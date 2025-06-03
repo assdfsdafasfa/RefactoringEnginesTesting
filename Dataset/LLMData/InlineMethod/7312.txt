@@ -1,0 +1,17 @@
+class SourceClass {
+
+    TargetClass target;
+
+    public SourceClass(TargetClass target) {
+        this.target = target;
+    }
+
+    // Inlined logic instead of calling methodToMove
+    public void someCaller(TargetClass t) {
+        this.target = t;
+    }
+}
+
+interface TargetClass {
+    void methodInInterface();
+}

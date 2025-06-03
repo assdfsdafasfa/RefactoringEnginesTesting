@@ -1,0 +1,36 @@
+private static abstract class BaseTaskRenamed<T, S extends BaseTaskRenamed<T, S>> extends RecursiveAction {
+    public final int depth;
+    public final ParallelStream<T> coll;
+
+    protected BaseTaskRenamed(int depth, ParallelStream<T> coll) {
+        this.depth = depth;
+        this.coll = coll;
+    }
+
+    public abstract void seq();
+
+    public void combine(S left, S right) { }
+
+    public abstract S makeTask(int depth, ParallelStream<T> coll);
+
+    @Override
+    protected void compute() {
+    }
+}
+
+private static class ForEachTaskRenamed<T> extends BaseTaskRenamed<T, ForEachTaskRenamed<T>> {
+    private static final long serialVersionUID = 1L;
+    private final Block<? super T> block;
+
+    ForEachTaskRenamed(int depth, ParallelStream<T> coll, Block<? super T> block) {
+        super(depth, coll);
+        this.block = block;
+    }
+
+    public void seq() {
+    }
+
+    public ForEachTaskRenamed<T> makeTask(int depth, ParallelStream<T> coll) {
+        return new ForEachTaskRenamed<>(depth, coll, block);
+    }
+}

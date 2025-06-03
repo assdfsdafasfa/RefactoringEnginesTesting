@@ -1,0 +1,21 @@
+import java.io.File;
+
+public class MyFile extends File {
+    private String l;
+
+    public MyFile(String parent, String child) {
+        super(parent, toLowerCase(child));
+        l = toLowerCase(child);
+    }
+
+    private static String toLowerCase(String s) {
+        return s.toLowerCase();
+    }
+}
+
+// Moved the toLowerCase method out of MyFile class into a utility class
+class StringUtils {
+    public static String toLowerCase(String s) {
+        return s.toLowerCase();
+    }
+}

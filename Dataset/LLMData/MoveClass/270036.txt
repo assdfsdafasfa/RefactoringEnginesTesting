@@ -1,0 +1,6 @@
+public class sHolder {
+    public enum s {
+        INSTANCE_ONE(Something.class);
+    }
+}
+

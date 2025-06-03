@@ -1,0 +1,8 @@
+class Helper {
+    static void before() {
+    }
+}
+
+void after() {
+    Helper.before();
+}

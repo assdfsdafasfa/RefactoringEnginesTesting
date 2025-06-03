@@ -1,0 +1,8 @@
+class X {
+  public static final String s = "s";
+
+  public static void main(String... args) {
+    // introduce variable named s for static field reference s here
+    s
+  }
+}

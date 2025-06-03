@@ -1,0 +1,14 @@
+public class OriginalClass {
+    public void test() {
+        int[] arrs = {1, 2, 3};
+        int a = 0;
+        int current = arrs[a]; // extracted variable from arrs[a]
+        System.out.println(current);
+        a++;
+        current = arrs[a]; // reuse of extracted variable pattern (optional refinement)
+        System.out.println(current);
+        a++;
+        current = arrs[a];
+        System.out.println(current);
+    }
+}

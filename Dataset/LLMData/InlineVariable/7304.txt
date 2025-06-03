@@ -1,0 +1,16 @@
+public class Test {
+    void m() {
+        final int i = 0;
+        class X {
+            void m() {
+                int j = extractValue();
+                // i = j; is invalid because i is final, so we simulate inlining logic with an extract step.
+                System.out.println(j);
+            }
+
+            private int extractValue() {
+                return 2;
+            }
+        }
+    }
+}

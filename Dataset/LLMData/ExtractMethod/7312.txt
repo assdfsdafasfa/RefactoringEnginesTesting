@@ -1,0 +1,21 @@
+class SourceClass {
+
+    TargetClass target;
+
+    public SourceClass(TargetClass target) {
+        this.target = target;
+    }
+
+    private final void methodToMove(TargetClass target) {
+        assignTarget(target);
+    }
+
+    // Extracted logic from methodToMove
+    private void assignTarget(TargetClass target) {
+        this.target = target;
+    }
+}
+
+interface TargetClass {
+    void methodInInterface();
+}

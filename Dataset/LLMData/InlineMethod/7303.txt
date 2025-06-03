@@ -1,0 +1,9 @@
+interface I {
+    // inline method 'm()' renamed to 'hashCode()'
+    String hashCode() throws Exception;
+
+    // inline method to preserve original call
+    default String m() throws Exception {
+        return hashCode();
+    }
+}

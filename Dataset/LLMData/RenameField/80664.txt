@@ -1,0 +1,5 @@
+class A {
+    private static final String sRenamed = ""; // renamed during simulated extraction
+    public void handleMessage(Message message) {}
+}
+class NewName {}

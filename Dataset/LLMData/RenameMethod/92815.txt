@@ -1,0 +1,17 @@
+public void handleArrayOutput(String[] array, boolean someCondition) {
+    if (someCondition) {
+        printFirst(array); // renamed method after extraction
+    } else {
+        printEmpty(); // renamed method after extraction
+    }
+}
+
+private void printFirst(String[] array) {
+    // assert array.length == 1;
+    System.out.println(array[0]);
+}
+
+private void printEmpty() {
+    // assert array.length == 0;
+    System.out.println("Nothing");
+}

@@ -1,0 +1,9 @@
+class DateFields {
+  static final int result = 0;
+}
+
+interface Date {
+  default int getMonth() {
+    return DateFields.result;
+  }
+}

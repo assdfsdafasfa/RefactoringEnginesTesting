@@ -1,0 +1,15 @@
+package org.example;
+public class Main {
+    public static void main(String[] args) {
+        int value = 0;
+        String message = switch (value) {
+            case 0 -> Formatter.format("");
+            default -> "";
+        };
+    }
+}
+class Formatter {
+    public static String format(String... input) {
+        return "";
+    }
+}

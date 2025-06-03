@@ -1,0 +1,11 @@
+class Baz { // formerly Bar
+	public static void main(String[] args) {
+		R r = null;
+	}
+	private void foo(Object o) {
+		Baz x = null;
+		if (o instanceof Baz) { // this does not change
+			System.out.println("hello");
+		}
+	}
+}

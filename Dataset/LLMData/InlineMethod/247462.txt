@@ -1,0 +1,20 @@
+package testrefactormove;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestRefactorMove {
+    public static void main(String[] args) {
+        List<String> list1 = new ArrayList<>();
+        list1.add("AAA");
+        list1.add("BBB");
+        List<String> lower = new ArrayList<>();
+        for (String s : list1) {
+            lower.add(s.toLowerCase());
+        }
+        System.out.println("Before: " + list1.toString());
+        System.out.println("After:  " + lower.toString());
+    }
+}
+
+class SomethingElse {
+}

@@ -1,0 +1,15 @@
+public class OriginalClass {
+    public int m() {
+        return 1;
+    }
+
+    public class C extends OriginalClass {
+        // renamed method in subclass
+        public int renamedMethod(B b) {
+            return super.m();
+        }
+    }
+}
+
+class B {
+}

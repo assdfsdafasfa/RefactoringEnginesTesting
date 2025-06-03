@@ -1,0 +1,12 @@
+interface Bar<T> { }
+
+interface Base<T> { }
+
+class Foo<T,U> implements Base<U> {
+    static class ExtractedFieldHolder {
+        int extractedField;
+    }
+    ExtractedFieldHolder holder = new ExtractedFieldHolder();
+
+    void foo(Bar<U> bar) { }
+}

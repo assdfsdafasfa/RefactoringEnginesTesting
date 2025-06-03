@@ -1,0 +1,18 @@
+default BitSet test(final List<T> items) {
+    try {
+        return ourPredicatesCache.get(Pair.create(this, items), () -> BitSetUtil.compute(items, this));
+    } catch (final ExecutionException e) {
+        Logs.error(e);
+        throw new RuntimeException(e);
+    }
+}
+
+class BitSetUtil {
+    static <T> BitSet compute(List<T> items, SomeType self) {
+        final BitSet result = new BitSet(items.size());
+        for (int i = 0; i < items.size(); i++) {
+            result.set(i, self.test(items.get(i)));
+        }
+        return result;
+    }
+}

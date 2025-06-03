@@ -1,0 +1,14 @@
+public class Foo {
+    private Bar _bar;
+    public void foo() {}
+    public void tempName() {
+        _bar.bar();
+    }
+}
+
+public class Bar {
+    public void bar() {}
+    void x(Foo f) {
+        f.foo();
+    }
+}

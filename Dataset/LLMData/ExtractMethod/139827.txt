@@ -1,0 +1,14 @@
+public class Test {
+  {
+    Season.values();
+    // Extracted a new method 't' which calls original 'valueOf'
+    t("");
+  }
+
+  // Extracted method 't' from rename operation
+  private Season t(String name) {
+    return Season.valueOf(name);
+  }
+
+  enum Season {WINTER, SPRING, SUMMER, AUTUMN}
+}

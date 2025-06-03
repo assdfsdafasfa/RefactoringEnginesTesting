@@ -1,0 +1,13 @@
+public class Demo
+{
+
+   public static void main(String[] args)
+   {
+      System.out.println(Source.LISTENER);
+   }
+
+}
+public class Source
+{
+   public static final ActionListener LISTENER = mock(ActionListener.class);
+}

@@ -1,0 +1,6 @@
+static abstract class A implements Collection<String> {
+    protected static int RENAMED_FIELD = 0;
+}
+
+static abstract class B extends A implements Collection<String> {  
+}

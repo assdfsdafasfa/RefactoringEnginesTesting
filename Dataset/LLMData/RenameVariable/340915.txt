@@ -1,0 +1,11 @@
+class A {
+    public void £() {
+    }
+}
+
+class B extends A {
+    public void c() {
+        A superRef = super; // extracted variable
+        superRef.£();
+    }
+}

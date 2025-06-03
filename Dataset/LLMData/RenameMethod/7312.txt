@@ -1,0 +1,18 @@
+class SourceClass {
+
+    TargetClass target;
+
+    public SourceClass(TargetClass target) {
+        this.target = target;
+    }
+
+    // Renamed methodToMove to tempName
+    private final void tempName(TargetClass target) {
+        // Method implementation
+        this.target = target;
+    }
+}
+
+interface TargetClass {
+    void methodInInterface();
+}

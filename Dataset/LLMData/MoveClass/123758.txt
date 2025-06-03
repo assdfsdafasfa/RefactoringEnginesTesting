@@ -1,0 +1,14 @@
+public class DialogConstants {
+  public static final int BUTTON_POSITIVE = 1;
+  public static final int BUTTON_NEGATIVE = 2;
+  public static final int BUTTON_NEUTRAL = 3;
+}
+public interface SimpleDialogPresenter {
+  void onClick(int which);
+}
+public class SimpleDialogPresenterImpl implements SimpleDialogPresenter {
+  @Override
+  public void onClick(int which) {
+    // Use DialogConstants.BUTTON_POSITIVE etc.
+  }
+}

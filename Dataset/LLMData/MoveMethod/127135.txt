@@ -1,0 +1,17 @@
+public class CallToSimpleGetter {
+    private String someString = "";
+
+    public void execute() {
+        GetterHelper.getFirst(this);
+    }
+
+    public String getSomeString() {
+        return someString;
+    }
+}
+
+class GetterHelper {
+    public static String getFirst(CallToSimpleGetter obj) {
+        return obj.getSomeString();
+    }
+}

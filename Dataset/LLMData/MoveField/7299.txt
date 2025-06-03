@@ -1,0 +1,12 @@
+class A {
+    int i; // moved field 'j' renamed to 'i' and moved here
+
+    void m() {
+        int i = 0;
+        class B {
+            void k() {
+                i = A.this.i; // refer to moved field via outer class reference
+            }
+        }
+    }
+}

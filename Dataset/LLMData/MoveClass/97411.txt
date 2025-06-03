@@ -1,0 +1,9 @@
+public class Try {
+	void usage() {
+		Color c = new Color("ultrared");
+	}
+}
+
+class Color {
+	Color(String name) {}
+}

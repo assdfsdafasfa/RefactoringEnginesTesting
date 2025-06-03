@@ -1,0 +1,7 @@
+public class NewName { // renamed from original containing method
+    public void main(List<Foorifier> foorifiers) {
+        for (FoorifierImpl foorifier : foorifiers) {
+            foorifier.bar();
+        }
+    }
+}

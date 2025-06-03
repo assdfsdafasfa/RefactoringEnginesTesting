@@ -1,0 +1,9 @@
+public class A {
+    <T> void foo(B<T> b) {
+        // Inlined extractedFoo code directly
+        System.out.println("");
+    }
+}
+
+class B<T> {
+}

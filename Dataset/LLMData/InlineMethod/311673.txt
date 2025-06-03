@@ -1,0 +1,6 @@
+interface I {
+    default void m() {
+        // inlined behavior here, originally from E or elsewhere
+    }
+}
+enum E implements I {}

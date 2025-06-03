@@ -1,0 +1,13 @@
+public interface IPlanet {}
+
+public class SimplePlanet implements IPlanet {
+    double mass;
+
+    private double mass() {
+        return mass;
+    }
+
+    public double tempName() {
+        return mass();
+    }
+}

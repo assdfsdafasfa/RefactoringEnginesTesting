@@ -1,0 +1,18 @@
+public class A {
+  public B b;
+  private long m(long l) {
+    return 0;
+  }
+  public long m(int i) {
+    return extractedM(i);
+  }
+  private long extractedM(int i) {
+    System.out.println("");
+    return 1;
+  }
+}
+public class B extends A {
+  public long test() {
+    return super.m(2);
+  }
+}

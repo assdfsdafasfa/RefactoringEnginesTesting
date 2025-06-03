@@ -1,0 +1,9 @@
+interface I {
+}
+
+class C implements I {
+    static class ExtractedFieldHolder {
+        boolean value;
+    }
+    ExtractedFieldHolder holder = new ExtractedFieldHolder();
+}

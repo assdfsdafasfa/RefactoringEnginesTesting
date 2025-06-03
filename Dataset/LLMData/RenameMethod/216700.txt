@@ -1,0 +1,14 @@
+class A {
+    static int getRecursive() {
+        return getRecursiveRenamed();
+    }
+    
+    static int getRecursiveRenamed() {
+        return getRecursiveRenamed();
+    }
+}
+class B {
+    static int getRecursive() {
+        return A.getRecursiveRenamed();
+    }
+}

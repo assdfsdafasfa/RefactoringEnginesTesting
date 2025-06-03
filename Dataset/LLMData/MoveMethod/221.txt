@@ -1,0 +1,11 @@
+public interface Nameable {
+}
+
+public record User(String name) implements Nameable {
+}
+
+public class NameService {
+    public @NotNull String getName(User user) {
+        return user.name();
+    }
+}

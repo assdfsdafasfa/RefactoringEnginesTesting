@@ -1,0 +1,19 @@
+class BarHolder {
+    // Moved Baz class here
+    class Baz {}
+}
+
+class Foo {
+    BarHolder.Baz bazInstance; // to show usage, optional
+    
+    void test(BarHolder.Baz bar) {
+        
+    }
+    void test1() {
+        BarHolder.Baz bar = new BarHolder().new Baz();
+    }
+    void test2() {
+        List<BarHolder.Baz> bars = new ArrayList<>();
+        bars.forEach(bar -> System.out.println(bar));
+    }
+}

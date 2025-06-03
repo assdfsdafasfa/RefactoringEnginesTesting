@@ -1,0 +1,11 @@
+public class A {
+
+    public void show(B b) {
+        System.out.println(this);
+    }
+
+    public void m(C c) {
+        System.out.println(this);
+    }
+
+}

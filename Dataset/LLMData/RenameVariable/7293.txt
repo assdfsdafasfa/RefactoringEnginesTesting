@@ -1,0 +1,9 @@
+public class ExtractVariableTest {
+    public void method() {
+        int a;
+        if (true) {
+            int extracted = 3; // extracted variable with new name "extracted"
+            a = extracted;
+        }
+    }
+}

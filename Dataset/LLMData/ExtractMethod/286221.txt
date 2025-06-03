@@ -1,0 +1,11 @@
+public class O {
+    private S _s;
+    private void m() {
+        System.out.println("");
+    }
+    public void m() {}
+}
+
+public class S {
+    public void m() {}
+}

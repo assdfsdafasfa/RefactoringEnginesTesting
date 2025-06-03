@@ -1,0 +1,13 @@
+public Item[] getChildren(Widget widget, Object[] elementChildren) {
+    Item[] items = super.getChildren(widget, elementChildren);
+    if (elementChildren.length == 0 || items.length / elementChildren.length > 5) { // Will there be a lot of disposal?
+        extractedMethod(widget);
+        items = getChildren(widget);
+    }
+    return items;
+}
+
+private void extractedMethod(Widget widget) {
+    getTree().removeAll();
+    unmapAllElements();
+}

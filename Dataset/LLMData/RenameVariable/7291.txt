@@ -1,0 +1,10 @@
+class OrginalClass {
+    public void f() {}
+}
+
+class OtherClass extends OrginalClass {
+    public void c() {
+        OrginalClass parent = this; // extracted variable from 'super'
+        parent.f();
+    }
+}

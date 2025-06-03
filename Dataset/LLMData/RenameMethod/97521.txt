@@ -1,0 +1,11 @@
+public class A {
+    <T> void foo(B<T> b) {
+    }
+
+    // renamed foo to tempName to simulate move
+    <T> void tempName(B<T> b) {
+    }
+}
+
+class B<T> {
+}

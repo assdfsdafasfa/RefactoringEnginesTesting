@@ -1,0 +1,22 @@
+package ru;
+
+public class Outer {
+    static class Constants {
+        final static String C0 = "";
+        final static String C1 = "";
+    }
+
+    @A(Constants.C0)
+    enum Enm {
+        @A(Constants.C0)
+        E0;
+
+        @A(Constants.C1)
+        void foo() {
+        }
+    }
+}
+
+@interface A {
+    String value();
+}

@@ -1,0 +1,11 @@
+public class Formatter {
+    public static final String format(String key, Object ... args)
+    {
+        return MessageFormat.format(key, args);
+    }
+}
+// Usage in original context:
+public static final String format(String key, Object ... args)
+{
+    return Formatter.format(key, args);
+}

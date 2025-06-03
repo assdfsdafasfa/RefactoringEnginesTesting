@@ -1,0 +1,13 @@
+package inline.constant;
+
+public class Main {
+    public static final String ID = "id";
+
+    // method inlined and moved to another class
+}
+
+class Helper {
+    public static String getId() {
+        return Main.ID;
+    }
+}

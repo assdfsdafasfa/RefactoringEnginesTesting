@@ -1,0 +1,13 @@
+public class Test {
+
+    // Moved and renamed class Dummy to DummyA at class level
+    class DummyA {}
+
+    void test1() {
+        DummyA d = new DummyA();
+    }
+
+    void test2() {
+        DummyA d = new DummyA();
+    }
+}

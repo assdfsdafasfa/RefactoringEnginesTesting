@@ -1,0 +1,8 @@
+public class PullUpLosesAnnotation {
+    // moved method renamed here to preserve original after move
+    public void tempName() {}
+}
+
+class SubclassA extends PullUpLosesAnnotation {
+    // method foo removed after move
+}

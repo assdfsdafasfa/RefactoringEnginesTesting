@@ -1,0 +1,1 @@
+https://youtrack.jetbrains.com/issue/IDEA-91421/JDK-1.8-Inline-Refactoring-confusing-message-is-shown-on-attempt-to-inline-a-variable-defined-in-a-lambda-and-accessed-for

@@ -1,0 +1,15 @@
+interface MyInterface {
+}
+
+class MyClass implements MyInterface {
+}
+
+public class MoveInstanceBug1 {
+    private MyInterface myInterface;
+
+    // Inline doSomething(): calls to doSomething() replaced by direct code (empty here)
+    
+    public void callDoSomething() {
+        // Inlined doSomething() code here (empty)
+    }
+}

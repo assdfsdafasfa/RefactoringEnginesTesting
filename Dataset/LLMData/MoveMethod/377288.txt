@@ -1,0 +1,15 @@
+public class Test {
+    public void x(int i) {
+        helperSwitch(i);
+    }
+}
+
+// extracted method moved to another class
+class TestHelper {
+    public static void helperSwitch(int i) {
+        switch (i) {
+            case 0:
+            case 1:
+        }
+    }
+}

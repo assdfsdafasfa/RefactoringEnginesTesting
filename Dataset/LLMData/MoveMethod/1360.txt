@@ -1,0 +1,13 @@
+class OriginalClass {
+    private boolean flag = false;
+    public void callerMethod() throws InterruptedException {
+        Helper.originalMethod(this);
+    }
+}
+class Helper {
+    public static synchronized void originalMethod(OriginalClass obj) throws InterruptedException {
+        // Some logic here
+        obj.flag = true;
+        obj.notify();
+    }
+}

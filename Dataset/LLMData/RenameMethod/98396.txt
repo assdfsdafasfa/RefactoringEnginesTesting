@@ -1,0 +1,8 @@
+void foo(Object x) {
+  if (x instanceof String) x = ((String)x).substring(1);
+  if (x instanceof String) x = renamedExtractedSubstring((String)x);
+}
+
+private String renamedExtractedSubstring(String s) {
+  return s.substring(1);
+}

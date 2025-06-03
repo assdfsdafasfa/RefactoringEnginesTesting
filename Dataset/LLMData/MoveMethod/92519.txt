@@ -1,0 +1,13 @@
+public class InlineMethodBug {
+    private Object data;
+
+    InlineMethodBug(Object data){
+        B.setData(this, data);
+    }
+}
+
+class B {
+    static void setData(InlineMethodBug obj, Object bytes) {
+        obj.data = bytes;
+    }
+}

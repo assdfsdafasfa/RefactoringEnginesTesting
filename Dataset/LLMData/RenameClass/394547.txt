@@ -1,0 +1,5 @@
+class ExtractClassBug {
+    class NewName { // originally C
+        int m;
+    }
+}

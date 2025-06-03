@@ -1,0 +1,13 @@
+class TargetClass {
+    public void extractedMethod() {
+        System.out.println("Another method in TargetClass");
+    }
+}
+
+class SourceClass {
+    TargetClass target;
+
+    public void callMethod() {
+        target.extractedMethod();
+    }
+}

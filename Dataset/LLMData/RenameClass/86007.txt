@@ -1,0 +1,25 @@
+public class Demo {
+
+    static class MyParentInlined {
+        private final String value;
+
+        MyParentInlined(String value) {
+            this.value = value;
+        }
+    }
+
+    static class MyChild extends MyParentInlined {
+        MyChild(String value) {
+            super(value);
+        }
+    }
+
+    public static void main(String[] args) {
+        String value = "something";
+        final MyParentInlined p;
+        if (true)
+            p = new MyChild(value);
+        else
+            p = new MyParentInlined("value");
+    }
+}

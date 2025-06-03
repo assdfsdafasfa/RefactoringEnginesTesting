@@ -1,0 +1,15 @@
+package p;
+public class A {
+  protected void m() {}
+  public void tempName() {}
+}
+
+package p;
+public class B {
+  public void n(q.C c, A a) {
+    a.m();
+  }
+}
+
+package q;
+public class C {}

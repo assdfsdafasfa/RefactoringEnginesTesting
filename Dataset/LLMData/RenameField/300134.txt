@@ -1,0 +1,6 @@
+interface Date {
+  default int getMonth() {
+    int resultRenamed = 0;
+    return resultRenamed;
+  }
+}

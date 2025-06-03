@@ -1,0 +1,18 @@
+public class A {
+    void m(Object m) {
+        System.out.println("A");
+    }
+    // inline method 'inlineM'
+    void inlineM(String m) {
+        System.out.println("B");
+    }
+}
+
+class B extends A {
+    void m(String m) {
+        inlineM(m);
+    }
+    void f() {
+        m("1");
+    }
+}

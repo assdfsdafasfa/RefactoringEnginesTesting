@@ -1,0 +1,11 @@
+abstract class A {
+    public void tempName() {}
+}
+
+abstract class B extends A {
+    abstract void m();
+}
+
+class C extends A {
+
+}

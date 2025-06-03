@@ -1,0 +1,20 @@
+class OriginalClass {
+    TargetClass c;
+
+    interface InnerInterface {
+        void renamedInnerMethod();
+    }
+
+    public void myMethod() {
+        InnerInterface inner = new InnerInterface() {
+            @Override
+            public void renamedInnerMethod() {
+                // Some logic here
+            }
+        };
+        inner.renamedInnerMethod();
+    }
+}
+
+class TargetClass {
+}

@@ -1,0 +1,10 @@
+public static void changeColorAndMakeStringOfOldColors(List<Shape> shapes, Color newColor, StringBuilder stringBuilder) {
+    shapes.forEach(shape -> ShapeUtil.changeAndRecord(shape, newColor, stringBuilder));
+}
+
+class ShapeUtil {
+    public static void changeAndRecord(Shape shape, Color newColor, StringBuilder stringBuilder) {
+        stringBuilder.append(shape);
+        shape.setColor(newColor);
+    }
+}

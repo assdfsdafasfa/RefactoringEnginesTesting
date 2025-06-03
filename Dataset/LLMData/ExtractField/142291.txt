@@ -1,0 +1,10 @@
+class C extends C {
+    static class ExtractedFieldHolder {
+        int field;
+    }
+    ExtractedFieldHolder holder = new ExtractedFieldHolder();
+
+    @Override
+    public void test() {
+    }
+}

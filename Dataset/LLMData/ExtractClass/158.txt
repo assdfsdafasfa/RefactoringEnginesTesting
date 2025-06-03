@@ -1,0 +1,16 @@
+public interface ITest {
+    void name();
+}
+public class Test implements ITest {
+    public static void main(String[] args) throws Exception {
+        new Test().name();
+    }
+    public void name() {
+        helperMethod();
+    }
+    // Extracted helper method
+    private void helperMethod() {
+        // extracted code, e.g., print statement or logic
+        System.out.println("Extracted helper method called.");
+    }
+}

@@ -1,0 +1,13 @@
+public class A {
+    public void logWarning(String msg) {
+        LoggerHelper.logWarning(msg);
+    }
+}
+
+class LoggerHelper {
+    public static Logger LOG = Logger.getLogger(AppInterfaceServer.class,
+            ServerSettingsConstants.DefaultServerMessagesFileName);
+    public static void logWarning(String msg) {
+        LOG.warn(msg);
+    }
+}

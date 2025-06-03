@@ -1,0 +1,10 @@
+class A {
+    public void extractedMethod() {
+        System.out.println("");
+    }
+}
+
+class C extends A{
+    void foo(List<String>... args) {
+    }
+}

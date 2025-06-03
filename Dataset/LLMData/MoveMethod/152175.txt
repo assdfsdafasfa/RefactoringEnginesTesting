@@ -1,0 +1,15 @@
+public class A {
+
+}
+public class B extends A {
+    void foo() {}
+
+    void err() {
+        BHelper.foo(this); // moved call
+    }
+}
+class BHelper {
+    public static void foo(B b) {
+        b.callSuperFoo();
+    }
+}

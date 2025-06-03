@@ -1,0 +1,9 @@
+public class Test {
+    public void x(int i) {
+        int extractedVar = i; // extracted variable
+        switch (extractedVar) {
+            case 0:
+            case 1:
+        }
+    }
+}

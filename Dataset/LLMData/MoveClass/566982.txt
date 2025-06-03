@@ -1,0 +1,15 @@
+class RLogic {
+    static void printConstructorMessage() {
+        System.out.println("Compact Constructor");
+    }
+}
+
+@SuppressWarnings("preview")
+record R(int i) {
+    R {
+        RLogic.printConstructorMessage();
+    }
+}
+
+class X {
+}

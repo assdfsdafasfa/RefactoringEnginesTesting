@@ -1,0 +1,12 @@
+public interface Iface {
+    // Method renamed and moved out from interface to implementing class
+    public boolean t();
+}
+
+// The implementation of the renamed method 't' is moved into the implementing class
+public class Impl implements Iface {
+    @Override
+    public boolean t() {
+        return true;
+    }
+}

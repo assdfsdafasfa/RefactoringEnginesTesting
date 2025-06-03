@@ -1,0 +1,20 @@
+package a;
+import b.B;
+class A {
+    public B b = new B();
+    static void staticMethod() {}
+
+    void moveMe() {
+        extractedPart();
+    }
+
+    private void extractedPart() {
+        b.m();
+        staticMethod();
+    }
+}
+
+package b;
+class B {
+    void m() {}
+}

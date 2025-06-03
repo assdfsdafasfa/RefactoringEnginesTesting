@@ -1,0 +1,12 @@
+public class InlineMethodBug {
+    private Object data;
+
+    InlineMethodBug(Object data){
+        setData(data);
+    }
+
+    // method remains but called normally
+    private void setData(Object bytes) {
+        this.data = bytes;
+    }
+}

@@ -1,0 +1,14 @@
+class SourceClass {
+    TargetClass target;
+    // extracted assignment logic to a new helper method
+    private void assignTarget(TargetClass target) {
+        this.target = target;
+    }
+
+    private final void methodToMove(TargetClass target) {
+        assignTarget(target);
+    }
+}
+
+enum TargetClass {
+}

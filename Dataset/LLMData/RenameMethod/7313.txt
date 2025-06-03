@@ -1,0 +1,10 @@
+class SourceClass {
+    TargetClass target;
+    // renamed methodToMove to tempName
+    private final void tempName(TargetClass target) {
+        this.target = target;
+    }
+}
+
+enum TargetClass {
+}

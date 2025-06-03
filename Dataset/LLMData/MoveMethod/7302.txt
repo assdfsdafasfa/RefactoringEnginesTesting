@@ -1,0 +1,15 @@
+class B {
+    // extracted method from k()
+    void extracted() {
+        // original logic of k() would be here
+    }
+
+    void k() {
+        extracted();
+    }
+}
+
+class A extends B {
+    static public void m() {
+    }
+}

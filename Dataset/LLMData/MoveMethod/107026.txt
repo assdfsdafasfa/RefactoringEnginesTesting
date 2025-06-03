@@ -1,0 +1,18 @@
+public class ABC {
+    protected enum Functions implements PropsSetter {
+        MINIMUM_FOURIER {
+            public void applyTo(Properties props){
+                doSomething();
+                Helper.refactoredCode();
+            }
+        },
+    }
+}
+
+class Helper {
+    static void refactoredCode() {
+        codeToRefactor1();
+        codeToRefactor2();
+        codeToRefactorN();
+    }
+}

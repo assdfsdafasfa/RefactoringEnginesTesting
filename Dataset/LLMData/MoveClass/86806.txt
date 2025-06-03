@@ -1,0 +1,38 @@
+private static class TaskHolder {
+    private static abstract class BaseTask<T, S extends BaseTask<T, S>> extends RecursiveAction {
+        public final int depth;
+        public final ParallelStream<T> coll;
+
+        protected BaseTask(int depth, ParallelStream<T> coll) {
+            this.depth = depth;
+            this.coll = coll;
+        }
+
+        public abstract void seq();
+
+        public void combine(S left, S right) { }
+
+        public abstract S makeTask(int depth, ParallelStream<T> coll);
+
+        @Override
+        protected void compute() {
+        }
+    }
+
+    private static class ForEachTask<T> extends BaseTask<T, ForEachTask<T>> {
+        private static final long serialVersionUID = 1L;
+        private final Block<? super T> block;
+
+        ForEachTask(int depth, ParallelStream<T> coll, Block<? super T> block) {
+            super(depth, coll);
+            this.block = block;
+        }
+
+        public void seq() {
+        }
+
+        public ForEachTask<T> makeTask(int depth, ParallelStream<T> coll) {
+            return new ForEachTask<>(depth, coll, block);
+        }
+    }
+}

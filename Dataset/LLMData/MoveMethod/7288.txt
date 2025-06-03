@@ -1,0 +1,11 @@
+public class ExtractMethodTest {
+    private final int value;
+
+    public ExtractMethodTest(int value) {
+        initialize(value);
+    }
+
+    private void initialize(int val) {  // extracted method moved inside class
+        this.value = val;
+    }
+}

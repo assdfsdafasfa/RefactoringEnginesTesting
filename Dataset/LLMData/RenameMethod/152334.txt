@@ -1,0 +1,23 @@
+@Entity
+@NamedQueries(value = {
+        @NamedQuery(name = "revenues", query = ""),
+        @NamedQuery(name = "expenses", query = "")
+})
+public class ExampleEntity {
+
+    @Id
+    private String id;
+
+    public String getId() {
+        return fetchId();
+    }
+
+    // Extracted method renamed from original
+    private String fetchId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+}

@@ -1,0 +1,13 @@
+String foo(String... strings){
+    String suffix = "foo";
+    Helper.printStrings(strings, suffix);
+    return suffix;
+}
+
+class Helper {
+    public static void printStrings(String[] strings, String suffix) {
+        for (String string : strings) {
+            System.out.println(string + suffix);
+        }
+    }
+}

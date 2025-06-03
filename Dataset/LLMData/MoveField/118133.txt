@@ -1,0 +1,10 @@
+public class ClassA {
+    private final Object xyz;
+    ClassA() {
+        xyz = ClassA.class;
+    }
+}
+
+class NewName {
+    private final Object xyz = ClassA.class; // field moved from ClassA
+}

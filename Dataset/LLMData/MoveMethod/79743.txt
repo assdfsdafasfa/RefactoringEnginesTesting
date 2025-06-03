@@ -1,0 +1,6 @@
+  class A{
+void m(){
+          int a = 1;
+            System.out.println("" + (Object)a);
+        }
+}

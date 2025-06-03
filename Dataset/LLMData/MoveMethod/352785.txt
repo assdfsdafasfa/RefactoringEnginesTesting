@@ -1,0 +1,17 @@
+public class OriginalClass {
+    public void foo(int i) {
+        switch (i) {
+            case 1:
+                NewClass.newMethod();
+                break;
+        }
+    }
+}
+
+class NewClass {
+    public static void newMethod() {
+        if (true) {
+            // original break inside case handled by caller
+        }
+    }
+}

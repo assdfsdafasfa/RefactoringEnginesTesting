@@ -1,0 +1,21 @@
+public class DummyClass {
+    String str1;
+
+    public String getStr1() {
+        return this.str1;
+    }
+
+    public void setStr1(final String str1) {
+        this.str1 = str1;
+    }
+
+    public void extraStr1() {
+        String output = DummyClassHelper.formatOutput(this);
+    }
+}
+
+class DummyClassHelper {
+    public static String formatOutput(DummyClass instance) {
+        return "ABC {" + instance.str1 + "}";
+    }
+}

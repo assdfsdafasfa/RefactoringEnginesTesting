@@ -1,0 +1,9 @@
+class A {
+    public void tempName(List<String>... args) {
+    }
+}
+
+class C extends A{
+    void foo(List<String>... args) {
+    }
+}

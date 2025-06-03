@@ -1,0 +1,23 @@
+package pack;
+public class String {
+}
+
+public class X {
+  public static void foo(String s) {
+    // Extracted logic from new helper method
+    extractedFoo(s);
+  }
+
+  private static void extractedFoo(String s) {
+    // original body of foo(String s)
+  }
+
+  public void foo(pack.String s) {
+    // Extracted logic from new helper method
+    extractedFooPackString(s);
+  }
+
+  private void extractedFooPackString(pack.String s) {
+    // original body of foo(pack.String s)
+  }
+}

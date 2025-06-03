@@ -1,0 +1,4 @@
+Runnable x = () -> {
+    String hello = "hello";
+    System.out.println(hello);
+};

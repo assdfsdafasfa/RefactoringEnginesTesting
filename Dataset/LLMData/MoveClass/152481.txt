@@ -1,0 +1,17 @@
+public class A implements I {
+    A(int i) {
+        System.out.println(i);
+    }
+}
+
+public interface I {}
+
+class AHelper {
+    // No methods to move since A only has a constructor.
+}
+
+public class B extends A implements I { // place caret on I
+    B(boolean mode) {
+        super(mode ? 1 : 0);
+    }
+}

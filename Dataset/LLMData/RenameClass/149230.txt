@@ -1,0 +1,7 @@
+import java.io.Serializable;
+class ActionRenamed implements Serializable {
+}
+class MyAction extends ActionRenamed {
+    <T extends ActionRenamed> void m() {
+    }
+}

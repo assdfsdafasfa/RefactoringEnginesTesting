@@ -1,0 +1,13 @@
+// ----- Constants.java -----
+public class Constants {
+	public static final int FOO = 0;
+}
+
+// ----- Foo.java -----
+public class Foo {
+	int bar = Constants.FOO;
+}
+
+// ----- Bar.java -----
+class Bar {
+}

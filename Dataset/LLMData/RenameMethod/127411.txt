@@ -1,0 +1,11 @@
+public class TextField {
+    private final JTextField textField = new JTextField();
+
+    public void onValueSet(ValueSetEvent<?> event) {
+        updateTextField();
+    }
+
+    private void updateTextField() {
+        textField.setText("foo");
+    }
+}

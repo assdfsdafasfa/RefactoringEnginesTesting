@@ -1,0 +1,18 @@
+final boolean b = ((THashMap<Key, Value>)newData).forEachEntry(new TObjectObjectProcedure<Key, Value>() {
+  @Override
+  public boolean execute(Key key, Value value) {
+    return StorageHelper.tryAddValue(myStorage, key, inputId, value, exceptionRef);
+  }
+});
+
+class StorageHelper {
+  public static <Key, Value> boolean tryAddValue(MyStorage myStorage, Key key, int inputId, Value value, AtomicReference<StorageException> exceptionRef) {
+    try {
+      myStorage.addValue(key, inputId, value);
+    } catch (StorageException ex) {
+      exceptionRef.set(ex);
+      return false;
+    }
+    return true;
+  }
+}

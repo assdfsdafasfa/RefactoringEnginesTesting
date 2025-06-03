@@ -1,0 +1,17 @@
+public class A {
+    private Integer i = 0;
+
+    void foo() {
+        Helper.foo(i);
+    }
+}
+public class B extends A {
+    void bar() {
+        foo();
+    }
+}
+class Helper {
+    public static void foo(Integer i) {
+        i.toString();
+    }
+}

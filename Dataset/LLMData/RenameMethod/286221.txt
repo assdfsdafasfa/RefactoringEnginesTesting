@@ -1,0 +1,8 @@
+public class O {
+    private S _s;
+    public void tempName() {}
+}
+
+public class S {
+    public void m() {}
+}

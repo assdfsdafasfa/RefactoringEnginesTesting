@@ -1,0 +1,5 @@
+void asd() {
+    final String p = "aa";
+    Runnable r = () -> System.out.println(p);
+    System.out.println(p);
+}

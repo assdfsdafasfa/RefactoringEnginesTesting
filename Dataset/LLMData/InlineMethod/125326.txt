@@ -1,0 +1,14 @@
+abstract class A {
+    void m() {
+        // inlined method body
+        System.out.println("");
+    }
+}
+
+abstract class B extends A {
+    abstract void m();
+}
+
+class C extends A {
+
+}

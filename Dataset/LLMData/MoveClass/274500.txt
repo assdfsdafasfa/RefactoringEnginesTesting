@@ -1,0 +1,22 @@
+public class ExtractEnum {
+    public static void main(String[] args) {
+        System.out.println(EnumValues.numString(EnumValues.ONE));
+        System.out.println(EnumValues.numString(EnumValues.TWO));
+        System.out.println(EnumValues.numString(EnumValues.THREE));
+    }
+}
+
+class EnumValues {
+    public static final int ONE = 1;
+    public static final int TWO = 2;
+    public static final int THREE = 3;
+
+    public static String numString(int num) {
+        switch (num) {
+        case ONE:   return "one";
+        case TWO:   return "two";
+        case THREE: return "three";
+        default:    throw new AssertionError("unknown constant");
+        }
+    }
+}

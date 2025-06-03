@@ -1,0 +1,17 @@
+public double amount() {
+    return AmountCalculator.calculateAmount(this);
+}
+
+class AmountCalculator {
+    public static double calculateAmount(YourClass instance) {
+        return switch (instance.getMovie().getPriceCode()) {
+            case Movie.REGULAR -> {
+                if (instance.daysRented > 2) {
+                    yield instance.regularPenalty();
+                }
+                yield YourClass.REGULAR_BASE_AMOUNT;
+            }
+            default -> 0;
+        };
+    }
+}

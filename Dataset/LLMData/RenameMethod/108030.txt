@@ -1,0 +1,24 @@
+class A {
+    B fB;
+
+    public void doit(String doitArg) {
+        tempName(1.2f);
+    }
+
+    public void subroutine(float subArg) {
+        subsub();
+    }
+
+    public void subsub() {
+        
+    }
+
+    // Renamed method simulating move
+    public void tempName(float subArg) {
+        subsub();
+    }
+}
+
+class B {
+
+}

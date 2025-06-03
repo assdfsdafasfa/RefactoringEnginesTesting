@@ -1,0 +1,13 @@
+public class Example
+{
+    public static void main(String[] args)
+    {
+        int x = 2;
+        System.out.println(buildString(x + 2, " suffix"));
+    }
+
+    private static String buildString(int number, String suffix)
+    {
+        return "prefix " + number + suffix;
+    }
+}

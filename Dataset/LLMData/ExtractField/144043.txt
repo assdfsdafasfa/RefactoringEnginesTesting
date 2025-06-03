@@ -1,0 +1,25 @@
+package a;
+public abstract class A {
+    public abstract void m();
+    
+    public void mExtra() {
+        System.out.println("");
+    }
+}
+
+package b;
+public class B extends A {
+  @Override
+  public void m() {
+    super.mExtra();
+  }
+
+  void n() {
+    new A() {
+        @Override
+        public void m() {
+            System.out.println("");
+        }
+    };
+  }
+}

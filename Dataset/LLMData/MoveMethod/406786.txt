@@ -1,0 +1,30 @@
+@FunctionalInterface
+public interface I1 {
+	int foo(int a);
+}
+
+interface I2 {
+	I1 i1 = (a) -> Helper.compute(a);
+}
+
+interface I3 {
+	default int foo() {
+		return Helper.getA();
+	}
+
+	static int bar() {
+		return Helper.getA();
+	}
+}
+
+class Helper {
+	static int compute(int a) {
+		int b = 10;
+		return a + b;
+	}
+
+	static int getA() {
+		int a = 10;
+		return a;
+	}
+}

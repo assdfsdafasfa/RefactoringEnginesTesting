@@ -1,0 +1,15 @@
+public class TestCase {
+	public void main() {
+		class T {
+			public T() {}
+		}
+		/*]*/fooRenamed();/*[*/
+	}
+
+	public void fooRenamed() {
+		class T {
+			T t;
+			public T() {}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+class OriginalClass {
+    private int f(boolean b1, boolean b2) {
+        int n = 0;
+        int i = 0;
+        i = NewClass.extractedMethod(b1, i);
+        if (b2)
+            n = n + i;
+        return n;
+    }
+}
+
+class NewClass {
+    public static int extractedMethod(boolean b1, int i) {
+        if (b1)
+            i = 1;
+        return i;
+    }
+}

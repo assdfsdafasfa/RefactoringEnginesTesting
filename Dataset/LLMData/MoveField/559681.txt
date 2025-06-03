@@ -1,0 +1,40 @@
+public record Circle(long radius) implements Shape {
+    /**
+     * create unit radius circle
+     */
+    public Circle {
+        this.radius = radius;
+    }
+    public void Circle2(long radius) {
+    }
+    @Override
+    public long area() {
+        // delegate calculation to helper class
+        return CircleHelper.area(this);
+    }
+}
+
+// Move the field 'i' and the calculation logic to a helper class
+class CircleHelper {
+    // moved renamed field 'i'
+    private long i;
+
+    // Constructor to receive Circle instance and extract radius as i
+    CircleHelper(Circle circle) {
+        this.i = circle.radius();
+    }
+
+    // area calculation moved here using renamed field 'i'
+    public long area() {
+        return ((22 * i * i) / 7);
+    }
+
+    // static facade for convenience
+    public static long area(Circle circle) {
+        CircleHelper helper = new CircleHelper(circle);
+        return helper.area();
+    }
+}
+
+interface Shape {
+}

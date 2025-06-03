@@ -1,0 +1,13 @@
+private void foo(int e) {
+    switch (e) {
+        case Helper.foo():
+            break;
+    }
+}
+
+class Helper {
+    public static int foo() {
+        // original logic of foo() here, or simply return a constant if foo() is simple
+        return 0; 
+    }
+}

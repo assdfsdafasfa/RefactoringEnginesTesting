@@ -1,0 +1,18 @@
+public class OriginalClass {
+    public void originalMethod() throws IOException {
+        // method body remains as is
+    }
+}
+
+class OtherClass1 {
+    public void callerMethod() {
+        OriginalClass obj = new OriginalClass();
+        // call remains to originalMethod()
+        try {
+            obj.originalMethod();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+}

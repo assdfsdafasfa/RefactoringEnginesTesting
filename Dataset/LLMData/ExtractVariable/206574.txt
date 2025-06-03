@@ -1,0 +1,17 @@
+public class RenameLocalVariable {
+
+    public int test() {
+        int local = 3;
+        int a = 45;
+        System.out.println(getLocal(local));
+        if (getLocal(local) < getLocal(local)) {
+            System.out.println(getLocal(local));
+        }
+        return getLocal(local);
+    }
+    
+    // Extracted method to replace direct variable usage
+    private int getLocal(int local) {
+        return local;
+    }
+}

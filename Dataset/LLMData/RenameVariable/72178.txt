@@ -1,0 +1,16 @@
+package c;
+
+import a.A;
+
+public class C
+{
+   b.A method()
+   {
+      return new b.A();
+   }
+   
+   void failHere()
+   {
+      b.A localVar = method(); // extracted variable
+   }
+}

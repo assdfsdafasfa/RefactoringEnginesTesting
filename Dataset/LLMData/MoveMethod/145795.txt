@@ -1,0 +1,16 @@
+public class Example
+{
+    public static void main(String[] args)
+    {
+        int x = 2;
+        System.out.println(StringUtil.getString(x + 2, " suffix"));
+    }
+}
+
+class StringUtil
+{
+    public static String getString(int number, String suffix)
+    {
+        return "prefix " + number + suffix;
+    }
+}

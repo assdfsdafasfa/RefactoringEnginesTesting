@@ -1,0 +1,8 @@
+public class Test1 {
+  private void test(String s) {
+    switch (s) {
+      case "ABC":
+    }
+  }
+}
+class Test2 {}

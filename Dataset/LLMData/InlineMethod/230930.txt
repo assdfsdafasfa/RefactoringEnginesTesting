@@ -1,0 +1,4 @@
+public class TestClass implements MyIface {
+    // method() inlined — its content placed directly where it was used
+    // since method is empty and unused, it can be removed
+}

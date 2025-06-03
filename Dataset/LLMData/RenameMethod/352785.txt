@@ -1,0 +1,15 @@
+class NewName {
+    public void foo(int i) {
+        switch (i) {
+            case 1:
+                newMethod();
+                break;
+        }
+    }
+    
+    private void newMethod() {
+        if (true) {
+            // original break inside case is preserved by calling this method before break in foo()
+        }
+    }
+}

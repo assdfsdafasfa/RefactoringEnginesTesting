@@ -1,0 +1,22 @@
+package ru;
+
+public class Outer {
+    static class Nested {
+        final static String RENAMED_C0 = "";
+        final static String RENAMED_C1 = "";
+    }
+
+    @A(Nested.RENAMED_C0)
+    enum Enm {
+        @A(Nested.RENAMED_C0)
+        E0;
+
+        @A(Nested.RENAMED_C1)
+        void foo() {
+        }
+    }
+}
+
+@interface A {
+    String value();
+}

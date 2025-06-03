@@ -1,0 +1,22 @@
+public interface ITest {
+    void name();
+}
+
+public class Test implements ITest {
+    private Helper helper = new Helper();
+
+    public static void main(String[] args) throws Exception {
+        new Test().name();
+    }
+
+    public void name() {
+        helper.name();
+    }
+}
+
+// New class where the renamed method is moved to
+class Helper {
+    public void name() {
+        // original implementation moved here
+    }
+}

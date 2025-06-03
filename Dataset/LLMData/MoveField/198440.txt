@@ -1,0 +1,9 @@
+class LocalHelper {
+    static void locally() {}
+}
+
+class K {
+    void m() {
+        LocalHelper.locally();
+    }
+}

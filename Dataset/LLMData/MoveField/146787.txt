@@ -1,0 +1,14 @@
+class ExtractConstantAfter {
+
+    public String getString() {
+        return MovedConstantHolder.EXTRACTED_CONSTANT;
+    }
+
+    static class StaticInner {
+        public static String STRING = "aaaa";
+    }
+}
+
+class MovedConstantHolder {
+    static final String EXTRACTED_CONSTANT = ExtractConstantAfter.StaticInner.STRING; // moved out
+}

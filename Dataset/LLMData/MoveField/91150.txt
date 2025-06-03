@@ -1,0 +1,9 @@
+class RunnableHolder {
+    static Runnable runnable = () -> {};
+}
+
+class Test {
+    void foo() {
+        RunnableHolder.runnable.run();
+    }
+}

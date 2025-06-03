@@ -1,0 +1,16 @@
+public class Test {
+
+    // Extracted method that defines the renamed class and returns an instance
+    DummyA createDummyA() {
+        class DummyA {}
+        return new DummyA();
+    }
+
+    void test1() {
+        DummyA d = createDummyA();
+    }
+
+    void test2() {
+        DummyA d = createDummyA();
+    }
+}

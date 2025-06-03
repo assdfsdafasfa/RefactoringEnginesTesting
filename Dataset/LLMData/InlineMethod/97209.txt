@@ -1,0 +1,11 @@
+package com.example;
+
+public class SuperType<ELEM extends Number> {
+    void add(ELEM e) {
+    }
+
+    ELEM get() {
+        add(get());
+        return null;
+    }
+}

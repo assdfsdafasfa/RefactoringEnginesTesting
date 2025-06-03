@@ -1,0 +1,7 @@
+public interface IPlanet {}
+
+public class SimplePlanet implements IPlanet {
+    double mass;
+
+    // inlined mass() method: usage would replace mass() calls with 'mass' directly
+}

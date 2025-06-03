@@ -1,0 +1,20 @@
+class A {
+    B fB;
+
+    public void doit(String doitArg) {
+        // Inline subroutine call
+        subsub();
+    }
+
+    public void subroutine(float subArg) {
+        subsub();
+    }
+
+    public void subsub() {
+        
+    }
+}
+
+class B {
+
+}

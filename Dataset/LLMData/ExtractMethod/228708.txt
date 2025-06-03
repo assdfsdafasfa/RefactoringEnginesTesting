@@ -1,0 +1,16 @@
+public interface Iface {
+    public boolean t();
+}
+
+public class Impl implements Iface {
+
+    @Override
+    public boolean t() {
+        return executeTest();
+    }
+
+    // Extracted method holding the original logic of test()
+    private boolean executeTest() {
+        return true;
+    }
+}

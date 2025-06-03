@@ -1,0 +1,16 @@
+public class Try {
+    Object getImage(Object o) {
+    	return null;
+    }
+
+    Object foo() {
+    	Object o = getImage();  // call remains
+    	return getImage(o);
+    }
+}
+
+class A {
+	void foo() {
+		new Try().getImage();
+	}
+}

@@ -1,0 +1,6 @@
+public class ExtractVariableTest {
+    public void method(int localVar) {
+        int extractedVar = 5; // extracted variable renamed to extractedVar
+        System.out.println(extractedVar);
+    }
+}

@@ -1,0 +1,19 @@
+package my.test;
+
+public class Foo {
+    int d;  // renamed field from 'a' to 'd'
+    int b;
+    int c;
+
+    // Extracted method to access field 'd'
+    public int getD() {
+        // extracted usage of field d
+        return d;
+    }
+
+    // Extracted method to set field 'd'
+    public void setD(int value) {
+        // extracted usage of field d
+        this.d = value;
+    }
+}

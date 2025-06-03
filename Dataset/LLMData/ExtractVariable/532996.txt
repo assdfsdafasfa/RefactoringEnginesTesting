@@ -1,0 +1,12 @@
+class One {
+};
+
+public class Test {
+    {
+        var two = createOne();
+    }
+
+    private One createOne() {
+        return new One();
+    }
+}

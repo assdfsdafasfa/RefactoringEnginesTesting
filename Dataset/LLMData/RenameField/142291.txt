@@ -1,0 +1,6 @@
+class C extends C {
+    @Override
+    public void test() {
+    }
+    public int tempField;
+}

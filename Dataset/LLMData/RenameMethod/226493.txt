@@ -1,0 +1,21 @@
+package t;
+public class A {
+    public static void main(String[] args) {
+        String message = getMessageRenamed();
+        System.out.println(message);
+    }
+
+    public static String getMessageRenamed() {
+        return "Hello World!";
+    }
+}
+
+package t;
+public class ATest {
+
+    @Test
+    public void testMain() {
+        String message = A.getMessageRenamed();
+        assertEquals(message, "Hello World!");
+    }
+}

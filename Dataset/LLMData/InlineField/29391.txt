@@ -1,0 +1,7 @@
+public class TestRefactor {
+	class Foo {
+		int foo() {
+			return 1;
+		}
+	}
+}

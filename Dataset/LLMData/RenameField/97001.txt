@@ -1,0 +1,3 @@
+        } else if (new AcrossJVMSerializationFeature().isWriteReplace(method)) {
+            return new AcrossJVMSerializationFeature().writeReplace(proxy);
+        }

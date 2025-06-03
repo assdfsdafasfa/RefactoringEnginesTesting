@@ -1,0 +1,11 @@
+package my.test;
+
+public class Foo {
+    int b;
+    int c;
+}
+
+class Bar {
+    // moved and renamed field from Foo: 'a' renamed to 'd'
+    int d;
+}

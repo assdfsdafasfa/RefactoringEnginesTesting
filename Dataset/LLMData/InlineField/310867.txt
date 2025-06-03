@@ -1,0 +1,20 @@
+package my.test;
+
+public class Foo {
+    // field 'a' renamed to 'd'
+    int d;
+    int b;
+    int c;
+
+    // Inline field 'd' usage in a method (example)
+    public void printD() {
+        // Instead of accessing 'd' directly elsewhere, it is used here directly.
+        System.out.println(d);
+    }
+
+    // Inline field assignment example
+    public void resetD() {
+        // inlining the usage of 'd'
+        d = 0;
+    }
+}

@@ -1,0 +1,17 @@
+package p;
+
+class A {
+	void a(A a){}
+	void a(B b){}
+	private void callAWithThis(B b) {
+		a(b);
+	}
+}
+
+package p;
+
+class B extends A {
+	void m() {
+		callAWithThis(this);
+	}
+}

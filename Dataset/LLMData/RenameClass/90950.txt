@@ -1,0 +1,5 @@
+public class MovedInterfaceHolder {
+    public interface I {
+        int m(ArrayList p);
+    }
+}

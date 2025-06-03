@@ -1,0 +1,16 @@
+class OriginalClass {
+    B b;
+
+    class StaticInnerClass {
+        public static void innerMethod() {
+            System.out.println("Extracted logic");
+        }
+    }
+
+    public void original() {
+        System.out.println("Extracted logic");
+    }
+}
+
+class B {
+}

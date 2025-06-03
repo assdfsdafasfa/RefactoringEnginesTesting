@@ -1,0 +1,13 @@
+public class Bug {
+  void test() {
+    // Removed inner class Foo, now uses moved class F
+    F fInstance = new F();
+    Foo foo = fInstance.getFoo(); // use after move and rename
+  }
+}
+
+public class F {
+  F getFoo() {
+    return null;
+  }
+}

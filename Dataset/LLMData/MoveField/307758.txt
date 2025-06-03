@@ -1,0 +1,10 @@
+class A {
+    public void m() {
+        // foo is undeclared.
+        int a = <foo + 5>;
+    }
+}
+
+class NewName {
+    // Intended to contain the extracted field, but since 'foo' is undeclared and placeholder, no concrete field moved.
+}

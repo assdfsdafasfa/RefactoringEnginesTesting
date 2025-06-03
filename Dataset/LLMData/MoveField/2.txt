@@ -1,0 +1,18 @@
+public class A {
+    void m(Object m){
+        System.out.println("A");
+    }
+}
+
+class B extends A {
+    String k;
+    C helper = new C();
+
+    void f() {
+        System.out.println(k);       
+        System.out.println(helper.m);    
+    }
+}
+class C {
+    public String m; 
+}

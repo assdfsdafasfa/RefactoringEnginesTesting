@@ -1,0 +1,13 @@
+class PushDownBug1 {
+
+    static abstract class C {
+        // Renamed method from "m" to "renamedM"
+        abstract void renamedM();
+    }
+
+    static final C F = new C() {
+        @Override
+        void renamedM() {
+        }
+    };
+}

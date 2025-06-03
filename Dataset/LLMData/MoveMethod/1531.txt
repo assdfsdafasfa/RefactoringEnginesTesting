@@ -1,0 +1,40 @@
+public class A {
+    {
+        int length = LengthHelper.aLength(new String[0]);
+    }
+
+    enum M {
+        ;
+        {
+            MHelper.aValueOf("");
+        }
+    }
+
+    enum S {
+        ;
+        {
+            SHelper.aValues();
+        }
+    }
+}
+
+// Helper class moved from 'length' and renamed to 'aLength'
+class LengthHelper {
+    public static int aLength(String[] array) {
+        return array.length;
+    }
+}
+
+// Helper class moved from 'valueOf' and renamed to 'aValueOf'
+class MHelper {
+    public static A.M aValueOf(String name) {
+        return A.M.valueOf(name);
+    }
+}
+
+// Helper class moved from 'values' and renamed to 'aValues'
+class SHelper {
+    public static A.S[] aValues() {
+        return A.S.values();
+    }
+}

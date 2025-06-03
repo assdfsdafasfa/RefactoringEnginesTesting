@@ -1,0 +1,1 @@
+double paymentSaveAmount = solution.getValue(i + 1, 0);   // todo fix this

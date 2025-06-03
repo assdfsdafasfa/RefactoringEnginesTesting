@@ -1,0 +1,12 @@
+class ConstantHolder {
+  public static final String TEST = "ABC";
+}
+
+public class Test1 {
+  private void test(String s) {
+    switch (s) {
+      case ConstantHolder.TEST:
+    }
+  }
+}
+class Test2 {}

@@ -1,0 +1,11 @@
+public class OriginalClass {
+    public void main(List<Foorifier> foorifiers) {
+        for (FoorifierImpl foorifier : foorifiers) {
+            foorifier.bar();
+        }
+    }
+}
+
+class NewName {
+    // extracted class placeholder (empty since no extraction detail)
+}

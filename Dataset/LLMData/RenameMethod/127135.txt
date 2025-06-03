@@ -1,0 +1,11 @@
+public class CallToSimpleGetter {
+    private String someString = "";
+
+    public void execute() {
+        getSomeString();
+    }
+
+    public String getSomeString() {
+        return someString;
+    }
+}

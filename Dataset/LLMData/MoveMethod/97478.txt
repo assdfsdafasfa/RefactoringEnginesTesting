@@ -1,0 +1,11 @@
+public class A {
+    private <T> int foo(List<T> list) {
+        return Helper.getSize(list);
+    }
+}
+
+class Helper {
+    public static <T> int getSize(List<T> list) {
+        return list.size();
+    }
+}

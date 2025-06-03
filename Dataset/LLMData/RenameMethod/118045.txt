@@ -1,0 +1,7 @@
+public interface IFoo {
+}
+
+public class Foo implements IFoo {
+    public void tempName() {
+    }
+}

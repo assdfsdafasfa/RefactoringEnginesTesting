@@ -1,0 +1,18 @@
+public class A {
+    public class BaseInner {
+        public void tempInnerMethod() { }
+    }
+
+    public class Outer {
+        public int x = 0;
+        public void foo(){}
+
+        public class Inner extends BaseInner {
+            @Override
+            public void tempInnerMethod() {
+                System.out.println(Outer.this.x);
+                Outer.this.foo();
+            }
+        }
+    }
+}

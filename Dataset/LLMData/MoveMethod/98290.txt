@@ -1,0 +1,18 @@
+class Bag {
+    Integer x;
+    Integer y;
+}
+
+public class Simple {
+    public static void method() {
+        Bag b = new Bag();
+        b.x = Helper.compute();
+        b.x = Helper.compute();
+    }
+}
+
+class Helper {
+    public static int compute() {
+        return 1 + 2;
+    }
+}

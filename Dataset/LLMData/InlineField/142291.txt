@@ -1,0 +1,6 @@
+class C extends C {
+    @Override
+    public void test() {
+        int field = 0; // inlined field inside method
+    }
+}

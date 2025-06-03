@@ -1,0 +1,18 @@
+import static java.lang.Math.*;
+
+public class SuperType<ELEM extends Number> {
+
+    int stat(Integer j) {
+        // Inline min calculation logic directly
+        int head = j;
+        int[] tail = {42, 52, abs(32)};
+        int min = head;
+        for (int i : tail)
+            min = min(i, min);
+        return min;
+    }
+
+    int min(int a, int b) {
+        return a < b ? a : b;
+    }
+}

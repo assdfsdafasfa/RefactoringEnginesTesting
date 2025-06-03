@@ -1,0 +1,9 @@
+class Source {
+  void usage() {
+    Target.foo(1);
+    // inlined call of foo("one")
+  }
+}
+class Target {
+  public static void foo(int x){}
+}

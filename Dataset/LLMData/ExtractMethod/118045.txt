@@ -1,0 +1,8 @@
+public interface IFoo {
+}
+
+public class Foo implements IFoo {
+    public void test() {
+        System.out.println("");
+    }
+}

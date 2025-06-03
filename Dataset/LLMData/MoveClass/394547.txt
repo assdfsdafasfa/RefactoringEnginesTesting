@@ -1,0 +1,5 @@
+class ExtractClassBug {}
+
+class C { // moved out from ExtractClassBug
+    int m;
+}

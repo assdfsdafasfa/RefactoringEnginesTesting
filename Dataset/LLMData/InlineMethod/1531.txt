@@ -1,0 +1,23 @@
+public class A {
+    {
+        // Inline method call replaced by its body
+        int length = new String[0].length;
+    }
+
+    enum M {
+        ;
+        {
+            // Inline method call replaced by its body
+            String s = M.valueOf("").toString();
+        }
+    }
+
+    enum S {
+        ;
+        {
+            // Inline method call replaced by its body
+            Object[] arr = S.values();
+        }
+    }
+
+}

@@ -1,0 +1,9 @@
+public class Foo {
+    public int x;
+    public class Inner {
+        // y is removed
+        public void foo() { 
+            System.out.println(x + 1);
+        }
+    }
+}

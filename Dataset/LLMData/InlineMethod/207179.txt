@@ -1,0 +1,15 @@
+public class SourceClass {
+ 
+    int x;
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    // inlined: if mmm() was used somewhere, its body `File f = new File("");` is now directly inserted at usage sites
+    // since mmm() was unused or replaced, it's removed
+}

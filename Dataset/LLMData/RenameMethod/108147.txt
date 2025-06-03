@@ -1,0 +1,13 @@
+package a;
+import java.util.*;
+class Source {
+    static {
+        // renamed the new Stack() initialization to tempInit()
+        tempInit();
+    }
+
+    private static void tempInit() {
+        new Stack();
+    }
+}
+class Destination {}

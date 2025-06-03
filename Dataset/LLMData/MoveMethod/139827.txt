@@ -1,0 +1,16 @@
+public class Test {
+
+  {
+    Season.values();
+    SeasonHelper.t("");// moved and renamed method call
+  }
+
+  enum Season {WINTER, SPRING, SUMMER, AUTUMN}
+}
+
+class SeasonHelper {
+  // Moved the static method 'valueOf' from enum 'Season' to this helper class and renamed it to 't'
+  public static Season t(String name) {
+    return Season.valueOf(name);
+  }
+}

@@ -1,0 +1,19 @@
+class X {
+  void test() {
+    Runnable r = XHelper.createRunnable();
+    r.run();
+  }
+  
+  class Y {}
+}
+
+class XHelper {
+  public static Runnable createRunnable() {
+    return new Runnable() {
+      @Override
+      public void run() {
+        System.out.println(new X().new Y());
+      }
+    };
+  }
+}

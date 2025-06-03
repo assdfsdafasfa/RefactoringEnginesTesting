@@ -1,0 +1,7 @@
+import java.util.ArrayList;
+
+public class Try extends ArrayList {
+}
+
+@SuppressWarnings(value = {"all", "rawtypes"})
+class NewName {}

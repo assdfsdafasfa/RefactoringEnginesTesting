@@ -1,0 +1,23 @@
+public class EmoDaddy {
+    protected int daddyField = 1;
+    protected int daddyMethod() { return daddyField; }
+}
+
+public class LambdaEmo extends EmoDaddy {
+    private int ownField = 2;
+    private int ownMethod() { return ownField; }
+
+    public void context() {
+        queue(() -> LambdaEmoHelper.printSum(ownField, ownMethod()));
+        queue(() -> LambdaEmoHelper.printSum(this.ownField, this.ownMethod()));
+        queue(() -> LambdaEmoHelper.printSum(super.daddyField, super.daddyMethod()));
+    }
+
+    public void queue(Runnable runnable) { runnable.run(); }
+}
+
+public class LambdaEmoHelper {
+    public static void printSum(int a, int b) {
+        System.out.println(a + b);
+    }
+}

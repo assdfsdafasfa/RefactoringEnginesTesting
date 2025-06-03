@@ -1,0 +1,17 @@
+public class NewClass {
+    public void m() {}
+
+    class B {
+        void k() {
+            m();        
+            helper.k(NewClass.this);
+        }
+        C helper = new C();
+    }
+}
+
+class C {
+    public void k(NewClass nc) {
+        nc.m();
+    }
+}

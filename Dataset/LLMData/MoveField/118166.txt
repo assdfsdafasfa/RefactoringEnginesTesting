@@ -1,0 +1,14 @@
+@Model(usages = @Usage("${__REQUEST_PARAMETERS}"),
+  description = "Defines Request Parameters",
+  descriptionKey = "tags.models.requestParameters.description"
+)
+public class SomeClass extends IModel {
+  @Override
+  public String getModelName() {
+     return RequestConstants.REQUEST_PARAMETERS_CONSTANT;
+  }
+}
+
+class RequestConstants {
+  public static final String REQUEST_PARAMETERS_CONSTANT = "__REQUEST_PARAMETERS"; // moved to new class
+}

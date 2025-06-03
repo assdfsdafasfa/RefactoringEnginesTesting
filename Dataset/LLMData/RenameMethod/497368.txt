@@ -1,0 +1,8 @@
+public void log(Level level, String message, String... parameters) {
+    String formattedMessage = MessageFormat.format(message, (Object[])parameters);
+    System.out.println("Logging "+message+" with "+Arrays.asList(parameters));
+}
+public void tempName(Level level, String message, String... parameters) {
+    LogManager.getLogManager().getLogger(Foo.class.getName()).log(level, 
+        MessageFormat.format(message, (Object[])parameters));
+}

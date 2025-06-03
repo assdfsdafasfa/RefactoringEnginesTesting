@@ -1,0 +1,11 @@
+public class Util {
+    public static void test(int x) {
+        if (x > 3) x = 0;
+    }
+}
+
+public class Caller {
+    public void user() {
+        Util.test(2);
+    }
+}

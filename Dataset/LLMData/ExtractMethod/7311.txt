@@ -1,0 +1,19 @@
+public class OriginalClass {
+    TargetClass c;
+
+    private OriginalClass() {
+        init();
+    }
+
+    private void init() {
+        // Extracted constructor logic
+        // Some logic here
+    }
+
+    public void methodUsingPrivateConstructor() {
+        OriginalClass instance = new OriginalClass();
+    }
+}
+
+class TargetClass {
+}

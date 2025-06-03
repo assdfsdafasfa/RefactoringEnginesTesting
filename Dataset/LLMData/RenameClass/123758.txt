@@ -1,0 +1,13 @@
+public interface RenamedSimpleDialogPresenter {
+  int BUTTON_POSITIVE = 1;
+  int BUTTON_NEGATIVE = 2;
+  int BUTTON_NEUTRAL = 3;
+
+  void onClick(int which);
+}
+public class SimpleDialogPresenterImpl implements RenamedSimpleDialogPresenter {
+  @Override
+  public void onClick(int which) {
+    //Do something
+  }
+}

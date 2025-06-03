@@ -1,0 +1,8 @@
+@SuppressWarnings("preview")
+record RenamedR(int i) {
+    RenamedR {
+        System.out.println("Compact Constructor");
+    }
+}
+class X {
+}

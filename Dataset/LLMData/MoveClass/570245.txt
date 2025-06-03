@@ -1,0 +1,18 @@
+// Moved enum Y2 into its own file or outside X2 class
+enum Y2 { 
+    BLEU,
+    BLANC,
+    ROUGE;
+
+    public static void main(String[] args) {
+        for(Y2 y: Y2.values()) {
+            System.out.print(y);
+        }
+    }
+}
+
+public class X2 { 
+    public static void main(String[] args) {
+        Y2.main(args);
+    }
+}

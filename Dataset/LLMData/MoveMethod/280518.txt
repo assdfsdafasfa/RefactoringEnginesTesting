@@ -1,0 +1,18 @@
+public class MethodTest {
+	
+	public void methodOne() {
+		System.err.println("one");
+	}
+	
+	public void methodTwo() {
+		System.err.println("two");
+	}
+	
+	// methodThree removed from here
+}
+
+class LoggerHelper {
+	public void methodThree(MethodTest mt) {
+		System.err.println("three");
+	}
+}

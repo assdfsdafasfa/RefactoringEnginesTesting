@@ -1,0 +1,14 @@
+public class ClassBase {
+  // ClassBase no longer contains main(BaseClass, String[])
+}
+
+public class DerivedClass extends ClassBase {
+  public static void main(String[] parameters) {
+    main(new DerivedClass(), parameters);
+  }
+  
+  // Moved main method from ClassBase to DerivedClass, adapted parameter type
+  public static void main(ClassBase base, String[] parameters) {
+    // original logic (empty here)
+  }
+}

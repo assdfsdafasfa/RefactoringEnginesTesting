@@ -1,0 +1,8 @@
+public class Class1 {
+    static {
+        String value = "value";
+        // Previously used INITIALIZED_LATER now replaced inline with "value"
+    }
+}
+public class Class2 {
+}

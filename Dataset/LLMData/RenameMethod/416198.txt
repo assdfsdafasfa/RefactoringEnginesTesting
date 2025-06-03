@@ -1,0 +1,14 @@
+public class A {
+    public static int i;
+
+    public static int getI() {         // method still present, call remains
+        return i;
+    }
+}
+
+public enum B {
+    m(A.getI());
+
+    B(int j){
+    }
+}

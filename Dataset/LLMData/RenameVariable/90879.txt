@@ -1,0 +1,2 @@
+FileFilter java = f -> f.getName().endsWith(".java");
+java.getClass();

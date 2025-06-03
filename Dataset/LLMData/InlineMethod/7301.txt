@@ -1,0 +1,7 @@
+public class NewClass {
+    public void m() {}
+    class B {
+        void k(NewClass outer) {
+            outer.m(); 
+    }
+}

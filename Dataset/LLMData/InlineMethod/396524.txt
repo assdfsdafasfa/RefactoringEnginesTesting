@@ -1,0 +1,10 @@
+package test.plugin;
+public interface Foo {
+}
+package test.plugin;
+import java.io.File;
+public class Bar implements Foo {
+    public void method(File x) {
+        // inlined method body here (if method was called elsewhere)
+    }
+}

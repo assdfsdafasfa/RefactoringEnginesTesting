@@ -1,0 +1,8 @@
+public boolean isConsideredFinal(int cl) {
+    return checkIfAllExpectedSeenAtCl(cl, countExpectedDirectlyAtCl());
+}
+
+private boolean checkIfAllExpectedSeenAtCl(int cl, int countExpectedDirectlyAtCl) {
+    return cl == cl()
+        && countSeenDirectlyAtCl() == countExpectedDirectlyAtCl;
+}

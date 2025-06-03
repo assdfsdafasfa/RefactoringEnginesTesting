@@ -1,0 +1,13 @@
+interface Foo {
+    void setFoo(int bar);
+}
+
+class Bar implements Foo {
+    int foo;
+
+    @Override
+    public void setFoo(int bar) {
+        // Inline the assignment directly instead of renaming the field
+        this.foo = bar;
+    }
+}

@@ -1,0 +1,9 @@
+public class TestClass implements MyIface {
+    public static void method() {
+        extractedLogic();
+    }
+
+    private static void extractedLogic() {
+        // original logic here (currently empty)
+    }
+}

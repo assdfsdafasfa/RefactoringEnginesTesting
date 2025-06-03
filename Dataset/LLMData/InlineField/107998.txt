@@ -1,0 +1,6 @@
+class Bug {
+    class Inner{
+        int number = 0;
+        int method() { return 0; }
+    }
+}

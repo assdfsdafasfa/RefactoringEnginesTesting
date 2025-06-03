@@ -1,0 +1,13 @@
+public class Test {
+  {
+    Season.values();
+    // inline method 't' which calls Season.valueOf
+    t("");
+  }
+
+  // extracted method 't' that is inlined by its call site
+  private Season t(String name) {
+    return Season.valueOf(name);
+  }
+  enum Season {WINTER, SPRING, SUMMER, AUTUMN}
+}

@@ -1,0 +1,11 @@
+public class InLineTest {
+    private void bar() {
+        B.foo();
+    }
+}
+
+class B {
+    static void foo() {
+        System.out.println();
+    }
+}

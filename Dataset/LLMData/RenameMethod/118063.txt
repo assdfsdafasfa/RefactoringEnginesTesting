@@ -1,0 +1,15 @@
+package p1;
+class C {
+}
+
+package p2;
+public class A {
+    protected static void foo(int args) {}
+    protected static void foo(int args, int moreArgs) {}
+
+    // renamed bar to tempName to simulate move
+    private void tempName() {
+        foo(5);
+        foo(5, 5);
+    }
+}

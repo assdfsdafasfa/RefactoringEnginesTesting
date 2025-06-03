@@ -1,0 +1,17 @@
+class X {
+  void test() {
+    Runnable r = createRunnable();
+    r.run();
+  }
+
+  private Runnable createRunnable() {
+    return new Runnable() {
+      @Override
+      public void run() {
+        System.out.println(new Y());
+      }
+    };
+  }
+  
+  class Y {}
+}

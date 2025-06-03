@@ -1,0 +1,20 @@
+class OriginalClass {
+    B b;
+
+    class StaticInnerClass {
+        public static void innerMethod() {
+            extractedLogic();
+        }
+
+        private static void extractedLogic() {
+            System.out.println("Extracted logic");
+        }
+    }
+
+    public void original() {
+        StaticInnerClass.innerMethod();
+    }
+}
+
+class B {
+}

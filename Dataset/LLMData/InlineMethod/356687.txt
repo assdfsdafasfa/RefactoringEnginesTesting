@@ -1,0 +1,14 @@
+public class A {
+  public B b;
+  private long m(long l) {
+    return 0;
+  }
+  public long m(int i) {
+    return 1; // inlined directly without calling another method
+  }
+}
+public class B extends A {
+  public long test() {
+    return 1; // replaced super.m(2) inline with return value
+  }
+}

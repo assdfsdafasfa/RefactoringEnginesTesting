@@ -1,0 +1,16 @@
+interface MyInterface {
+}
+
+class MyClass implements MyInterface {
+}
+
+public class MoveInstanceBug1 {
+    private MyInterface myInterface;
+
+    public void doSomething(System.out.println("");) {
+    }
+    
+    public void callDoSomething() {
+        doSomething();
+    }
+}

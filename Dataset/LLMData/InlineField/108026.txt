@@ -1,0 +1,12 @@
+
+private int name;
+
+// Inline getNewName() method body
+public int getNewName() {
+    return name;
+}
+
+// Inline setNewName(int) method body
+public void setNewName(int oldName) {
+    this.name = oldName;
+}

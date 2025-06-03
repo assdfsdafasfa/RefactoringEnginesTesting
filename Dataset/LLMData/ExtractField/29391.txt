@@ -1,0 +1,11 @@
+public class Constants {
+	public final static int ABC = 1;
+}
+
+public class TestRefactor {
+	class Foo {
+		int foo() {
+			return Constants.ABC;
+		}
+	}
+}

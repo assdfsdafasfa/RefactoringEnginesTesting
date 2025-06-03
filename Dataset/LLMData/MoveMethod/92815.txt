@@ -1,0 +1,19 @@
+public void handleArrayOutput(String[] array, boolean someCondition) {
+    if (someCondition) {
+        ArrayPrinter.printFirst(array);
+    } else {
+        ArrayPrinter.printEmpty();
+    }
+}
+
+class ArrayPrinter {
+    public static void printFirst(String[] array) {
+        // assert array.length == 1;
+        System.out.println(array[0]);
+    }
+
+    public static void printEmpty() {
+        // assert array.length == 0;
+        System.out.println("Nothing");
+    }
+}

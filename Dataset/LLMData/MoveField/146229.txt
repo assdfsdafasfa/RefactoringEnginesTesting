@@ -1,0 +1,18 @@
+interface Foo {
+    void setFoo(int bar);  // parameter name changed to match moved field
+}
+
+// The field 'foo' is moved from Bar to a new holder class FooFieldHolder
+class FooFieldHolder {
+    int bar;  // renamed and moved field
+}
+
+class Bar implements Foo {
+    // Instead of field 'foo', Bar holds an instance of FooFieldHolder
+    FooFieldHolder fieldHolder = new FooFieldHolder();
+
+    @Override
+    public void setFoo(int bar) {
+        fieldHolder.bar = bar;  // delegate to moved field
+    }
+}

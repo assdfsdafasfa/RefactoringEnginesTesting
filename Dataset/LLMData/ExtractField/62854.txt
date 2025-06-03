@@ -1,0 +1,19 @@
+public class SuperFieldContainer {
+    public int a;
+}
+
+public class Super {
+    protected SuperFieldContainer container = new SuperFieldContainer();
+}
+
+public class Sub extends Super {
+    private int b;
+
+    public int getA() {
+        return container.a;
+    }
+
+    public int getB() {
+        return b;
+    }
+}

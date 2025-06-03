@@ -1,0 +1,11 @@
+public class A {
+    public interface Bar<T> { }
+
+    public interface Base<T> { }
+
+    public class Foo<T, U> implements Base<U> {
+        public void foo(Bar<U> bar) {
+            // inlined: actual logic is placed directly here (was empty)
+        }
+    }
+}

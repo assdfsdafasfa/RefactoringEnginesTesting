@@ -1,0 +1,14 @@
+class PushDownBug1 {
+
+    static abstract class C {
+        // Inlined method body directly where it's used
+        abstract void m();
+    }
+
+    static final C F = new C() {
+        @Override
+        void m() {
+            // originally empty logic, now inlined (no-op)
+        }
+    };
+}

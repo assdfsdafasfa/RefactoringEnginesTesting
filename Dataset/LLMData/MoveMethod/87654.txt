@@ -1,0 +1,15 @@
+public class Test {
+    public void test() {
+        int a = 1;
+        if (true) {
+            TestHelper.printA(a);
+        } else {
+            TestHelper.printA(a);
+        }
+    }
+}
+public class TestHelper {
+    public static void printA(int a) {
+        System.out.println(a);
+    }
+}

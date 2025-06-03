@@ -1,0 +1,13 @@
+package b;
+
+class Inner {
+}
+package a;
+
+class Upper {
+  b.Inner i;
+}
+package b;
+
+class Target {
+}

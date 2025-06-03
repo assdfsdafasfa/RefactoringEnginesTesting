@@ -1,0 +1,15 @@
+class RenameTest {
+    static void foo2(Long i) {
+        System.out.println("2");
+    }
+    public static void main(String[] args) {
+        long n = 0;
+        Helper.foo2(n); // updated call to moved method
+    }
+}
+
+class Helper {
+    static void foo2(Number n) {
+        System.out.println("1");
+    }
+}

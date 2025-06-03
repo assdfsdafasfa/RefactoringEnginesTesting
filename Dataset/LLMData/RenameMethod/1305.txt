@@ -1,0 +1,15 @@
+class OriginalClass {
+    B b;
+
+    class StaticInnerClass {
+        public static void tempInnerMethod() {
+        }
+    }
+
+    public void original() {
+        StaticInnerClass.tempInnerMethod();
+    }
+}
+
+class B {
+}

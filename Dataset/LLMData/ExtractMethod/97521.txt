@@ -1,0 +1,12 @@
+public class A {
+    <T> void foo(B<T> b) {
+        extractedFoo(b);
+    }
+
+    private <T> void extractedFoo(B<T> b) {
+        System.out.println("");
+    }
+}
+
+class B<T> {
+}

@@ -1,0 +1,13 @@
+class B {
+    // inline method 'inlineM'
+    void inlineM() {
+    }
+    void f() {
+        inlineM();
+    }
+}
+
+class A extends B {
+    static public void m() {
+    }
+}

@@ -1,0 +1,7 @@
+LibraryTable table = LibraryTablesRegistrar.getInstance().getLibraryTable(module.getProject());
+<selection>table.getLibraries()</selection>
+
+Invoke "Introduce Variable" and get
+
+LibraryTable table = LibraryTablesRegistrar.getInstance().getLibraryTable(module.getProject());
+Library[] libraries = (Library[])table.getLibraries();

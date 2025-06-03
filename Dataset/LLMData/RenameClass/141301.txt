@@ -1,0 +1,4 @@
+public interface FooEnumInterface {
+    // Enum constants would be declared in an enum, not interface, so this is likely incomplete.
+}
+class NewName {}

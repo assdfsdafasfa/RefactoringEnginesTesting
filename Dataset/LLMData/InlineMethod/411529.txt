@@ -1,0 +1,15 @@
+package p;
+public class A {
+  protected void m() {}
+}
+
+package p;
+public class B {
+  public void n(q.C c, A a) {
+    // Inline method call to a.m()
+    // Replaced with direct behavior or comment since m() is empty:
+  }
+}
+
+package q;
+public class C {}

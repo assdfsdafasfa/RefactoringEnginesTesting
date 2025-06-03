@@ -1,0 +1,18 @@
+public class Try {
+    Object foo() {
+    	Object o = Helper.getImage();  // moved method call
+    	return Helper.getImage(o);
+    }
+}
+
+class Helper {
+    static Object getImage(Object o) {
+    	return null;
+    }
+}
+
+class A {
+	void foo() {
+		new Try().foo();
+	}
+}

@@ -1,0 +1,8 @@
+class X {
+  public static final String s = "s";
+
+  public static void main(String... args) {
+    // Inline variable s1 by directly using s
+    System.out.println(s);
+  }
+}

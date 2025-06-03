@@ -1,0 +1,6 @@
+interface I {
+    default void m() {
+        System.out.println("");
+    }
+}
+record R(int i) {}

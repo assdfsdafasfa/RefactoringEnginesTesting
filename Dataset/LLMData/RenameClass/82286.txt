@@ -1,0 +1,6 @@
+abstract class StraightLine implements InlinedGo {
+}
+
+interface InlinedGo {
+    void go(); // renamed from Inline to InlinedGo
+}

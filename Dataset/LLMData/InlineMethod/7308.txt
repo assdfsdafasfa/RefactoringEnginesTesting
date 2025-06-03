@@ -1,0 +1,16 @@
+public class OriginalClass {
+    TargetClass t;
+
+    public static class StaticInnerClass {
+        public static void staticInnerMethod() {
+        }
+    }
+
+    // move method
+    public void originalMethod() {
+        // Inlined logic from StaticInnerClass.staticInnerMethod()
+    }
+}
+
+class TargetClass {
+}

@@ -1,0 +1,12 @@
+package a;
+import java.util.*;
+class Source {
+    static {
+        initStack();
+    }
+
+    private static void initStack() {
+        new Stack();
+    }
+}
+class Destination {}

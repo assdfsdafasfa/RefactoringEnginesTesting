@@ -1,0 +1,9 @@
+import com.intellij.util.xml.Attribute;
+
+public interface Test {
+
+  @Attribute(ATTRIBUTE_CLASS)
+  void test();
+
+  String ATTRIBUTE_CLASS = "class"; // extracted and renamed
+}

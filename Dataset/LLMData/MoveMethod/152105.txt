@@ -1,0 +1,13 @@
+public class B {
+    void foo() {
+        String tmp = BUtil.bar();
+//        tmp = BUtil.bar();
+        System.out.println("that's a bar()");
+    }
+}
+
+class BUtil {
+    public static String bar() {
+        return "blah";
+    }
+}

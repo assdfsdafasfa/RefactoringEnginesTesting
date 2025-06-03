@@ -1,0 +1,13 @@
+package test.plugin;
+public interface Foo {
+}
+package test.plugin;
+import java.io.File;
+public class Bar implements Foo {
+    public void method(File x) {
+        helperMethod(x);
+    }
+    private void helperMethod(File x) {
+        // original method body
+    }
+}

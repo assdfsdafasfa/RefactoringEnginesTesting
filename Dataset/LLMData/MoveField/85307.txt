@@ -1,0 +1,11 @@
+import com.intellij.util.xml.Attribute;
+
+public interface Test {
+
+  @Attribute(Constants.ATTRIBUTE_CLASS)
+  void test();
+}
+
+class Constants {
+  public static final String ATTRIBUTE_CLASS = "class"; // moved to new container class
+}

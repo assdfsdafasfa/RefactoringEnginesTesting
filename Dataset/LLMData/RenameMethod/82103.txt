@@ -1,0 +1,10 @@
+class Source {
+  void usage() {
+    Target.foo(1);
+    tempName("one");
+  }
+  private static void tempName(String x){}
+}
+class Target {
+  public static void foo(int x){}
+}

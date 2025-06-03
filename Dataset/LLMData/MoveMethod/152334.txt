@@ -1,0 +1,24 @@
+@Entity
+@NamedQueries(value = {
+        @NamedQuery(name = "revenues", query = ""),
+        @NamedQuery(name = "expenses", query = "")
+})
+public class ExampleEntity {
+
+    @Id
+    private String id;
+
+    public String getId() {
+        return IdHelper.getId(this);
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+}
+// New helper class after move refactoring
+public class IdHelper {
+    public static String getId(ExampleEntity entity) {
+        return entity.id;
+    }
+}

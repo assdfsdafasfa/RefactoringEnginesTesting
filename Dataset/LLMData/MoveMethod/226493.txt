@@ -1,0 +1,24 @@
+package t;
+public class A {
+    public static void main(String[] args) {
+        String message = MessageProvider.getMessage();
+        System.out.println(message);
+    }
+}
+
+package t;
+public class MessageProvider {
+    public static String getMessage() {
+        return "Hello World!";
+    }
+}
+
+package t;
+public class ATest {
+
+    @Test
+    public void testMain() {
+        String message = MessageProvider.getMessage();
+        assertEquals(message, "Hello World!");
+    }
+}

@@ -1,0 +1,12 @@
+public class X {
+    void bar() {
+        B.show("");
+    }
+}
+
+class B {
+    static void show(String d) {
+        System.out.println(d);
+    }
+    // same note about the duplicated show method applies
+}

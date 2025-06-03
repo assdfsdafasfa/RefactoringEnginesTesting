@@ -1,0 +1,21 @@
+public class OriginalClass {
+    // originalMethod removed or made private if necessary
+}
+
+class OtherClass1 {
+    public void callerMethod() {
+        // call changed to moved static method in Helper class
+        try {
+            Helper.originalMethod();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+}
+
+class Helper {
+    public static void originalMethod() throws IOException {
+        // moved method implementation here
+    }
+}

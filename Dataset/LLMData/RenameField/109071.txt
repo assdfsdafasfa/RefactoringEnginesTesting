@@ -1,0 +1,6 @@
+class Bug {
+    static final int[] arrayRenamed = {};
+    {
+        for(int i = arrayRenamed.length; i < arrayRenamed.length; arrayRenamed[i] = i);
+    }
+}

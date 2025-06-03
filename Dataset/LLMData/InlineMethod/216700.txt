@@ -1,0 +1,10 @@
+class A {
+    static int getRecursive() {
+        return getRecursive();
+    }
+}
+class B {
+    static int getRecursive() {
+        return A.getRecursive(); // already inlined
+    }
+}

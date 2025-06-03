@@ -1,0 +1,8 @@
+public class Base {
+   public class inner {}
+}
+public class Derrived extends Base {
+   public void foo() {
+       inner extractedVar = new inner(); // extracted variable
+   }
+}

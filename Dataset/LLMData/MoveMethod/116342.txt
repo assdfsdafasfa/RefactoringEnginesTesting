@@ -1,0 +1,17 @@
+import junit.framework.TestCase;
+
+public class BugTest extends TestCase {
+    
+    public void testLoop() {
+        int x = 0;
+        for (int i = x; i < 10; i++) {
+            AssertHelper.checkEquals(i, x++);
+        }
+    }
+}
+
+class AssertHelper {
+    public static void checkEquals(int expected, int actual) {
+        junit.framework.Assert.assertEquals(expected, actual);
+    }
+}

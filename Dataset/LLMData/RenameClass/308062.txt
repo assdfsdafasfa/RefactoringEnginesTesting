@@ -1,0 +1,10 @@
+public abstract class RenamedBaseClass {
+    public static final int VALUE = 1;
+}
+public class OtherClass extends RenamedBaseClass {
+}
+public class YetAnotherClass {
+    public static void main(String[] args) {
+        System.out.println(RenamedBaseClass.VALUE);
+    }
+}

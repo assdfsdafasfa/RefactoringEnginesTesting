@@ -1,0 +1,15 @@
+import java.io.StringReader;
+
+class X {
+    
+    Object f() {
+        StringReader reader = Helper.createReader();
+        return reader;
+    }
+}
+
+class Helper {
+    public static StringReader createReader() {
+        return new StringReader("");
+    }
+}

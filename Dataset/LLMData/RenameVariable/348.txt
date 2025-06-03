@@ -1,0 +1,10 @@
+String[] Lines;
+int i;
+private String foo(String msg) {
+    String line = Lines[i++]; // extracted variable
+    return msg + ": " + line;
+}
+...
+log.warn(foo("Format warning"));
+...
+log.warn(foo("Format warning"));

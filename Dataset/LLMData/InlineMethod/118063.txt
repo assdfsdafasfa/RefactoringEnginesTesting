@@ -1,0 +1,15 @@
+package p1;
+class C {
+}
+
+package p2;
+public class A {
+    protected static void foo(int args) {}
+    protected static void foo(int args, int moreArgs) {}
+
+    private void bar() {
+        // Inline extractedBar code directly into bar
+        foo(5);
+        foo(5, 5);
+    }
+}

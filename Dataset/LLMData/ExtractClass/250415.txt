@@ -1,0 +1,17 @@
+public class ClassBase {
+  public static void main(ClassBase base, String[] parameters) {
+    executeMain(base, parameters);
+  }
+  
+  // Extracted method
+  private static void executeMain(ClassBase base, String[] parameters) {
+    // Simulate extracted logic (empty for now)
+    System.out.println("Executing main with base: " + base);
+  }
+}
+
+public class DerivedClass extends ClassBase {
+  public static void main(String[] parameters) {
+    ClassBase.main(new DerivedClass(), parameters);
+  }
+}

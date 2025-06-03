@@ -1,0 +1,12 @@
+import org.eclipse.jdt.annotation.NonNull;
+public class Square implements Shape {
+
+    public Integer getArea(@NonNull Integer length) {
+        return extractedGetArea(length);
+    }
+
+    private Integer extractedGetArea(@NonNull Integer length) {
+        System.out.println("");
+        return new Integer(length * length);
+    }
+}

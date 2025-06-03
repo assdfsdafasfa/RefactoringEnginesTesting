@@ -1,0 +1,12 @@
+class RenameTest {
+    static void foo2(Long i) {
+        System.out.println("2");
+    }
+
+    // inline method 'foo1()' body moved into 'main'
+    public static void main(String[] args) {
+        long n = 0;
+        // inlined foo1() body here instead of calling foo1()
+        System.out.println("1");
+    }
+}

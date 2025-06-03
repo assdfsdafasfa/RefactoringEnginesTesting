@@ -1,0 +1,14 @@
+public class Super {
+    protected int a_renamed;
+}
+public class Sub extends Super {
+    private int b;
+
+    public int getA() {
+        return a_renamed;
+    }
+
+    public int getB() {
+        return b;
+    }
+}

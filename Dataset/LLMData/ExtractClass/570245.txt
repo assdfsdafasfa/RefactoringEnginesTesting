@@ -1,0 +1,20 @@
+public class X2 { 
+    public static void main(String[] args) {
+        Y2.main(args);
+    }
+
+    // Extracted the enum and its main method into a new static nested class Y2
+    static class Y2 {
+        enum InnerEnum {
+            BLEU,
+            BLANC,
+            ROUGE;
+        }
+
+        public static void main(String[] args) {
+            for(InnerEnum y: InnerEnum.values()) {
+                System.out.print(y);
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+import java.io.File;
+
+public class MyFile extends File
+{
+    private String l;
+
+    public MyFile(String parent, String child) {
+        String lowerChild = child.toLowerCase(); // extracted variable renamed to lowerChild
+        super(parent, lowerChild);
+        l = lowerChild;
+    }
+
+}

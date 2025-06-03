@@ -1,0 +1,10 @@
+public class A {
+    void XRenamed() {
+    }
+}
+
+class B extends A {
+    void Y() {
+        super.XRenamed();
+    }
+}

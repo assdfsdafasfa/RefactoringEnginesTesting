@@ -1,0 +1,7 @@
+public class ClassA {
+    private final Object xyzRenamed; // assume rename during extraction
+    ClassA() {
+        xyzRenamed = ClassA.class;
+    }
+}
+class NewName {}

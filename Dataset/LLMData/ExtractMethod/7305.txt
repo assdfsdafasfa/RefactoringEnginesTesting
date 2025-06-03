@@ -1,0 +1,21 @@
+class SourceClass {
+    private int value;
+    TargetClass c;
+    public void setValue(int value) {
+        this.value = value;
+    }
+    // extracted code to a new method used by dependentMethod
+    private void printValue() {
+        System.out.println("Dependent method: " + value);
+    }
+    public void dependentMethod() {
+        printValue();
+    }
+}
+
+class TargetClass {
+    public void callDependentMethod() {
+        SourceClass source = new SourceClass();
+        source.dependentMethod();
+    }
+}

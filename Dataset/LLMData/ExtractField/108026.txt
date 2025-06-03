@@ -1,0 +1,19 @@
+private int newName;
+
+// Extracted method to get field value by new name
+public int getName() {
+    return getNewName();
+}
+
+public int getNewName() {
+    return newName;
+}
+
+// Extracted method to set field value by new name
+public void setName(int name) {
+    setNewName(name);
+}
+
+public void setNewName(int oldName) {
+    this.newName = oldName;
+}

@@ -1,0 +1,15 @@
+public Item[] getChildren(Widget widget, Object[] elementChildren) {
+    Item[] items = super.getChildren(widget, elementChildren);
+    if (elementChildren.length == 0 || items.length / elementChildren.length > 5) { // Will there be a lot of disposal?
+        getTree().removeAll();
+        unmapAllElements();
+        items = getChildren(widget);
+    }
+    // Renamed method for move simulation
+    tempName(widget, elementChildren, items);
+    return items;
+}
+
+private void tempName(Widget widget, Object[] elementChildren, Item[] items) {
+    // original logic can be moved here if needed
+}

@@ -1,0 +1,22 @@
+package a;
+public abstract class A {
+    public abstract void m();
+}
+
+package b;
+public class B extends A {
+  @Override
+  public void m() {
+    // inlined code here, replacing call
+    System.out.println("");
+  }
+
+  void n() {
+    new A() {
+        @Override
+        public void m() {
+            System.out.println("");
+        }
+    };
+  }
+}

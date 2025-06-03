@@ -1,0 +1,16 @@
+class Bag {
+    Integer x;
+    Integer y;
+}
+
+public class Simple {
+    public static void method() {
+        Bag b = new Bag();
+        b.x = compute();
+        b.x = compute();
+    }
+    
+    private static int compute() {
+        return 1 + 2;
+    }
+}

@@ -1,0 +1,9 @@
+class FieldHolder {
+    static final int[] array = {};
+}
+
+class Bug {
+    {
+        for(int i = FieldHolder.array.length; i < FieldHolder.array.length; FieldHolder.array[i] = i);
+    }
+}

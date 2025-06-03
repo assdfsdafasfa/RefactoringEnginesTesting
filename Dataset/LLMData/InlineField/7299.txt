@@ -1,0 +1,11 @@
+class A {
+    void m() {
+        int i = 0;
+        class B {
+            int j;
+            void k() {
+                int temp = i; // inline the field j's usage
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+public class Test1 {
+  private static final String TEST_RENAMED = "ABC";
+  private void test(String s) {
+    switch (s) {
+      case TEST_RENAMED:
+    }
+  }
+}
+class Test2 {}

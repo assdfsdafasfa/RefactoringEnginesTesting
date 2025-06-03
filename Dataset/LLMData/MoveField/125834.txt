@@ -1,0 +1,21 @@
+public class A {
+
+}
+
+public class B {
+    // The field 'b' is moved here from class A
+    protected final int b = 1;
+
+    void main() {
+        final int localB = 2;
+        new A() {
+            void m() {
+                System.out.println(localB);
+            }
+        };
+    }
+}
+class C {
+	A a;
+	protected final int b = 1;
+}

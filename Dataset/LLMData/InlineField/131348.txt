@@ -1,0 +1,8 @@
+interface I {
+}
+
+class C implements I {
+    void method() {
+        boolean value = false; // field inlined inside method
+    }
+}

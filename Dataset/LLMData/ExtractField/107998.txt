@@ -1,0 +1,10 @@
+class FieldContainer {
+    public static int field;
+}
+
+class Bug {
+    class Inner{
+        int number = FieldContainer.field;
+        int method() { return FieldContainer.field; }
+    }
+}

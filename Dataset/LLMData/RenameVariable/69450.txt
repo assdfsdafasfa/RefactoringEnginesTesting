@@ -1,0 +1,2 @@
+Matcher matcher = getPattern().matcher(line);
+boolean isMatch = matcher.matches(); // extracted variable

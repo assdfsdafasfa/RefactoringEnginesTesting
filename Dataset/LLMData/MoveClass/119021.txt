@@ -1,0 +1,29 @@
+private static class IdSet {
+
+    private final MyTIntHashSet mySet;
+
+    private IdSet(final int initialCapacity) {
+        mySet = new MyTIntHashSet(initialCapacity, 0.98f);
+    }
+
+    public void ensureCapacity(int desiredCapacity) {
+        mySet.ensureCapacity(desiredCapacity);
+    }
+
+    public boolean add(int val) {
+        return mySet.add(val);
+    }
+}
+
+class MyTIntHashSet extends TIntHashSet {
+    public MyTIntHashSet(int initialCapacity, float loadFactor) {
+        super(initialCapacity, loadFactor);
+    }
+
+    @Override
+    public void compact() {
+        if (((int)(capacity() * _loadFactor)/ Math.max(1, size())) >= 3) {
+            super.compact();
+        }
+    }
+}

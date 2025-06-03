@@ -1,0 +1,18 @@
+public class OriginalClass {
+    public int m() {
+        return 1;
+    }
+
+    public class C extends OriginalClass {
+        private int extractedLogic() {
+            return super.m();
+        }
+
+        public int m(B b) {
+            return extractedLogic();
+        }
+    }
+}
+
+class B {
+}

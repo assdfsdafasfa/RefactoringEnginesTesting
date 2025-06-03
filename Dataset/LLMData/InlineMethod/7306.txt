@@ -1,0 +1,10 @@
+class TargetClass {
+}
+
+class SourceClass {
+    TargetClass target;
+
+    public void callMethod() {
+        System.out.println("Another method in TargetClass");
+    }
+}

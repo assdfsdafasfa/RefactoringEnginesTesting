@@ -1,0 +1,7 @@
+class Source {
+    static int getInt() {
+        System.out.println("");
+        return parseInt("");
+    }
+}
+class Target {}

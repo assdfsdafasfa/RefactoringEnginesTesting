@@ -1,0 +1,10 @@
+void foo(Object x) {
+  if (x instanceof String) x = ((String)x).substring(1);
+  if (x instanceof String) x = StringHelper.extractedSubstring((String)x);
+}
+// New helper class after move refactoring
+public class StringHelper {
+  public static String extractedSubstring(String s) {
+    return s.substring(1);
+  }
+}

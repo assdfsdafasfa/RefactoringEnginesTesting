@@ -1,0 +1,14 @@
+package p;
+
+class A {
+	void a(A a){}
+	void a(B b){}
+}
+
+package p;
+
+class B extends A {
+	void tempM() {
+		a(this);
+	}
+}

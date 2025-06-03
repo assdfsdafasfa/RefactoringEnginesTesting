@@ -1,0 +1,17 @@
+interface Foo {
+    void setFoo(int bar);
+}
+
+class Bar implements Foo {
+    int foo;
+
+    @Override
+    public void setFoo(int bar) {
+        setBar(bar);   // Extracted method called inside setter
+    }
+
+    // Extracted method encapsulating the renamed field assignment
+    private void setBar(int bar) {
+        this.foo = bar;  // Still using original field, but through extracted method
+    }
+}

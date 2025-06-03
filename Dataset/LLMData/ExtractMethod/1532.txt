@@ -1,0 +1,17 @@
+public class A {
+    public interface Bar<T> { }
+
+    public interface Base<T> {
+        void foo(Bar<T> bar);
+    }
+
+    public class Foo<T, U> implements Base<U> {
+        public void foo(Bar<U> bar) {
+            extractedFoo(bar);
+        }
+
+        private void extractedFoo(Bar<U> bar) {
+            // extracted logic (empty for now)
+        }
+    }
+}

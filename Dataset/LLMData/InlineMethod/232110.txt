@@ -1,0 +1,14 @@
+package com.mycompany.mavenproject1;
+
+public class Bar {
+   
+}
+package com.mycompany.mavenproject1;
+
+import java.util.List;
+
+public class Foo {
+
+    // method inlined — logic inserted directly where it was used (if used)
+    // if not used, method can be safely removed
+}

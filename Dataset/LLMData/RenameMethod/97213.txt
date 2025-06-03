@@ -1,0 +1,20 @@
+import static java.lang.Math.*;
+
+public class SuperType<ELEM extends Number> {
+
+    int stat(Integer j) {
+        return tempName(j, 42, 52, abs(32));
+    }
+
+    // Renamed from min to tempName to simulate move
+    int tempName(int head, int... tail) {
+        int min = head;
+        for (int i : tail)
+            min = min(i, min);
+        return min;
+    }
+
+    int min(int a, int b) {
+        return a < b ? a : b;
+    }
+}

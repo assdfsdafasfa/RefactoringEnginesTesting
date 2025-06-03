@@ -1,0 +1,8 @@
+class One {
+};
+
+public class Test {
+    {
+        new One();
+    } 
+}

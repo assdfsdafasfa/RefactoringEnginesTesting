@@ -1,0 +1,36 @@
+package x;
+
+import java.util.List;
+
+public class IntellijFail {
+  int a = 1;
+  public List<Pojo> things;
+
+  void fool() {
+    while(a == 1) {
+      HelperClass.extractedLogic(things);
+      a = 2;
+    }
+  }
+
+  static class Pojo {
+    double it;
+    Pojo(double w) {
+      it = w;
+    }
+  }
+}
+
+class HelperClass {
+  public static void extractedLogic(List<x.IntellijFail.Pojo> things) {
+    x.IntellijFail.Pojo x = things.get(0);
+
+    if(x.it > 0.5) {
+      return;
+    }
+
+    things.remove(x);
+
+    double y = 2 * x.it;
+  }
+}

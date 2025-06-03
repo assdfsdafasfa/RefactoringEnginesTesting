@@ -1,0 +1,17 @@
+public class MetaPersonRenamed {
+    public MetaPersonRenamed(String name) { }
+
+    public static MetaPersonRenamed[] emptyArray() {
+        return new MetaPersonRenamed[0];
+    }
+}
+public class Person extends MetaPersonRenamed { 
+    public Person(String name) {
+        super(name);
+    }
+}
+public class Roster {
+    public static void main(String[] args) {
+        final MetaPersonRenamed p = new MetaPersonRenamed(""); //inline MetaPersonRenamed
+    }
+}

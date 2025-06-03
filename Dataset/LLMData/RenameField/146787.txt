@@ -1,0 +1,11 @@
+class ExtractConstantAfter {
+
+    public String getString() {
+        return ExtractConstantAfter.RENAMED_CONSTANT;
+    }
+
+    static class StaticInner {
+        public static String STRING = "aaaa";
+        private static final String RENAMED_CONSTANT = STRING; // renamed from EXTRACTED_CONSTANT
+    }
+}

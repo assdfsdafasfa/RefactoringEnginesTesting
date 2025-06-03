@@ -1,0 +1,12 @@
+public class OriginalClass {
+    TargetClass c;
+
+    // Removed constructor, logic now inlined
+    public void methodUsingPrivateConstructor() {
+        OriginalClass instance = new OriginalClass(); // Inlined logic would go here directly if possible
+        // Some logic here (inlined)
+    }
+}
+
+class TargetClass {
+}

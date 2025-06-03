@@ -1,0 +1,17 @@
+public class ExtractMethodTest {
+    private final int value;
+
+    public ExtractMethodTest(int value) {
+        this.value = value;
+    }
+
+    // Renamed method from Bar to Baz
+    public void Baz() {
+        initializeValue();
+    }
+
+    private void initializeValue() {
+        // extracted method content - here just assigns the value (already done in constructor)
+        // Could have initialization logic if needed
+    }
+}

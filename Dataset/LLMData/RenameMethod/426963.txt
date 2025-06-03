@@ -1,0 +1,11 @@
+import org.eclipse.jdt.annotation.NonNull;
+public class Square implements Shape {
+
+    public Integer getArea(@NonNull Integer length) {
+        return new Integer(length * length);
+    }
+
+    public Integer tempName(@NonNull Integer length) {
+        return new Integer(length * length);
+    }
+}

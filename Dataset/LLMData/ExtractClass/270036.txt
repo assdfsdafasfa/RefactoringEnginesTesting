@@ -1,0 +1,16 @@
+public enum s {
+    INSTANCE_ONE(Something.class);
+
+    private Class<?> clazz;
+
+    // Constructor
+    s(Class<?> clazz) {
+        this.clazz = clazz;
+        init(); // extracted method call
+    }
+
+    // Extracted method performing some operation
+    private void init() {
+        System.out.println("Initializing with class: " + clazz.getName());
+    }
+}

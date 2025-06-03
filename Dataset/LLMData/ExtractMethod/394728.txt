@@ -1,0 +1,18 @@
+class PushDownBug1 {
+
+    static abstract class C {
+        // Method extracted from m
+        abstract void m();
+    }
+
+    static final C F = new C() {
+        @Override
+        void m() {
+            extractedLogic();
+        }
+
+        private void extractedLogic() {
+            // extracted content from m
+        }
+    };
+}

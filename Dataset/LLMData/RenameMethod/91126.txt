@@ -1,0 +1,12 @@
+public class A {
+    private Integer i = 0;
+
+    void foo() {
+        i.toString();
+    }
+}
+public class B extends A {
+    void bar() {
+        foo(); // still calls foo()
+    }
+}

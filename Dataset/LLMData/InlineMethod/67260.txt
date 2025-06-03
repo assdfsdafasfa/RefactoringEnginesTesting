@@ -1,0 +1,16 @@
+package pack;
+public class String {
+}
+
+public class X {
+
+  // Inline method 'foo(String)' into 'callFooWithJavaString()'
+  public static void callFooWithJavaString(String s) {
+    // inlined body of foo(String s)
+  }
+
+  // Inline method 'foo(pack.String)' into 'callFooWithPackString()'
+  public void callFooWithPackString(pack.String s) {
+    // inlined body of foo(pack.String s)
+  }
+}

@@ -1,0 +1,14 @@
+public class A {
+    void X() {
+        extractedX();
+    }
+
+    void extractedX() {
+    }
+}
+
+class B extends A {
+    void Y() {
+        super.X();
+    }
+}

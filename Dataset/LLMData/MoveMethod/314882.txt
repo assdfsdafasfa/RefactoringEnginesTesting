@@ -1,0 +1,11 @@
+class X {
+  String x() {
+    "🤘" + MetalUtils.string() + "🤘";
+  }
+}
+
+class MetalUtils {
+  static String string() {
+    return "heavy" + "⚡️" + "metal";
+  }
+}

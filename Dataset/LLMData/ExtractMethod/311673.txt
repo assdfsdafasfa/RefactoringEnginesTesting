@@ -1,0 +1,6 @@
+interface I {
+    default void m() {
+        System.out.println("");
+    }
+}
+enum E implements I {}

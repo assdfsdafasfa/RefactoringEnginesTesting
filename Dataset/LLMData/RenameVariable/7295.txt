@@ -1,0 +1,8 @@
+class A {
+    int y = 2;
+    int main() {
+        int y = 1; // extracted variable renamed to "y"
+        System.out.println(y);
+        return 0;
+    }
+}

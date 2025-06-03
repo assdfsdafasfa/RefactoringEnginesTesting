@@ -1,0 +1,10 @@
+@FunctionalInterface
+public interface I1 {
+	default int foo(int a) {
+		return compute(a);
+	}
+	
+	private int compute(int a) {
+		return a * 2;
+	}
+}

@@ -1,0 +1,20 @@
+public class OriginalClass {
+    TargetClass t;
+
+    public static class StaticInnerClass {
+        public static void staticInnerMethod() {
+        }
+    }
+
+    private void extractedLogic() {
+        StaticInnerClass.staticInnerMethod();
+    }
+
+    // move method
+    public void originalMethod() {
+        extractedLogic();
+    }
+}
+
+class TargetClass {
+}

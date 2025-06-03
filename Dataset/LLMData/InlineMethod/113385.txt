@@ -1,0 +1,13 @@
+public class PullUpLosesAnnotation {
+    // inline method body directly where used
+    public void foo() {
+        System.out.println("");
+    }
+}
+
+class SubclassA extends PullUpLosesAnnotation {
+    @Deprecated
+    public void foo() {
+        System.out.println("");
+    }
+}

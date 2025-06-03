@@ -1,0 +1,11 @@
+class SubSon {
+    // Method moved out of SubSon
+}
+
+class GrandSon extends SubSon {
+    // Moved method renamed to 't' and now located in GrandSon
+    public void t() { 
+        // Possibly delegate back if needed
+        // super.doMyOwn(); // cannot call original as it's moved
+    }
+}

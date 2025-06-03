@@ -1,0 +1,12 @@
+@FunctionalInterface
+public interface I1 {
+	default int foo(int a) {
+		return Helper.calculate(a);
+	}
+}
+
+class Helper {
+	static int calculate(int a) {
+		return a * 2;
+	}
+}

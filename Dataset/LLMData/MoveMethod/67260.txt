@@ -1,0 +1,16 @@
+package pack;
+
+public class String {
+  // moved method from X
+  public void fooInPackString() {
+    // original body of X.foo(pack.String)
+  }
+}
+
+public class X {
+  public static void foo(String s) {
+    // unchanged
+  }
+
+  // removed: public void foo(pack.String s) {}
+}

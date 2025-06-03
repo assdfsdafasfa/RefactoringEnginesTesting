@@ -1,0 +1,17 @@
+public class A {
+    public static int i;
+    // getI() removed or made private if needed
+}
+
+public enum B {
+    m(Helper.getI());
+
+    B(int j){
+    }
+}
+
+class Helper {
+    public static int getI() {
+        return A.i;
+    }
+}

@@ -1,0 +1,14 @@
+private void foo() {
+    if (false) return;
+    HelperClass.extractedLogic();
+}
+
+class HelperClass {
+    public static void extractedLogic() {
+        try {} finally {
+            while (true) {
+                break;
+            }
+        }
+    }
+}

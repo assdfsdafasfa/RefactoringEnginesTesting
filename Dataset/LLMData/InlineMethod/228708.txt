@@ -1,0 +1,26 @@
+public interface Iface {
+    public boolean t();
+}
+
+public class Impl implements Iface {
+
+    @Override
+    public boolean t() {
+        // inline method 'originalTest'
+        return originalTest();
+    }
+
+    // inlined logic previously in 'test()'
+    private boolean originalTest() {
+        return true;
+    }
+}
+
+public class Client {
+    private Impl impl = new Impl();
+
+    public boolean perform() {
+        // inline call to method 't()' replaced with direct call to 'originalTest()'
+        return impl.originalTest();
+    }
+}

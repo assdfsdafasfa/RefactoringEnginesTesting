@@ -1,0 +1,13 @@
+import java.io.StringReader;
+
+class X {
+    
+    Object f() {
+        StringReader reader = createReader();
+        return reader;
+    }
+    
+    private StringReader createReader() {
+        return new StringReader("");
+    }
+}

@@ -1,0 +1,13 @@
+public class AInlined implements I {
+    AInlined(int i) {
+        System.out.println(i);
+    }
+}
+
+public interface I {}
+  
+public class B extends AInlined implements I { // place caret on I
+    B(boolean mode) {
+        super(mode ? 1 : 0);
+    }
+}

@@ -1,0 +1,10 @@
+public class Test {
+    public void test(Object unused) {
+        if (null == null) ;
+        if (null == null) ;
+        if (null == null) ;
+        if (null == null) ;
+        if (null == null) ;
+        if (null == null) ;
+    }
+}

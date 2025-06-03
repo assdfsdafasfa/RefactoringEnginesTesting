@@ -1,0 +1,24 @@
+import junit.framework.TestCase;
+
+public class A extends TestCase{
+	
+    private int getGridY(int y) {
+        int tmp = 0, res = 1;
+        while (res < y) {
+            tmp = Helper.updateTmp(res, tmp);
+            res += 1;
+        }
+        return tmp;
+    }
+    
+    public void testCase(){    	
+    	assertEquals(getGridY(7),6);
+    }
+}
+
+class Helper {
+    public static int updateTmp(int res, int tmp) {
+        tmp = res;
+        return tmp;
+    }
+}

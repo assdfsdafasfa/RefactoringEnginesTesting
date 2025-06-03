@@ -1,0 +1,8 @@
+static abstract class A implements Collection<String> {
+    protected static class Holder {
+        protected static int FIELD = 0;
+    }
+}
+
+static abstract class B extends A implements Collection<String> {  
+}

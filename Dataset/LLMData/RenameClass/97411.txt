@@ -1,0 +1,8 @@
+public class Try {
+	private static final class RenamedColor {
+		private RenamedColor(String name) {}
+	}
+	void usage() {
+		RenamedColor c = new RenamedColor("ultrared");
+	}
+}

@@ -1,0 +1,9 @@
+// ----- Foo.java -----
+public class Foo {
+	int bar = Bar.FOO_RENAMED;
+}
+
+// ----- Bar.java -----
+class Bar {
+	private static final int FOO_RENAMED = 0;
+}

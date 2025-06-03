@@ -1,0 +1,22 @@
+public class A {
+    public Runnable create() {
+        return new Runnable() {
+            public void run() {
+                // inlined extractedRun() body here, currently empty
+            }
+        };
+    }
+}
+public class B {
+
+    public Runnable create() {
+        return new Runnable() {
+            () {
+                <init>();
+            }
+
+            public void run() {
+            }
+        };
+    }
+}

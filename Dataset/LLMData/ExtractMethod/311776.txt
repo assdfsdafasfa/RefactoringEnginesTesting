@@ -1,0 +1,6 @@
+class Foo {
+  public static void foo(System.out.println("")) {} // extracted code inserted as parameter
+  void m() {
+    class FooExt extends Foo { }
+  }
+}

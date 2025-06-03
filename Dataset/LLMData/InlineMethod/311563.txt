@@ -1,0 +1,6 @@
+interface I {
+    default void m() {
+        // inlined behavior here
+    }
+}
+record R(int i) {}

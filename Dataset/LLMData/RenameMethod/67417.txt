@@ -1,0 +1,11 @@
+public class X {
+    void bar() {
+        show("");
+    }
+    public void show(String d) {
+        System.out.println(d);
+    }
+    // The second show method with the same signature cannot coexist,
+    // assuming the original code had a mistake or meant overloading,
+    // so here it remains as is after renaming refactoring.
+}

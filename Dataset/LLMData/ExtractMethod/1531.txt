@@ -1,0 +1,34 @@
+public class A {
+    {
+        int length = getALength(new String[0]);
+    }
+
+    enum M {
+        ;
+        {
+            String s = getAValueOf("");// extracted from valueOf
+        }
+    }
+
+    enum S {
+        ;
+        {
+            Object[] arr = getAValues(); // extracted from values
+        }
+    }
+
+    // Extracted method for length renamed to aLength
+    private int getALength(String[] array) {
+        return array.length;
+    }
+
+    // Extracted method for valueOf renamed to aValueOf
+    private String getAValueOf(String name) {
+        return M.valueOf(name).toString();
+    }
+
+    // Extracted method for values renamed to aValues
+    private Object[] getAValues() {
+        return S.values();
+    }
+}

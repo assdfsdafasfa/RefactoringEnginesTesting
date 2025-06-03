@@ -1,0 +1,13 @@
+public void usage() {
+    List list = new ArrayList();
+    String aa = "AA";
+    String bb = "bb";
+    Collection col = new ArrayList();
+}
+
+class Helper {
+    public static void myTest(List list, String s1, String s2) {
+    }
+    public static void myTest(Collection list, String s1, String s2) {
+    }
+}

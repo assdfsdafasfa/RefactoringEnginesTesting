@@ -1,0 +1,7 @@
+class Bug {
+    public static int renamedField;
+    class Inner{
+        int number = renamedField;
+        int method() { return renamedField; }
+    }
+}

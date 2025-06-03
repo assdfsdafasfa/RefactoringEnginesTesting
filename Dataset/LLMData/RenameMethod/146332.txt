@@ -1,0 +1,12 @@
+private void foo() {
+    if (false) return;
+    renamedMethod();
+}
+
+private void renamedMethod() {
+    try {} finally {
+        while (true) {
+            break;
+        }
+    }
+}

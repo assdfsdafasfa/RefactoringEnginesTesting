@@ -1,0 +1,14 @@
+public class JavaClass {
+    String baz(boolean condition) {
+        if (condition)
+            return BarUtil.bar();
+
+        return "default";
+    }
+}
+
+class BarUtil {
+    public static String bar() {
+        return "bar";
+    }
+}

@@ -1,0 +1,19 @@
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
+import static java.util.stream.Collectors.toMap;
+
+class WithMethod {
+    public static void main(String[] args) {
+        MapUtil.filterMap();
+    }
+}
+
+class MapUtil {
+    public static void filterMap() {
+        new HashMap<Long, Set<Integer>>()
+                .entrySet()
+                .stream()
+                .collect(toMap(Entry::getKey, Entry::getValue));
+    }
+}

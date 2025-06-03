@@ -1,0 +1,23 @@
+class A {
+    B fB;
+
+    public void doit(String doitArg) {
+        extractedSubroutine(1.2f);
+    }
+
+    private void extractedSubroutine(float subArg) {
+        subsub();
+    }
+
+    public void subroutine(float subArg) {
+        subsub();
+    }
+
+    public void subsub() {
+        
+    }
+}
+
+class B {
+
+}

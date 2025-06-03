@@ -1,0 +1,17 @@
+class A {
+    void m() {
+        int i = 0;
+        class B {
+            int j;
+            
+            // extracted method for field assignment
+            void assignJ(int value) {
+                j = value;
+            }
+
+            void k() {
+                assignJ(i);
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+private void foo(int e) {
+    switch (e) {
+        case bar():
+            break;
+    }
+}
+
+private int bar() {
+    return foo();
+}

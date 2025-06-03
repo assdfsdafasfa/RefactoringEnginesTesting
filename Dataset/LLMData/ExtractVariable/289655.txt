@@ -1,0 +1,15 @@
+public class Test {
+
+    public void test(Object asdf) {
+        repeatNullCheck(asdf);
+        repeatNullCheck(asdf);
+        repeatNullCheck(asdf);
+        repeatNullCheck(asdf);
+        repeatNullCheck(asdf);
+        repeatNullCheck(asdf);
+    }
+
+    private void repeatNullCheck(Object asdf) {
+        if (asdf == null) asdf = null;
+    }
+}

@@ -1,0 +1,14 @@
+String[] Lines;
+int i;
+private void inc() {
+    i++;
+}
+...
+String currentLine = Lines[i];  // extracted variable
+log.warn(currentLine);
+...
+log.warn(currentLine);
+...
+inc();
+...
+log.warn(Lines[i]);

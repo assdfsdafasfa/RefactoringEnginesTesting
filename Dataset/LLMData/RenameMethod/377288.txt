@@ -1,0 +1,12 @@
+public class Test {
+    public void x(int i) {
+        switchMethod(i); // rename: extracted method called here
+    }
+
+    private void switchMethod(int i) {
+        switch (i) {
+            case 0:
+            case 1:
+        }
+    }
+}

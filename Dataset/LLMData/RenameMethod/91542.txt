@@ -1,0 +1,10 @@
+package p;
+class A<T> {
+    void a(A<T> a){}
+    public void tempName() {}
+}
+class B<T> extends A<T> {
+    protected void m() { 
+        a(this);
+    }
+}

@@ -1,0 +1,9 @@
+public class A {
+    // Method X is inlined; no longer needed
+}
+
+class B extends A {
+    void Y() {
+        // super.X(); was calling an empty method, so it can be removed or inlined as empty
+    }
+}

@@ -1,0 +1,3 @@
+public class NewName { // originally Test
+	int i;
+}
